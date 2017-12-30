@@ -83,6 +83,13 @@
                         {/if}
 
                         <div class="cell-user-mail" title="{$aLang.plugin.admin.users.table_header.mail}">{$user->getMail()}</div>
+                        {$oInviter = $LS->Invite_GetUserInviteFrom($user->getId())}
+                        <div><span class="cell-user-mail">приглашен: </span>
+                            {if $oInviter}
+                                <a href="{$oInviter->getUserWebPath()}">{$oInviter->getLogin()}</a>
+                            {else}
+                                Пришел сам
+                            {/if}</div>
                     </div>
                 </td>
 
