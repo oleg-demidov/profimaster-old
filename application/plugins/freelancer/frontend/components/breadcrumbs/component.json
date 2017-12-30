@@ -1,0 +1,16 @@
+{
+    "name": "breadcrumbs",
+    "version": "1.0.0",
+    "dependencies": {
+        "freelancer:logo":"*"
+    },
+    "templates": {
+        "breadcrumbs":"breadcrumbs.tpl"
+    },
+    "scripts": {
+        "breadcrumbs":"js/breadcrumbs.js"
+    },
+    "styles": {
+        "breadcrumbs":"css/breadcrumbs.css"
+    }
+}

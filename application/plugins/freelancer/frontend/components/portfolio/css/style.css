@@ -1,0 +1,22 @@
+
+.fl-portfolio-work-list{
+    margin-top: 20px;
+}
+.fl-portfolio-work-item{
+    width: 250px;   
+    float: left;
+    margin-right: 10px;
+}
+.fl-portfolio-work-item-date .ls-info-list-item-label{
+    min-width: 7.5em;
+    width: 7.5em;
+
+}
+.fl-portfolio-work-small-item a{
+    display: block;
+    margin: 0 5px;
+    text-align: center;
+}
+.fl-portfolio-work-small-item{
+    float: left;
+}

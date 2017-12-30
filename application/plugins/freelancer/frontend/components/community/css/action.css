@@ -1,0 +1,10 @@
+.fl-actions {
+    margin-top: 20px;
+}
+
+.fl-actions .fl-action-item{
+    margin-bottom: 20px;
+}
+.fl-actions .fl-action-item:last-child {
+    margin-bottom: 0;
+}

@@ -1,0 +1,41 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 02.08.2017, 13:46:35
+    Author     : oleg
+*/
+
+.fa{
+    min-width: 1.2em;
+    text-align: center;
+    
+}
+.ls-info-list-item-label {
+    min-width: 12em
+}
+
+
+.fl-order-new-budjet{
+    font-size: 18px;
+    font-weight: bolder;
+    text-align: right;
+    color: #fecc00;
+}
+.fl-order-new-title{
+    font-size: 16px;
+    
+}
+.fl-order-new-item{
+    margin-bottom: 30px;
+}
+.fl-order-new-item:last-child{
+    margin-bottom: 0;
+}
+.fl-order-new-fire{
+    color:#FF1313;
+}
+
+

@@ -1,0 +1,23 @@
+{
+    "name": "manager",
+    "version": "1.0.0",
+    "dependencies": {
+        "freelancer:user":"*",
+        "table":"*"
+    },
+    "templates": {
+        "wall.buttons":"wall-buttons.tpl",
+        "invite-but":"invite-but.tpl",
+        "invites":"invites-users.tpl",
+        "payments":"payments.tpl",
+        "transactions":"transactions.tpl",
+        
+        "block.ref.vert":"blocks/ref-banner-vert.tpl",
+        "block.ref.goriz":"blocks/ref-banner-goriz.tpl"
+    },
+    "scripts": {
+    },
+    "styles": {
+        "manager":"css/manager.css"
+    }
+}

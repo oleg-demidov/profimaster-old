@@ -1,0 +1,14 @@
+{
+    "name": "fl-userbar",
+    "version": "1.0.0",
+    "dependencies": {
+    },
+    "templates": {
+        "fl-userbar":"fl-userbar.tpl"
+    },
+    "scripts": {
+    },
+    "styles": {
+        "fl-userbar":"css/fl-userbar.css"
+    }
+}

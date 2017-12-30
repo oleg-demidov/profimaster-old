@@ -1,0 +1,16 @@
+{
+    "name": "keywords",
+    "version": "1.0.0",
+    "templates": {
+        "item": "keyword.tpl",
+        "keywords": "keywords.tpl",
+        "form": "keyword-form.tpl"
+    },
+    "scripts": {
+        "keywords":"js/ajax-keywords.js",
+        "ajax":"js/tabs-js.js"
+    },
+    "styles": {
+        "keywords":"css/keywords.css"
+    }
+}

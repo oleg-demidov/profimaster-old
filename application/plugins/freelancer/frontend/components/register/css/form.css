@@ -1,0 +1,35 @@
+
+.fl-register-master-form{
+    max-width: 400px;
+    margin: 0 auto;
+}
+.eye{
+    color: #555;
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.eye:hover{
+    color: #000;
+}
+.pass_field .ls-field-holder{
+    position: relative;
+}
+.activation_text{
+    text-indent: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+.soc-buts{
+    margin: 0 auto 10px auto;
+    width: 400px;
+}
+.fl-register-master-form-polz{
+    font-size: 16px;
+}
+.js-polz-modal{
+    width: 100%;
+    max-width: 800px;
+}

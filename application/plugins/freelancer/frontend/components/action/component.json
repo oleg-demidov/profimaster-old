@@ -1,0 +1,21 @@
+{
+    "name": "action",
+    "version": "1.0.0",
+    "dependencies": {
+        "freelancer:user":"*",
+        "freelancer:field":"*"
+    },
+    "templates": {
+        "form":"form.tpl",
+        "items":"actions.tpl",
+        "item":"action-item.tpl",
+        "actionbar":"action-actionbar.tpl"
+    },
+    "scripts": {
+        "action":"js/action.js"
+        
+    },
+    "styles": {
+        "action":"css/action.css"
+    }
+}

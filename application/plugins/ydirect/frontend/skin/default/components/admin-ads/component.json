@@ -1,0 +1,20 @@
+{
+    "name": "admin-ads",
+    "version": "1.0.0",
+    "dependencies": {
+    },
+    "templates": {
+        "list":"ads-list.tpl",
+        "item":"ads-list-item.tpl",
+        "list-new":"ads-list-new.tpl",
+        "item-new":"ads-list-item-new.tpl",
+        "edit": "edit.tpl",
+        "form": "ads-form.tpl"
+    },
+    "scripts": {
+        "admin-ads":"js/ads.js"
+    },
+    "styles": {
+        "admin-ads":"css/ads.css"
+    }
+}

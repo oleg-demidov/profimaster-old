@@ -1,0 +1,7 @@
+{
+    "name": "tunning",
+    "version": "1.0.0",
+    "scripts": {
+        "init-about":"js/init-about.js"
+    }
+}

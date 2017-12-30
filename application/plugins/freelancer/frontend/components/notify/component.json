@@ -1,0 +1,56 @@
+{
+    "name": "notify",
+    "version": "1.0.0",
+    "dependencies": {
+    },
+    "templates": {
+        "bell":"notify-bell.tpl",
+        "modal":"notify-modal.tpl",
+        "list":"notify-list.tpl",
+        "item":"notify-item.tpl",
+        "buttons":"notify-buttons.tpl",
+        
+        "email.talk":"templates/talk/email.tpl",
+        "sms.talk":"templates/talk/sms.tpl",
+        "panel.talk":"templates/talk/panel.tpl",
+        
+        "email.order":"templates/order/email.tpl",
+        "sms.order":"templates/order/sms.tpl",
+        "panel.order":"templates/order/panel.tpl",
+        
+        "email.orders":"templates/orders/email.tpl",
+        "sms.orders":"templates/orders/sms.tpl",
+        "panel.orders":"templates/orders/panel.tpl",
+        
+        "email.order_start":"templates/order_start/email.tpl",
+        "sms.order_start":"templates/order_start/sms.tpl",
+        "panel.order_start":"templates/order_start/panel.tpl",
+        
+        "email.response":"templates/response/email.tpl",
+        "sms.response":"templates/response/sms.tpl",
+        "panel.response":"templates/response/panel.tpl",
+        "email.response.item":"templates/response/response-item.tpl",
+        
+        "email.bid":"templates/bid/email.tpl",
+        "sms.bid":"templates/bid/sms.tpl",
+        "panel.bid":"templates/bid/panel.tpl",
+        
+        "email.order.item":"templates/order/order-item.tpl",
+        "email.order.list":"templates/orders/order-list.tpl",
+        "email.user":"templates/order_start/user-item.tpl",
+        
+        "email.registration_activate":"templates/registration_activate/email.tpl",
+        
+        "email.specialization_leave1":"templates/specialization_leave1/email.tpl",
+        "panel.specialization_leave1":"templates/specialization_leave1/panel.tpl"
+        
+    },
+    "scripts": {
+        "notify":"js/notify.js",
+        "init":"js/init.js"
+        
+    },
+    "styles": {
+        "style":"css/style.css"
+    }
+}

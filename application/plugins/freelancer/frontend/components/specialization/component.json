@@ -1,0 +1,17 @@
+{
+    "name": "specialization",
+    "version": "1.0.0",
+    "dependencies": {
+        "dropdown":"*"
+    },
+    "templates": {
+        "specialization":"specialization.tpl",
+        "tree":"specialization-tree.tpl"
+    },
+    "scripts": {
+        "tree":"js/specialization-tree.js"
+    },
+    "styles": {
+        "tree":"css/specialization-tree.css"
+    }
+}

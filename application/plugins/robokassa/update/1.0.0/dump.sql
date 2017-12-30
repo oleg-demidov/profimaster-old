@@ -1,0 +1,17 @@
+CREATE TABLE `prefix_robokassa_payment` ( 
+`id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT , 
+`user_id` BIGINT UNSIGNED NOT NULL , 
+`type` VARCHAR(20) NULL ,
+`product_id` INT UNSIGNED NOT NULL,
+`summ` FLOAT UNSIGNED NOT NULL , 
+`method` VARCHAR(20) NULL , 
+`state` TINYINT NOT NULL DEFAULT '0',
+`comm` VARCHAR(200) NULL,
+`date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP  , 
+`date_pay` DATETIME NULL DEFAULT NULL,
+`expiration` BIGINT NULL DEFAULT NULL,
+PRIMARY KEY (`id`),
+INDEX (`user_id`),
+INDEX (`type`),
+INDEX (`state`)) 
+ENGINE = InnoDB;

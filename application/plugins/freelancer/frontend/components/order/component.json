@@ -1,0 +1,30 @@
+{
+    "name": "order",
+    "version": "1.0.0",
+    "dependencies": {
+    },
+    "templates": {
+        "order": "order.tpl",
+        "order-list":"orders.tpl",
+        "list":"orders.tpl",
+        "order-list-item":"order-item.tpl",
+        "list-item":"order-item.tpl",
+        "item":"order-item.tpl",
+        "buttons-edit":"buttons-edit.tpl",
+        "form":"edit-form.tpl",
+        "mini":"order-mini.tpl",
+        "status":"order-status.tpl",
+        "admin-orders" : "admin/orders.tpl",
+        "admin-order-item" : "admin/order-item.tpl",
+        "actionbar":"order-actionbar.tpl",
+        "block.news":"blocks/block.orders.news.tpl",
+        "block.news.item":"blocks/block.orders.news.item.tpl"
+    },
+    "scripts": {
+        "init":"js/init.js",
+        "admin-order":"js/ajax-admin-orders.js"
+    },
+    "styles": {
+        "style":"css/style.css"
+    }
+}

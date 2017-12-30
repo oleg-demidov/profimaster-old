@@ -1,0 +1,56 @@
+.js-fl-notify-bell-toggle{
+    font-size: 20px;
+}
+.fl-notify-angle{
+    position: absolute;
+    top: -16px;
+    left: 364px;
+    -webkit-text-shadow: 2px -7px 15px rgba(0,0,0,.5);
+       -moz-text-shadow: 2px -7px 15px rgba(0,0,0,.5);
+            text-shadow: 2px -7px 15px rgba(0,0,0,.5);
+    font-size: 25px;
+    color: white;
+}
+.fl-notify-list .ls-block-header, .fl-notify-list .ls-block-content{
+    padding: 10px;
+}
+.fl-notify-list .ls-block-content{
+    text-indent: 10px;
+}
+.fl-notify-list .ls-block-footer{
+    padding: 7px 15px;
+    line-height: 8px;
+}
+.fl-notify-list .ls-block{
+    margin-bottom: 15px;
+}
+.fl-notify-modal .ls-modal-body{
+    max-height: 500px;
+    overflow: auto;
+}
+.fl-notify-item:last-child{
+    margin-bottom: 0;
+}
+.fl-notify-item-date{
+    text-align: right;
+    font-size: 12px;
+    float: right;
+}
+.js-fl-notify-bell-toggle{
+    float: right;
+}
+.js-fl-notify-bell-toggle a{
+    position: relative;
+}
+.js-fl-notify-bell-toggle .ls-nav-item-badge{
+    background: #fecc00;
+}
+.js-fl-notify-bell-toggle .fa-bell{
+    font-size: 20px;
+}
+.ls-nav-item--bell.ls-nav-item > .ls-nav-item-link {
+    padding: 14px;
+}
+.ls-nav-item--bell i{
+    color: #fff;
+}

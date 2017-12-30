@@ -1,0 +1,13 @@
+{
+    "name": "jivosite",
+    "version": "1.0.0",
+    "dependencies": {
+    },
+    "templates": {
+        "jivosite":"jivosite.tpl"
+    },
+    "scripts": {    	
+    },
+    "styles": {
+    }
+}

@@ -1,0 +1,36 @@
+.fl-search-form-count-result{
+    float: right;
+    margin: 5px;
+}
+.count_orders{
+    float: left;
+}
+.ls-block-footer{
+    overflow: auto;
+}
+#action_search{
+    overflow: auto;
+}
+.ls-field{
+    margin-bottom: 0;
+}
+.fl-search-form{
+    margin-bottom: 20px;
+    overflow: inherit;
+}
+.fl-search-form-scroll{
+    z-index: 40;
+    top:-65px;
+    position: fixed;
+}
+.but_add_order{
+    float: right;
+    margin-top: -7px;
+}
+.fl-search-form-count-result{
+    font-size: 16px;
+}
+.layout-container.layout-container-scroll {
+    padding-top: 231px;
+    
+}

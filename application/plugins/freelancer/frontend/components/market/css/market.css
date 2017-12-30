@@ -1,0 +1,37 @@
+.fl-market-modal {
+    max-width: 800px;
+    margin-top: 0px;
+}
+
+.fl-market-modal .ls-tab-pane-content{
+    padding: 0;
+}
+
+.fl-market-role-table td{
+    padding: 0;
+    padding: 8px;
+    font-size: 16px;
+
+}
+.fl-market-role-table tr{
+    border-bottom: solid 1px #ddd;
+}
+.fl-market-role-table tr:last-child{
+    border-bottom: none;
+}
+.fl-market-role-table .role-period{
+    font-size: 13px;
+    font-style: italic;
+}
+.fl-market-index{
+    overflow: auto;
+}
+.fl-market-form{
+    font-size: 16px;
+}
+.fl-market-form table td{
+    padding: 10px;
+}
+.fl-market-form table{
+    margin: 0 auto;
+}

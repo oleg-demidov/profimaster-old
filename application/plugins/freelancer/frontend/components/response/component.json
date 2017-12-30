@@ -1,0 +1,19 @@
+{
+    "name": "response",
+    "version": "1.0.0",
+    "dependencies": {
+    },
+    "templates": {
+        "form": "response-form.tpl",
+        "stars":"stars-raiting.tpl",
+        "item":"response-item.tpl",
+         "list":"response-list.tpl",
+        "buttons-edit":"buttons-edit.tpl"
+    },
+    "scripts": {
+        "init":"js/init.js"
+    },
+    "styles": {
+        "style":"css/style.css"
+    }
+}

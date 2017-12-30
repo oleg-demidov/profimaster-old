@@ -1,0 +1,19 @@
+{
+    "name": "specialization-tabs",
+    "version": "1.0.0",
+    "dependencies": {
+        "freelancer:masonry": "*"
+    },
+    "templates": {
+        "specialization-tabs":"specialization.tpl",
+        "master":"specialization-master.tpl",
+        "index":"form.tpl"
+    },
+    "scripts": {
+        "init":"js/init.js",
+        "tabs":"js/tabs.js"
+    },
+    "styles": {
+        "style":"css/style.css"
+    }
+}

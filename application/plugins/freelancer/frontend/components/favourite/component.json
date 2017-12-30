@@ -1,0 +1,16 @@
+{
+    "name": "favourite",
+    "version": "1.0.0",
+    "dependencies": {
+    },
+    "templates": {
+        "favourite":"favourite.tpl",
+        "buttons":"buttons.tpl"
+    },
+    "scripts": {
+        "init":"js/init.js"
+    },
+    "styles": {
+        "style":"css/style.css"
+    }
+}

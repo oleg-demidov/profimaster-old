@@ -1,0 +1,57 @@
+div.js-specializations-tabs{
+    overflow: auto;
+}
+div.js-specializations-tabs .child{
+        margin: 2px;
+}
+
+div.js-specializations-tabs .checked, .specializations-master .checked{
+    background: #b4dbe2;
+    border-radius: 3px;
+}
+div.js-specializations-tabs .select_subtree{
+    margin-left: 10px;
+}
+
+div.js-specializations-tabs .title{
+    font-weight: bolder;
+}
+div.js-specializations-tabs .select_tree{
+    float:left;
+    margin-bottom: 10px;
+    width: 350px;
+}
+ul.ls-tab-list{
+    margin-bottom: 0;
+}
+input.input_hidden{
+    display: none;
+}
+div.ls-tab-pane-content{
+    min-height: 100px;
+    overflow: auto;
+}
+.specializations-checkbox{
+    padding: 4px;
+}
+.specializations-checkbox:hover, .specialization-master-checkbox:hover{
+    padding: 3px;
+    border: 1px solid #3993a3;
+    border-radius: 3px;
+}
+.specializations-checkbox .ls-field-holder{
+    margin: 5px 0 0 7px;
+}
+.specializations-checkbox:hover .ls-field-holder{
+    margin: 4px 0 0 6px;
+}
+
+.specializations-checkbox .ls-field-label, .master-checkbox, .specializations-master .ls-field{
+    margin-bottom: 1px;
+}
+.master-checkbox{
+    width: 200px;
+}
+.specializations-master{
+    margin: 10px 0;
+}

@@ -1,0 +1,10 @@
+.fl-avatar .ls-avatar-image{
+    width: auto;
+    height: auto;
+}
+.fl-avatar.ls-avatar--has-name{
+    max-width: none;
+}
+.fl-avatar .ls-avatar-name-link{
+    font-size: 16px;
+}

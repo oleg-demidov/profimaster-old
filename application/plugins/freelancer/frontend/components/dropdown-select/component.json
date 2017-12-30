@@ -1,0 +1,14 @@
+{
+    "name": "dropdown-select",
+    "version": "1.0.0",
+    "dependencies": {
+    },
+    "templates": {
+        "dropdown-select":"dropdown-select.tpl"
+    },
+    "scripts": { 
+        "dropdown-select":"js/dropdown-select.js"
+    },
+    "styles": {
+    }
+}

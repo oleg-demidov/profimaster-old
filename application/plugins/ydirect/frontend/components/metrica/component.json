@@ -1,0 +1,13 @@
+{
+    "name": "metrica",
+    "version": "1.0.0",
+    "dependencies": {
+    },
+    "templates": {
+        "metrica": "metrica.tpl"
+    },
+    "scripts": {
+    },
+    "styles": {
+    }
+}

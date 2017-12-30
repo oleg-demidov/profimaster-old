@@ -1,0 +1,31 @@
+{
+    "name": "register",
+    "version": "1.0.0",
+    "dependencies": {
+        "freelancer:breadcrumbs":"*",
+        "freelancer:masonry": "*",
+        "freelancer:specialization-tabs":"*",
+        "ydirect:geo":"*"
+    },
+    "templates": {
+        "master.step1":"master/master-step1.tpl",
+        "master.step2":"master/master-step2.tpl",
+        "master.step3":"master/master-step3.tpl",
+        "master.step4":"master/master-step4.tpl",
+        "form":"form.tpl",
+        "activation":"activation.tpl",
+        "sms":"sms-form.tpl",
+        "role":"role-buttons.tpl"
+    },
+    "scripts": {
+        "register":"js/register.js",
+        "form":"js/form.js",
+        "sms":"js/sms-form.js",
+        "role":"js/role-but.js"
+    },
+    "styles": {
+        "form":"css/form.css",
+        "sms":"css/sms-form.css",
+        "master":"master/css/master.css"
+    }
+}

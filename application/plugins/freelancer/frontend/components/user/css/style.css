@@ -1,0 +1,53 @@
+
+
+
+.fl-user-middle-item{
+    overflow: auto;
+    font-size: 12px;
+    line-height: 17px;
+}
+.fl-user-middle-item .ls-info-list-item{
+    margin: 0;
+}
+.fl-block-in-line{
+    float: left;
+    margin: 10px;
+}
+.fl-block-in-line .ls-info-list-item-label{
+    width: 180px;
+}
+.fl-user-side .ls-avatar-image{
+    width: auto;
+    height: auto;
+}
+.fl-user-side-sub{
+    margin: 0 auto;
+    width: 300px;
+}
+.fl-user-side-a{
+    font-size: 20px;
+    margin: 0 0 10px 0px;
+    display: block;
+}
+.fl-employer-icon{
+font-size: 0.8em;
+}
+.fl-icon-employer-money{
+    color: #fff;
+    width: 2em;
+    font-size: 0.8em;
+    margin-top: -0.55em;
+    margin-left: 0.5em;
+}
+.fl-user-list-small-item-rating{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.fl-user-list-small-item .ls-avatar-name{
+    overflow: visible;
+}
+.fl-user-side-Pro, .fl-user-side-Profi, .fl-user-list-small-item-Pro, .fl-user-list-small-item-Profi{
+    display: inline-block;
+    vertical-align: middle;    
+}

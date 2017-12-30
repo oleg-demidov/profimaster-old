@@ -1,0 +1,24 @@
+.but_submit{
+    float: right;
+}
+.count_orders{
+    float: left;
+}
+.ls-block-footer{
+    overflow: auto;
+}
+#action_search{
+    overflow: auto;
+}
+.ls-field{
+    margin-bottom: 0;
+}
+.fl-bid-form textarea{
+    height: 100px;
+}
+.fl-form-order-bid{
+    margin-top: 20px;
+}
+.bid-form-hide{
+    display: none;
+}

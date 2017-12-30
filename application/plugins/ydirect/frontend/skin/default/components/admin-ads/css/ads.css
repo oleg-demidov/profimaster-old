@@ -1,0 +1,14 @@
+.yd-ads-holder .ls-field{
+    margin-bottom: 5px;
+}
+.ls-block.ls-block--success{
+    border-color: #4bb14b;
+}
+
+.ls-block.ls-block--warning{
+    border-color: #e0ac38;
+}
+
+.ls-block.ls-block--alert{
+    border-color: #d43f3a;
+}

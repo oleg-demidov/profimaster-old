@@ -1,0 +1,21 @@
+{
+    "name": "bid",
+    "version": "1.0.0",
+    "dependencies": {
+    },
+    "templates": {
+        "form":"form.tpl",
+        "choose": "modal-choose.tpl",
+        "edit": "edit.tpl"
+    },
+    "scripts": {
+    	"form":"js/form.js",
+        
+        "edit":"js/edit.js",
+         "modal":"js/init.js"
+    },
+    "styles": {
+    	"form":"css/form.css",
+        "items":"css/items.css"
+    }
+}

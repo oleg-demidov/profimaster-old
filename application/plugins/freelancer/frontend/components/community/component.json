@@ -1,0 +1,15 @@
+{
+    "name": "community",
+    "version": "1.0.0",
+    "dependencies": {
+        "freelancer:dropdown-select":"*"
+    },
+    "templates": {
+        "block.specialization":"blocks/community-specialization.tpl"
+    },
+    "scripts": { 
+        "community":"js/community-specialization.js"
+    },
+    "styles": {
+    }
+}

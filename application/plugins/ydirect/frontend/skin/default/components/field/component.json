@@ -1,0 +1,9 @@
+{
+    "name": "field",
+    "version": "1.0.0",
+    "templates": {
+        "textarea": "textarea.tpl",
+        "keywords":"keywords.tpl",
+        "geo": "field.geo.tpl"
+    }
+}

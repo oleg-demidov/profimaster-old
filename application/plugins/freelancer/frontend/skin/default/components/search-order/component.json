@@ -1,0 +1,14 @@
+{
+    "name": "search-order",
+    "version": "1.0.0",
+    "dependencies": {
+    },
+    "templates": {
+    },
+    "scripts": {
+        "init":"js/init.js"
+    },
+    "styles": {
+        "style":"css/style.css"
+    }
+}

@@ -1,0 +1,10 @@
+.fl-top-master-item tr:first-child td:last-child{
+    padding-left: 10px;
+    font-size: 16px;
+}
+.fl-top-master-item tr:last-child td{
+    padding-left: 5px;
+}
+.fl-top-master-item:not(:last-child){
+    margin-bottom: 20px;
+}

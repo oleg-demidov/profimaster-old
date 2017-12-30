@@ -1,0 +1,44 @@
+.fl-master-item-avatar{
+    vertical-align: top;
+}
+
+.fl-master-item-name{
+    font-size: 16px;
+    margin-left: 4px;
+}
+
+.fl-master-item-block {
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: top;
+}
+.fl-master-item-block-right {
+    float: right;
+}
+.fl-master-item-block-clear {
+    clear: both;
+}
+
+
+.fl-portfolio-work-small-list{
+    margin-top: 10px;
+}
+.fl-master-item-spec-geo {
+    margin-top: 10px;
+}
+.fl-master-item-geo {
+    float: right;
+}
+.fl-master-item-rating-icon.fa {
+    color: #fecc00;
+}
+.fl-master-item-rating {
+    font-size: 16px;
+}
+.fl-master-actionbar{
+    margin: 0;
+    padding: 0;
+}
+.fl-master-actionbar>.ls-button-group{
+    margin-bottom: 0;
+}

@@ -1,0 +1,13 @@
+.ls-tab-pane-content{
+    min-height: 100px;
+}
+#action_search{
+    display: inline-block;
+}
+#action_search div{
+    float: left;
+    margin: 5px;
+}
+.but_submit{
+    display: block;
+}

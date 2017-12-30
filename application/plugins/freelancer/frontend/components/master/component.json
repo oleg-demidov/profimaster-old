@@ -1,0 +1,17 @@
+{
+    "name": "master",
+    "version": "1.0.0",
+    "dependencies": {
+    },
+    "templates": {
+        "list":"master-list.tpl",
+        "item":"master-item.tpl",
+        "actionbar" : "master-actionbar.tpl"
+    },
+    "scripts": {
+        "init":"js/master.js"
+    },
+    "styles": {
+        "style":"css/style.css"
+    }
+}

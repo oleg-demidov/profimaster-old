@@ -1,0 +1,24 @@
+{
+    "name": "search",
+    "version": "1.0.0",
+    "dependencies": {
+        "ydirect:geo":"*",
+        "freelancer:specialization":"*"
+    },
+    "templates": {
+        "search":"form.tpl",
+        "sort":"sort.tpl"
+    },
+    "scripts": {
+        "form":"js/form.js",
+        "sort":"js/sort.js",
+    	"search":"js/init.js"
+        
+        
+    },
+    "styles": {
+    	"search":"css/search.css",
+        "sort":"css/sort.css"
+        
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "templates": {
+        "count":"field.count.tpl"
+    },
+    "scripts": {
+        "count":"js/count.js"
+    },
+    "styles": {
+    	"count":"css/count.css"
+    }
+}

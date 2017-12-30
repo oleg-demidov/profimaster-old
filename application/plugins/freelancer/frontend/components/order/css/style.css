@@ -1,0 +1,53 @@
+.fl-order-item .ls-block-footer{
+        padding: 12px 15px;
+            overflow: auto;
+}
+.fl-order-item .ls-block-footer .ls-info-list{
+    margin-top: 5px;
+}
+.fl-order-item-employer, .fl-order-item-budjet{
+    float: right;    
+}
+.fl-order-item .ls-info-list-item-label, .fl-order-item .ls-info-list-item-content{
+    font-size: 16px;
+}
+.fl-order-item .ls-block-header .ls-info-list-item-content, .fl-order-item-budjet{
+    font-size: 20px;
+    color: #3993a3;
+}
+.fl-order-item-title{
+    font-size: 20px;
+}
+.fl-order-list{
+    margin-top: 30px;
+}
+.fl-order-item-spec-geo{
+    margin-top: 10px;
+}
+.fl-order-item-geo{
+    float: right;
+}
+.fl-order-actionbar{
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+.fl-order-actionbar>.ls-button-group{
+    margin-bottom: 0;
+}
+.fl-order-title h1{
+    font-size: 20px;
+}
+.fl-order-title-budjet{
+    font-size: 16px;
+    text-align: right;
+}
+.fl-order-title-budjet strong{
+    color: #fecc00;
+}
+.fl-order-spec{
+    font-size: 16px;
+}
+.fl-order-edit, .fl-order-text{
+    margin-bottom: 20px ;
+}

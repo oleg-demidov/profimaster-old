@@ -1,0 +1,14 @@
+{
+    "name": "geo",
+    "version": "1.0.0",
+    "dependencies": {
+    },
+    "templates": {
+        "geo": "geo.tpl"
+    },
+    "scripts": {
+        "init":"js/init.js"
+    },
+    "styles": {
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "name": "portfolio",
+    "version": "1.0.0",
+    "dependencies": {
+    },
+    "templates": {
+        "work.form": "work.form.tpl",
+        "work.list": "work.list.tpl",
+        "work.item": "work.item.tpl",
+        "work.small.item": "work.small.item.tpl",
+        "work.small.list": "work.small.list.tpl"
+    },
+    "scripts": {
+        "init":"js/init.js"
+    },
+    "styles": {
+        "style":"css/style.css"
+    }
+}

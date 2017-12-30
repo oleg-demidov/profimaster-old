@@ -1,0 +1,15 @@
+{
+    "name": "user",
+    "version": "1.0.0",
+    "dependencies": {
+    },
+    "templates": {
+        "settings/specialization": "settings/specialization.tpl",
+         "list-small-item": "user-list-small-item.tpl"
+    },
+    "scripts": {
+    },
+    "styles": {
+        "style":"css/style.css"
+    }
+}

@@ -1,0 +1,114 @@
+.content_items{
+    float: left;
+    clear: both;
+}
+
+.content_item>div{
+    float: left;
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right:1px solid #ddd;
+}
+.pre_user_item li{
+    display: block;
+}
+.button_bid_list{
+    margin-top: 10px;
+}
+
+.order_budjet .ls-info-list-item-content{
+    font-size: 20px;
+}
+
+
+
+.freelancer-order-item-info-list{
+    float: right;
+    margin: 10px 0 0 20px;
+    font-size: 15px;
+}
+
+.freelancer-order-item-block-text{
+    float: left;
+    font-size: 15px;
+    max-width: 600px;
+}
+.freelancer-order-item-block-text .ls-text{
+    font-size: 16px;
+        float: left;
+}
+.freelancer-order-item-slider{
+    float: left;
+    margin: 0 10px 10px 0;
+}
+.freelancer-order-item .order_user_raiting{
+    float: left;
+}
+.order_item_subcontent{
+    overflow: auto;
+}
+.freelancer-order-item .ls-item-body{
+    width: auto;
+}
+.freelancer-order-item .ls-item-description{
+    max-width: 400px;
+}
+.freelancer-order-item .ls-block-title .user-list-small-item{
+    float: left;
+    padding: 6px 0;
+}
+.fl-order-content-about{
+    font-size: 1.3em;
+    clear: both;
+    padding: 20px 0;
+    text-indent: 20px;
+}
+.fl-order-content-block{
+    float: left;
+    margin: 10px;
+}
+.fl-order-title h1{
+    max-width: 70%;
+    font-size: 30px;
+}
+.fl-order-title-budjet{
+    float: right;
+    margin-top: -43px;
+    font-size: 1.7em;
+}
+.fl-order-title-budjet span{
+    color: #aaa;
+    font-size: 0.6em;
+    margin-right: 10px;
+}
+.fl-order-master .fl-user-list-small-item{
+    float: left;
+}
+.fl-order-master a{
+    margin: -5px 0 0 10px;
+}
+.fl-order-content-block .fl-user-list-small-item, .fl-admin-order .fl-user-list-small-item {
+
+    float: left;
+    padding:0;
+}
+.fl-cancel-master{
+    margin-left: 10px;
+}
+.freelancer-order-item-budjet, .freelancer-order-item-employer{
+    float: right;
+    font-size: 15px;
+    vertical-align: middle;
+    display: inline-block;
+}
+.freelancer-order-item-budjet .ls-info-list-item-content{
+    font-size: 20px;
+}
+.fl-order-list{
+    margin-top: 10px;}
+.freelancer-order-item-title{
+    font-size: 30px;
+}
+.freelancer-order-item .ls-block-title{
+    margin: 0 5px;
+}

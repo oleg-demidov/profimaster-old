@@ -1,0 +1,35 @@
+.fl-banner{
+    width: 100%;
+    background-image: url('../img/banner.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: -20px;
+}
+.fl-banner-cont{
+        width: 90%;
+        height: 272px;
+    margin: 20px auto 0 auto;
+    padding: 70px 0 97px 0;
+    text-align: center;
+}
+
+.fl-banner-cont h1{
+   text-align: center;
+   margin: 20px;
+   font-size: 40px;
+   font-weight: bolder;
+   text-shadow: 0px 0px 12px rgba(255, 255, 255, 1);
+}
+.fl-banner-cont h1 img{
+   width: 60%
+}
+.fl-banner-button{
+    margin: 10px 100px;
+    display: inline-block;
+    max-width: 222px;
+    font-size: 15px;
+    font-weight: bolder;
+}
+.fl-banner-button .ls-button{
+    margin-bottom: 15px; 
+}

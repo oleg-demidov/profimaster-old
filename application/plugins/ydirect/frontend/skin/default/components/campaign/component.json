@@ -1,0 +1,12 @@
+{
+    "name": "campaign",
+    "version": "1.0.0",
+    "templates": {
+        "form": "campaign-form.tpl"
+    },
+    "scripts": {
+        "admin":"admin-campaign.js"
+    },
+    "styles": {
+    }
+}

@@ -1,0 +1,11 @@
+.fl-user-profile-rating{
+        float: right;
+        font-size: 18px;
+}
+
+.fl-profile-about{
+    margin-top: 20px;
+}
+.fl-block-user-action{
+    text-align: center;
+}

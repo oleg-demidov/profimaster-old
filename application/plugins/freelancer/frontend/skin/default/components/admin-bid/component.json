@@ -1,0 +1,15 @@
+{
+    "name": "admin-bid",
+    "version": "1.0.0",
+    "dependencies": {
+    },
+    "templates": {
+        "list":"bid-list.tpl",
+        "item":"bid-list-item.tpl"
+    },
+    "scripts": {
+        "admin-bid":"js/ajax-admin-bids.js"
+    },
+    "styles": {
+    }
+}

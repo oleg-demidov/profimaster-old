@@ -1,0 +1,28 @@
+{
+    "name": "market",
+    "version": "1.0.0",
+    "dependencies": {
+        "freelancer:user":"*",
+        "freelancer:field":"*"
+    },
+    "templates": {
+        "market":"market.tpl",
+        "tool":"market-tool.tpl",
+        "role":"role.tpl",
+        "index":"index.tpl",
+        "pay":"button-pay.tpl",
+        "payment":"payment.tpl",
+        "error":"error.tpl",
+        "modal":"modal.tpl",
+        "form":"form.tpl",
+        "action":"action.tpl"
+    },
+    "scripts": {
+    	"init":"js/init.js",
+        "market":"js/market.js",
+        "form":"js/form.js"
+    },
+    "styles": {
+    	"market":"css/market.css"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "payment",
+    "version": "1.0.0",
+    "dependencies": {
+        "freelancer:user":"*"
+    },
+    "templates": {
+        "payment":"payment.tpl"
+    },
+    "scripts": {
+    	
+    },
+    "styles": {
+    }
+}

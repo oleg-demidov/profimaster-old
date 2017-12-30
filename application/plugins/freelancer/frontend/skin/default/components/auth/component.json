@@ -1,0 +1,19 @@
+{
+    "name": "auth",
+    "version": "1.0.0",
+    "dependencies": {
+    },
+    "templates": {
+        "auth":"registration.tpl",
+        "registration":"registration.tpl",
+        "role-buttons":"role-buttons.tpl",
+        "role-login-choose":"role-login-choose.tpl"
+    },
+    "scripts": {
+        "init":"js/init.js",
+        "role-but":"js/role-but.js"
+    },
+    "styles": {
+        "style":"css/style.css"
+    }
+}

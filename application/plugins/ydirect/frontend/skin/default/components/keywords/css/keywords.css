@@ -1,0 +1,16 @@
+.yd-keyword .ls-field, .yd-keyword-form .ls-field{
+    float: left;
+    clear: left;
+    width: 300px;
+    margin-bottom: 5px;
+}
+.yd-keyword .ls-button, .yd-keyword-form .ls-button{
+    float: left;
+}
+.yd-keyword, .yd-keyword-form{
+    overflow: auto;
+}
+.yd-keywords{
+    overflow: auto;
+    margin-bottom: 20px;
+}

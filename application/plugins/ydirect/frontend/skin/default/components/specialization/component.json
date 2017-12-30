@@ -1,0 +1,11 @@
+{
+    "name": "specialization",
+    "version": "1.0.0",
+    "templates": {
+        "specialization": "specialization.tpl"
+    },
+    "scripts": {
+    },
+    "styles": {
+    }
+}

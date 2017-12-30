@@ -1,0 +1,17 @@
+{
+    "name": "adgroup",
+    "version": "1.0.0",
+    "dependencies": {
+        "ydirect:keywords":"*",
+        "ydirect:admin-ads":"*"
+    },
+    "templates": {
+        "list": "adgroup-items.tpl",
+        "item": "adgroup-item.tpl",
+        "form": "adgroup-form.tpl"
+    },
+    "scripts": {
+    },
+    "styles": {
+    }
+}

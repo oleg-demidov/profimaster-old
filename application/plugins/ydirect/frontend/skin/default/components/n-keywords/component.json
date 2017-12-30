@@ -1,0 +1,7 @@
+{
+    "name": "n-keywords",
+    "version": "1.0.0",
+    "templates": {
+        "n-keywords": "n-keywords.tpl"
+    }
+}

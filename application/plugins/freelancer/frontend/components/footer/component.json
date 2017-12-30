@@ -1,0 +1,15 @@
+{
+    "name": "footer",
+    "version": "1.0.0",
+    "dependencies": {
+    },
+    "templates": {
+        "footer":"footer.tpl"
+    },
+    "scripts": {
+    	
+    },
+    "styles": {
+    	"footer":"css/footer.css"
+    }
+}
