@@ -46,6 +46,7 @@ class PluginSociality_ModuleOauth_MapperOauth extends Mapper
         
         $sql = "SELECT * FROM {$oauth_table} WHERE social_type = ? AND social_id = ?";
         
+        
         if($aRow = $this->oDb->selectRow($sql, $social_type, $id_user)){
             
             return Engine::GetEntity('PluginSociality_Oauth_Social', $aRow);
@@ -71,6 +72,21 @@ class PluginSociality_ModuleOauth_MapperOauth extends Mapper
         }
 
         return null;
+    }
+    
+    public function GetSocialItemsByUserId($iUserId)
+    {
+        $oauth_table = Config::Get('plugin.sociality.table.sociality');
+        
+        $sql = "SELECT * FROM {$oauth_table} WHERE user_id = ?";
+        
+        $aRes = array();
+        if ($aRows = $this->oDb->select($sql, $iUserId)) {
+            foreach ($aRows as $aRow) {
+                $aRes[] = Engine::GetEntity('PluginSociality_Oauth_Social', $aRow);
+            }
+        }
+        return $aRes;
     }
     
     public function DeleteSocialByUserId($iUserId) {

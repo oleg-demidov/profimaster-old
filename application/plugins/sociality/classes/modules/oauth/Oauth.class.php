@@ -44,6 +44,11 @@ class PluginSociality_ModuleOauth extends Module
         return $this->mapper->UpdateSocial($oSocial);
     }
     
+    public function GetSocialItemsByUserId($iUserId) 
+    {
+        return $this->mapper->GetSocialItemsByUserId($iUserId);
+    }
+    
     public function CreateSocialEntity( $iIdUser, $iIdSocialUser )
     {
         /** @var PluginSocialauthlite_ModuleOauth_EntityOauth $Oauth */
@@ -211,5 +216,24 @@ class PluginSociality_ModuleOauth extends Module
         return $sFileTmp;
     }
     
+    public function GetOrderButtons()
+    {
+        
+        $config = Config::Get('plugin.sociality.ha');
+        $order = explode(',', Config::Get('plugin.sociality.order'));
+        
+        $order2 = array();
+        
+        for ($i=0; sizeof($order) > $i; $i++){
+            $provider = trim($order[$i]);
+            if(!isset($config['providers'][$provider]))
+                continue;
+            if($config['providers'][$provider]['enabled']){
+                $order2[] = $provider;
+            }
+        }
+        return $order2;
+    }
     
+   
 }

@@ -1,0 +1,15 @@
+{
+    "name": "binds",
+    "version": "1.0.0",
+    "dependencies": {
+        "actionbar":"*",
+        "sociality:buts":"*"
+    },
+    "templates": {
+        "binds": "binds.tpl"
+    },
+    "scripts": {
+    },
+    "styles": {
+    }
+}
