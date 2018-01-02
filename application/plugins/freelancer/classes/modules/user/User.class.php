@@ -133,6 +133,11 @@ class PluginFreelancer_ModuleUser extends PluginFreelancer_Inherit_ModuleUser
                         $this->User_setUserFieldsValues($oUser->getId(),array($iFieldId[0]['id'] => $oUser->getNumber()));
                     }
                 }
+                if($oUser->getMail()){
+                    if($iFieldId = $this->User_userFieldExistsByName('mail')){
+                        $this->User_setUserFieldsValues($oUser->getId(),array($iFieldId[0]['id'] => $oUser->getMail()));
+                    }
+                }
                 
                 
                 return $oUser;
