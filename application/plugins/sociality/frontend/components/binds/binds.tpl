@@ -10,15 +10,19 @@
             [
                 'buttons' => [
                     [ 'text' => $oSocial->getSocialType(), 'type'=>'button', 'mods' => 'primary large' ],
-                    [ 'text' => $oSocial->getProfileUrl(), 'type'=>'button', 'mods'=>"large",'url' => $oSocial->getProfileUrl()],
-                    [ 'icon'=> 'close', 'type'=>'button', 'mods'=>"large danger", 'title' => 'Отвязать']
+                    [ 'text' => $oSocial->getProfileUrl(), 'mods'=>"large",'url' => $oSocial->getProfileUrl()],
+                    [ 'icon'=> 'close', 
+                        'classes'=>"js-bindremove-confirm",
+                        'url'=>"{router page='oauth'}{$oSocial->getSocialType()}/remove/?security_ls_key={$LIVESTREET_SECURITY_KEY}", 
+                        'mods'=>"large danger", 'title' => 'Отвязать']
                 ]
             ]
         ]}
     {/foreach}
+   
     <legend>Привязать:</legend><br>
     {foreach from=$aButtonsNames item=but}
-        <a style="margin:2px;" href={router page="oauth/{$but}"} title="{$but}" alt="{$but}">
+        <a style="margin:2px;" href="{router page="oauth/{$but}"}bind" title="{$but}" alt="{$but}">
             <img src="{$sUriPluginSkin}/img/{$but}-{$sSizeButton}.png"/></a> 
     {/foreach}
 </fieldset>

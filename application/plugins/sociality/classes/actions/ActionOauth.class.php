@@ -29,8 +29,10 @@ class PluginSociality_ActionOauth extends ActionPlugin
         
         //$this->AddEvent('index', 'EventAuth');
         $this->AddEventPreg('/^(.*)?/i','/^(reg)/i','EventRegistration');
-        $this->AddEventPreg('/^(.*)?/i','/^(start)?$/i','EventOauthStart');
+        $this->AddEventPreg('/^(.*)?/i','/^(start|bind)?$/i','EventOauthStart');
         $this->AddEventPreg('/^(.*)?/i','/^end$/i','EventOauthEnd');
+        
+        $this->AddEventPreg('/^(.*)?/i','/^remove$/i','EventRemoveBind');
         
     }
 
@@ -85,7 +87,9 @@ class PluginSociality_ActionOauth extends ActionPlugin
         //print_r($oUserProfile);
         if(!is_object($oUserProfile)){            
             Router::Location($this->returnUrlError);
-        }
+        }       
+        
+        $this->Hook_Run('sociality_get_data', ['data' => &$oUserProfile, 'provider' => $this->sCurrentEvent]);
             
         
         $this->PluginSociality_Oauth_SetProvider( $this->sCurrentEvent );
@@ -97,7 +101,7 @@ class PluginSociality_ActionOauth extends ActionPlugin
             /*
              * Обновляем данные из соц сети
              */
-            $oSocial = $this->PluginSociality_Oauth_GetSocialBySocialID( $oUserProfile->identifier );
+            $oSocial = $this->PluginSociality_Oauth_GetSocialBySocialID( $oUserProfile->identifier);
             
             $oSocial->SetDateReceived(date('Y-m-d H:i:s'));
             
@@ -134,14 +138,10 @@ class PluginSociality_ActionOauth extends ActionPlugin
        }
         
         
-       
         /*
          * Нет, значит направляем на регистрацию
          */
-        $this->Session_Set('oUserProfile', $oUserProfile);
-        //$this->Logger_Notice('auth_reg');
-        
-        $this->Hook_Run('sociality_get_data', ['data' => &$oUserProfile, 'provider' => $this->sCurrentEvent]);
+        $this->Session_Set('oUserProfile', $oUserProfile);        
         
         if($oUserProfile){
             Router::Location(Router::GetPath('oauth/'.$this->sCurrentEvent.'/reg'));
@@ -287,5 +287,19 @@ class PluginSociality_ActionOauth extends ActionPlugin
 
     }
     
+    public function EventRemoveBind() {
+        $this->Security_ValidateSendForm();
+        $oUserCurrent = $this->User_GetUserCurrent();
+        if(is_array($aSocial = $this->PluginSociality_Oauth_GetSocialItemsByUserId($oUserCurrent->getId()))){
+            
+            $oSocial = array_shift($aSocial);
+            $oSocial->setUserId(0);           
+            $this->PluginSociality_Oauth_UpdateSocial($oSocial);
+            if($iFieldId = $this->User_userFieldExistsByName(strtolower($oSocial->getSocialType()))){
+                $this->User_setUserFieldsValues($oUserCurrent->getId(),array($iFieldId[0]['id'] => null));
+            }
+        }
+        Router::LocationAction('settings');
+    }
 
 }

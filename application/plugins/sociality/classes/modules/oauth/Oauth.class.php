@@ -34,9 +34,9 @@ class PluginSociality_ModuleOauth extends Module
         return $this->mapper->GetUserBySocialTypeID($this->provider, $social_user_id);
     }
     
-    public function GetSocialBySocialID( $social_user_id )
+    public function GetSocialBySocialID( $social_user_id, $type=null )
     {
-        return $this->mapper->GetSocialBySocialTypeID($this->provider, $social_user_id);
+        return $this->mapper->GetSocialBySocialTypeID($type?$type:$this->provider, $social_user_id);
     }
     
     public function UpdateSocial(PluginSociality_ModuleOauth_EntitySocial $oSocial)

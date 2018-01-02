@@ -9,6 +9,7 @@
         "binds": "binds.tpl"
     },
     "scripts": {
+        "binds": "js/init-binds.js"
     },
     "styles": {
     }

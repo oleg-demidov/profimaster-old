@@ -19,12 +19,16 @@ class PluginSociality_ModuleOauth_MapperOauth extends Mapper
         $oauth_table = Config::Get('plugin.sociality.table.sociality');
         $sql = "UPDATE {$oauth_table}
             SET
-              date_received = ?
+              date_received = ?,
+              user_id = ?d             
             WHERE
-              id = ?";
+              id = ?d"; 
+        
         if ($this->oDb->query($sql,
                 $oSocial->GetDateReceived(),
+                $oSocial->getUserId(),
                 $oSocial->GetID()
+                
             ) === 0
         ) {
             return true;

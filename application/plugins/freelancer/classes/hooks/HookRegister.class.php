@@ -70,8 +70,9 @@ class PluginFreelancer_HookRegister extends Hook
             $this->Session_Set('provider', $aParams['provider']);
             Router::Location(Router::GetPath('user/register_'.$this->Session_Get('role').'/reg'));
         }else{
-            $this->Message_AddError('Вы не зарегистрированы. Выберете свою роль для регистрации','Ошибка входа', true);
-            Router::Location(Router::GetPathRootWeb());
+            return;
+            /*$this->Message_AddError('Вы не зарегистрированы. Выберете свою роль для регистрации','Ошибка входа', true);
+            Router::Location(Router::GetPathRootWeb());*/
         }
     }
     
