@@ -66,10 +66,11 @@ class PluginFreelancer_ActionFauth extends ActionPlugin{
         /**
          * Проверяем есть ли такой юзер по логину
          */
-        if ((func_check(getRequest('email_or_number'),
-                    'mail') and $oUser = $this->User_GetUserByMail(getRequest('email_or_number'))) 
+        if ((func_check(getRequest('email_or_number'),'mail') 
+                and $oUser = $this->User_GetUserByMail(getRequest('email_or_number'))) 
                 or $oUser = $this->User_GetUserByLogin(getRequest('email_or_number'))
-                or ($this->User_IsNumber(getRequest('email_or_number')) and $oUser = $this->User_GetUserByNumber(getRequest('email_or_number')))
+                or (/*$this->User_IsNumber(getRequest('email_or_number')) 
+                        and*/ $oUser = $this->User_GetUserByNumber(getRequest('email_or_number')))
         ) {
             /**
              *  Выбираем сценарий валидации

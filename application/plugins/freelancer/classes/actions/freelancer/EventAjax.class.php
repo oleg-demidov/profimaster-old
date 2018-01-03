@@ -121,7 +121,15 @@ class PluginFreelancer_ActionFreelancer_EventAjax extends Event {
             '#index-from' => 'master_id']);
         $aMasters = array_keys($aOrders);
         if(($this->oUserCurrent and in_array($this->oUserCurrent->getId(), $aMasters)) or $oUser->isOpenContact()){
-            $this->Viewer_AssignAjax('phone',$oUser->getNumber());
+            $aFields = $this->User_GetFieldsByName($oUser->getId(), 'phone');
+            //$this->Logger_Notice(serialize($aFields));
+            $sNumber = null;
+            foreach($aFields as $oField){
+                if(substr($oField->getValue(), 0, getRequest('iFieldValueSize') ) == getRequest('iFieldValueCrop')){
+                    $sNumber = $oField->getValue();
+                }
+            }
+            $this->Viewer_AssignAjax('phone',$sNumber);
             return;
         }
         
@@ -131,4 +139,5 @@ class PluginFreelancer_ActionFreelancer_EventAjax extends Event {
         }
         $this->Viewer_AssignAjax('phone',$oUser->getNumber());
     }
+    
 }

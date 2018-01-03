@@ -1,20 +1,7 @@
-
-/**
- * Media
- *
- * @module ls/media
- *
- * @license   GNU General Public License, version 2
- * @copyright 2013 OOO "ЛС-СОФТ" {@link http://livestreetcms.com}
- * @author    Denis Shakhov <denis.shakhov@gmail.com>
- *
- * TODO: Фильтрация файлов по типу при переключении табов
- */
-
 (function($) {
     "use strict";
 
-    $.widget( "livestreet.flActions", $.livestreet.lsComponent, {
+    $.widget( "freelancer.phoneHide", $.livestreet.lsComponent, {
         /**
          * Дефолтные опции
          */
@@ -45,7 +32,6 @@
          */
         _create: function () {
             this._super();
-            
             this._on( this.element, { click: 'loadPhone' } );
 
         },
@@ -54,9 +40,8 @@
          * 
          */
         loadPhone: function( event ) {
-            console.log('phone')
-            var _this = this
             this._load( 'load', {}, "onLoad");
+            return false;
         },
 
         /**
@@ -64,13 +49,9 @@
          */
         onLoad: function( res ) {
             if(res.phone){
-                this.element.html('<i class="fa fa-phone  " aria-hidden="true"></i> '+res.phone);
+                this.element.parent().html(res.phone);
             }
         }
 
     });
 })(jQuery);
-
-jQuery(function ($) {
-    $('.fl-user-action-buttons-but-phone').flActions();
-});

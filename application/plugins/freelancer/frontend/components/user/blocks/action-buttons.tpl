@@ -22,7 +22,7 @@
     {if $oUserCurrent}
         {if $oUserCurrent->isEmployer() and $oUser->isMaster()}
             {$aButtons[] = [
-                'text'=>'Предложить заказ',
+                'text'=>'Заказ',
                 'classes' =>"{$component}-but-order",
                 'icon'=>'cart-plus',  
                 'mods' => "success large",
@@ -32,7 +32,7 @@
         {/if}
     
         {$aButtons[] = [
-            'text'=>'Написать сообщение',
+            'text'=>'Сообщение',
             'classes' =>"{$component}-but-mess",
             'icon'=>'envelope',  
             'mods' => "large",
@@ -41,7 +41,7 @@
         ]}
     {/if}
     
-    {$sNumber = $oUser->getNumberCrop()}
+    {*$sNumber = $oUser->getNumberCrop()}
     {if $sNumber}
         {$isAllowContact = ($oUserCurrent and !$oUserCurrent->isViewEmployerContacts() and $oUser->isEmployer())}
         {$aButtons[] = [
@@ -53,15 +53,16 @@
             'attributes'=>['data-param-i-user-id' => $oUser->getId()]
         ]}
         {if $isAllowContact}{component 'freelancer:market.tool' text="Показать контакты" mods="large"}{/if}
-    {/if}
+    {/if*}
+    
     
     {component 'button.group'
         classes="fl-profile-contacts"
         buttonParams=[ 'mods' => 'large' ]
-        mods="vertical"
+        mods=""
         buttons=$aButtons}
 {/capture}
     
 {if !($oUserCurrent and $oUser->getId()== $oUserCurrent->getId())}
-    {component 'block' classes="fl-block-user-action" content=$smarty.capture.actions}
+    {$smarty.capture.actions}
 {/if}

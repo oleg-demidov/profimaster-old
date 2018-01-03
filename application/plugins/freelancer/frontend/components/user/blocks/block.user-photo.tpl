@@ -33,8 +33,11 @@
         url          = $oUser->getUserWebPath()
         photoPath    = $oUser->getProfileFotoPath()
         photoAltText = $oUser->getDisplayName()}
+        
+    {component 'freelancer:user.block.actions'}
 {/capture}
 
 {component 'block'
     mods     = 'user-photo'
     content = $smarty.capture.block_content}
+    

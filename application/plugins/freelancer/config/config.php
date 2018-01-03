@@ -41,8 +41,9 @@ Config::Set('block.user_profile', array(
         ),
     'blocks' => array(
         'left' => array(
-            'component@user.block.photo'   => array('priority' => 100),
-            'component@freelancer:user.block.actions' => array('priority' => 50),
+            'component@freelancer:user.block.photo'   => array('priority' => 100),
+           // 'component@freelancer:user.block.actions' => array('priority' => 50),
+            'component@freelancer:user.block.contacts' => array('priority' => 49),
             'ordersNews'    => array('priority' => 25, 'params' => array('plugin' => 'freelancer'))
         )
     ),

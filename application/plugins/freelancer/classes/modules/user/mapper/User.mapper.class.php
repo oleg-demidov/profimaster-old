@@ -142,6 +142,7 @@ class PluginFreelancer_ModuleUser_MapperUser extends PluginFreelancer_Inherit_Mo
     }
     
     public function NumberIsExits($iNum) {
+        
         $sql = "SELECT * FROM ".Config::Get('db.table.user_field_value')." WHERE `value` = ?d";
         return $this->oDb->query( $sql, $iNum);
     }

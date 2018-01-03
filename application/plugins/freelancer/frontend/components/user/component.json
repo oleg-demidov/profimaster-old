@@ -12,15 +12,16 @@
         "side":"user-side.tpl",
         "avatar":"avatar/user-avatar.tpl",
         "profile":"user-profile.tpl",
-        "photo":"user-photo.tpl",
+        "block.photo":"blocks/block.user-photo.tpl",
         "wall-buttons":"wall-buttons.tpl",
         "block.actions":"blocks/action-buttons.tpl",
+        "block.contacts":"blocks/block-contacts.tpl",
         "block.employer":"blocks/employer.tpl",
         "block.top-masters":"blocks/top-masters.tpl",
         "block.top-master-item":"blocks/top-master-item.tpl"
     },
     "scripts": {
-        "actions":"js/actions.js",
+        
         "init-about":"js/init-about.js"
     },
     "styles": {

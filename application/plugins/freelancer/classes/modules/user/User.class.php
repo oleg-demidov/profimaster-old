@@ -24,6 +24,16 @@ class PluginFreelancer_ModuleUser extends PluginFreelancer_Inherit_ModuleUser
         return preg_match('/^(8|\+7)[\- ]?\(?\d{3}\)?[\- ]?[\d\- ]{7,10}$/', $sNum);
     }
     
+    public function GetFieldsByName($iUserId, $sName) {
+        $aFields = $this->getUserFieldsValues($iUserId, true, ['contact', 'social']);
+        foreach($aFields as &$oField ){
+            if($oField->getName() != $sName){
+                unset($oField);
+            }
+        }
+        return $aFields;
+    }
+    
     public function GetUserByNumber($sValue) {
         $sNumer = str_replace(['(',')',' ','-',',','.','+'], '', trim($sValue));
         $aNum = $this->NumberIsExits($sNumer);

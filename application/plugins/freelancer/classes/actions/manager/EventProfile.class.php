@@ -13,6 +13,7 @@ class PluginFreelancer_ActionManager_EventProfile extends Event {
 
     public function Init() { 
         $this->Component_Add('freelancer:manager');
+        $this->Component_Add('freelancer:phone-hide');
         
         $this->oUser = $this->User_GetUserById($this->sCurrentEvent);
         if(!$this->oUser){

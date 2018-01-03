@@ -37,4 +37,6 @@
 {component 'block'
     classes="{$component}"
     mods     = 'user-photo'
-    content = $smarty.capture.block_content}
+    content = $smarty.capture.block_content}ss
+    
+{component 'freelancer:user.block.actions'}
