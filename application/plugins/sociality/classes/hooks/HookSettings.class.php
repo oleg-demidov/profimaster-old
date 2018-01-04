@@ -54,7 +54,7 @@ class PluginSociality_HookSettings extends Hook
         }
         
         if($iFieldId = $this->User_userFieldExistsByName(strtolower($aParams['provider']))){
-            $this->User_setUserFieldsValues($oUserCurrent->getId(),array($iFieldId[0]['id'] => $aParams['data']->profileURL));
+            $this->User_setUserFieldsValues($oUserCurrent->getId(),array($iFieldId[0]['id'] => $aParams['data']->identifier));
         }
         
         Router::LocationAction('settings');

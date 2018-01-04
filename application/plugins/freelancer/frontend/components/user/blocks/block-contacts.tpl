@@ -5,7 +5,9 @@
 {$aContacts = $LS->User_getUserFieldsValues($oUser->getId(), true, ['contact', 'social'])}
 
 {$aIcons = [
-    "phone" => "phone"
+    "phone" => "phone",
+    "vkontakte" => "vk",
+    "E-mail" => "envelope-o"
 ]}
 
 {capture 'content'} 
@@ -19,7 +21,12 @@
                 'content' => {component 'freelancer:phone-hide' oField=$oField}]}
         {continue}
     {/if}
-    {$aList[] =  ['label' => $oField->getTitle(), 'content' => $oField->getValue()]}
+    {if $oField->getPattern()}
+        {$sContent = {$oField->getPattern()|replace:'{*}':$oField->getValue()}}
+    {else}
+        {$sContent = $oField->getValue()}
+    {/if}
+    {$aList[] =  ['label' => $oField->getTitle(), 'icon'=>{$aIcons[$oField->getName()]}, 'content' => $sContent]}
 {/foreach}
 
 
