@@ -115,29 +115,39 @@ class PluginFreelancer_ActionFreelancer_EventAjax extends Event {
     }
     
     public function EventUserPhone() {
-        $oUser = $this->User_GetUserById(getRequest('iUserId')); 
-        $aOrders = $this->PluginFreelancer_Order_GetOrderItemsByFilter([
-            'user_id' => $oUser->getId(), 
-            '#index-from' => 'master_id']);
-        $aMasters = array_keys($aOrders);
-        if(($this->oUserCurrent and in_array($this->oUserCurrent->getId(), $aMasters)) or $oUser->isOpenContact()){
-            $aFields = $this->User_GetFieldsByName($oUser->getId(), 'phone');
-            //$this->Logger_Notice(serialize($aFields));
-            $sNumber = null;
-            foreach($aFields as $oField){
-                if(substr($oField->getValue(), 0, getRequest('iFieldValueSize') ) == getRequest('iFieldValueCrop')){
-                    $sNumber = $oField->getValue();
-                }
+        $oUser = $this->User_GetUserById(getRequest('iUserId'));
+        
+        $aFields = $this->User_GetFieldsByName($oUser->getId(), 'phone');
+        $sNumber = null;
+        foreach($aFields as $oField){
+            if(substr($oField->getValue(), 0, getRequest('iFieldValueSize') ) == getRequest('iFieldValueCrop')){
+                $sNumber = $oField->getValue();
             }
+        }
+        
+        if($oUser->isMaster() or $oUser->isOpenContact()){
             $this->Viewer_AssignAjax('phone',$sNumber);
             return;
         }
         
-        if($oUser->getStrRole() == 'employer' and !$this->Rbac_IsAllow('view_employer_contacts', 'freelancer')){
-            $this->Message_AddError('Нет доступа к контактам заказчика. ');
+        if($this->Rbac_IsAllow('view_employer_contacts', 'freelancer')){
+            $this->Viewer_AssignAjax('phone',$sNumber);
             return;
         }
-        $this->Viewer_AssignAjax('phone',$oUser->getNumber());
+        
+        
+        $aOrders = $this->PluginFreelancer_Order_GetOrderItemsByFilter([
+            'user_id' => $oUser->getId(), 
+            '#index-from' => 'master_id']);
+        $aMasters = array_keys($aOrders);
+        
+        if($this->oUserCurrent and in_array($this->oUserCurrent->getId(), $aMasters)){
+            $this->Viewer_AssignAjax('phone',$sNumber);
+            return;
+        }
+        
+        $this->Viewer_AssignAjax('market',1);
+        $this->Message_AddError('Нет доступа к контактам.');
     }
     
 }
