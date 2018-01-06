@@ -1,0 +1,13 @@
+{
+    "name": "search",
+    "version": "1.0.0",
+    "dependencies": {
+        "search-form": "*"
+    },
+    "templates": {
+        "main": "search-form.main.tpl"
+    },
+    "styles": {
+        "search": "css/search.css"
+    }
+}
