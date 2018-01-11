@@ -1,0 +1,18 @@
+<h1>Добавить пользователя</h1>
+
+<form method="POST">
+    {component 'field.text' name="inviter" label="Кто пригласил(логин)" value=""}
+    {component 'field.text' name="name" label="Имя" value="{$aUserData['name']|trim}"}
+    {component 'field.textarea' name="text" label="Текст" value="{$aUserData['text']|trim}"}
+    {component 'field.text' name="phone" label="Телефон" value="{$aUserData['phone']|trim}"}
+    подсказка: <b>{$aUserData['category']}</b>
+    {insert name='block' block='fieldCategory' params=[  'entity' => 'ModuleUser_EntityUser' ]}
+    подсказка: <b>{$aUserData['geo']}</b>
+    {hook run="freelancer_search_form" assign='contentReturn' target = $oUserCurrent}
+    {$contentReturn}
+    {foreach $aUserData['imgs'] as $img}
+        {component 'field.hidden' value=$img name="imgs[]"}
+        <img width="50" src="{$img}"/>
+    {/foreach}<br>
+    {component 'button' text="Отправить"}
+</form>

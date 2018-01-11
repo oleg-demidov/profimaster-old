@@ -55,7 +55,7 @@ class PluginFreelancer_ModuleMedia_BehaviorEntity extends Behavior
     }
     
     public function ValidateMediaCheck($mValue) {
-        $aMediaRequest = getRequest('media');
+        $aMediaRequest = getRequest('media',$mValue);
         if(!is_array($aMediaRequest)){
             if($this->getParam('validate_require') ){
                 return 'Выберете медиа файл';
