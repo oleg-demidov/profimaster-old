@@ -1,0 +1,16 @@
+{
+    "name": "geo",
+    "version": "1.0.0",
+    "dependencies": {
+    },
+    "templates": {
+        "geo":"geo.tpl"
+    },
+    "scripts": {
+        "ymaps":"https://api-maps.yandex.ru/2.1/?lang=ru_RU",
+        "geo":"js/geo.js"
+    },
+    "styles": {
+        "geo":"css/geo.css"
+    }
+}

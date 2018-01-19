@@ -1,0 +1,22 @@
+.ymaps-geo-field{
+    width:400px;
+}
+.ymaps-geo-field .ls-field-holder{
+    position: relative;
+}
+.ymaps-geo-field .primary-text{
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.ymaps-geo-field #map{
+    display: none;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    right: -410px;
+    top: 0;
+    z-index: 100;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
