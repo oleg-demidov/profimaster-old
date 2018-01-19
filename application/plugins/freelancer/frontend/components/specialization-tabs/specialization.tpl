@@ -51,8 +51,9 @@
 ]}
 
 {foreach $specializations as $specialization}
+    {$aData = $specialization->getData()}
     {$aTabs[] = [
-        'text' => "{component 'icon' icon={$aIcons[$specialization->getId()]}} {$specialization->getTitle()}",
+        'text' => "{component 'icon' mods='large' icon={$aData['icon']}} {$specialization->getTitle()}",
         'content' => {get_items_childs category=$specialization}
     ]}
 {/foreach}

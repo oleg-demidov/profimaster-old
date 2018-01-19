@@ -13,12 +13,12 @@
 .layout-container {
     margin: 20px auto 0 auto;
     padding: 0 50px;
+    
 }
 .layout-content {
         background: #fff;
     padding: 20px !important;
     box-shadow: 0 0px 6px rgba(10, 10, 10, 0.22);
-    
 }
 
 
@@ -44,7 +44,7 @@
     margin-bottom: 10px;
 }
 
-/* Responsive */
+/* Responsive 
 @media (max-width: 999px)  {
     .layout-content { width: 100% !important; margin-bottom: 30px; padding: 15px !important; }
     .layout-sidebar { width: 100% !important; margin-bottom: 30px; padding: 0; }
@@ -57,7 +57,7 @@
     .layout-container {
         padding: 0;
     }
-}
+}*/
 
 /**
  * Главное меню
@@ -69,12 +69,12 @@
     background: #2f8bbc;
 }
 
-@media (max-width: 480px)  {
+/*@media (max-width: 480px)  {
     .layout-nav {
         padding: 0;
         margin-bottom: 0;
     }
-}
+}*/
 
 
 /**

@@ -16,9 +16,10 @@
  </form>      
 {/capture}
 
+{$smarty.capture.search_form}
 
-{component 'block' 
+{*component 'block' 
     classes = "{$component}"
     title=$title
     content=$smarty.capture.search_form
-    }
+    *}

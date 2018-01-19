@@ -202,6 +202,11 @@ class PluginSociality_ModuleOauth extends Module
         curl_setopt($oCurl, CURLOPT_BINARYTRANSFER,1);
         curl_setopt($oCurl, CURLOPT_FILE, $fPhoto);
         curl_setopt($oCurl, CURLOPT_HEADER, 0);
+        curl_setopt($curl, CURLOPT_URL, $url);
+	 
+	//имитируем браузер опера
+	curl_setopt($curl, CURLOPT_USERAGENT, 'Opera/9.80 (Windows NT 5.1; U; ru) Presto/2.7.62 Version/11.01');
+	 
         curl_exec($oCurl);
         curl_close($oCurl);
         fclose($fPhoto);

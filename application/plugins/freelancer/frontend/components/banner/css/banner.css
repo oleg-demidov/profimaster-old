@@ -1,9 +1,11 @@
 .fl-banner{
     width: 100%;
+    
+    min-width: 1150px;
     background-image: url('../img/banner.jpg');
     background-position: center;
     background-repeat: no-repeat;
-    margin-top: -20px;
+    margin: -20px auto 0 auto;
 }
 .fl-banner-cont{
         width: 90%;

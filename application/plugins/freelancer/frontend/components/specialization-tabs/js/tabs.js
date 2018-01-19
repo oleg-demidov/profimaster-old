@@ -34,9 +34,9 @@
             this.element.find('.ls-tab-pane-content').masonry({
                 // options
                 itemSelector: '.select_tree',
-                columnWidth: 350,
+                columnWidth: 330,
                 transitionDuration: '0.1s',
-                gutter: 0
+                gutter: 5
             });
         },
         addDataForm: function(el){

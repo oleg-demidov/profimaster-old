@@ -855,7 +855,6 @@ class ModuleUser_MapperUser extends Mapper
 			WHERE v.user_id = ?d AND v.field_id = f.id { and f.type IN (?a) }';
         }
         $aResult = array();
-        $this->Logger_Notice($sql);
         if ($aRows = $this->oDb->select($sql, $iUserId, (is_null($aType) or !count($aType)) ? DBSIMPLE_SKIP : $aType)) {
             foreach ($aRows as $aRow) {
                 if ($bOnlyNoEmpty and !$aRow['value']) {

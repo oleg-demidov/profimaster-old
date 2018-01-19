@@ -369,7 +369,7 @@ class ModuleMedia extends ModuleORM
          * TODO: файл может быть не только изображением, поэтому требуется рефакторинг
          */
         if (!$aImageInfo = (@getimagesize($sFileUrl))) {
-            return $this->Lang_Get('media.error.not_image');
+            return $this->Lang_Get('media.error.not_image'). $sFileUrl;
         }
         $aTypeImage = array(
             1 => 'gif',

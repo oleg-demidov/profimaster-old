@@ -1555,3 +1555,685 @@
 [2018-01-06 21:15:02] cron.NOTICE 12171 560ba9d: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
 [2018-01-06 21:15:02] cron.NOTICE 12171 560ba9d: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
 [2018-01-06 21:20:01] cron.NOTICE 12218 da32a3a: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-06 21:25:02] cron.NOTICE 12411 08cfe84: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-06 21:30:01] cron.NOTICE 12473 3615609: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 11:20:01] cron.NOTICE 2636 5d89ff4: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 11:20:01] cron.NOTICE 2636 5d89ff4: Run cron task "Удаление старого кеша данных" {"state":"successful","return":null}
+[2018-01-07 11:20:01] cron.NOTICE 2636 5d89ff4: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-07 11:25:01] cron.NOTICE 3351 1f30537: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 11:30:01] cron.NOTICE 3946 d8d2e11: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 11:35:02] cron.NOTICE 4025 51a1051: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 11:40:01] cron.NOTICE 4132 9244c5c: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 11:45:01] cron.NOTICE 4201 80c695e: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 11:50:01] cron.NOTICE 4264 dc2f496: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 11:55:01] cron.NOTICE 4316 b9794ef: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 12:00:01] cron.NOTICE 4355 24a37f4: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 12:05:02] cron.NOTICE 4391 ac30128: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 12:10:01] cron.NOTICE 4477 bffad0f: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 12:15:01] cron.NOTICE 4518 eed76ca: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 12:20:01] cron.NOTICE 4558 e1b87b9: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 12:25:01] cron.NOTICE 4595 a1d3766: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 12:25:01] cron.NOTICE 4595 a1d3766: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-07 12:30:02] cron.NOTICE 4632 fb4d30d: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 12:35:01] cron.NOTICE 4678 61a1037: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 12:40:01] cron.NOTICE 4759 cf384e8: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 12:45:02] cron.NOTICE 4803 d75bcc8: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 12:50:01] cron.NOTICE 4849 0ab4df2: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 12:55:01] cron.NOTICE 5534 8147a58: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 13:00:01] cron.NOTICE 5866 22a0db6: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 13:05:01] cron.NOTICE 6015 24b264c: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 13:10:01] cron.NOTICE 6129 54d1b03: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 13:15:01] cron.NOTICE 6183 2b24833: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 13:20:01] cron.NOTICE 6267 ecab41e: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 13:25:01] cron.NOTICE 6308 31c2a91: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 13:30:01] cron.NOTICE 6872 18de04a: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 13:30:01] cron.NOTICE 6872 18de04a: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-07 13:35:02] cron.NOTICE 6948 e93d1b6: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 13:40:01] cron.NOTICE 7210 0cdfb80: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 13:45:01] cron.NOTICE 7287 2e98095: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 13:50:01] cron.NOTICE 7378 f602455: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 13:55:01] cron.NOTICE 7420 c86724e: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 14:00:01] cron.NOTICE 7481 cf0d90f: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 14:05:01] cron.NOTICE 7529 d4ad440: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 14:10:01] cron.NOTICE 7643 b110da3: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 14:15:01] cron.NOTICE 7823 059c913: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 14:20:01] cron.NOTICE 8288 80f251a: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 14:25:01] cron.NOTICE 9576 976d8f5: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 14:30:01] cron.NOTICE 10367 c542034: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 14:35:02] cron.NOTICE 10421 c647a97: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 14:35:02] cron.NOTICE 10421 c647a97: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-07 14:40:01] cron.NOTICE 10555 7537cda: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 14:45:01] cron.NOTICE 10599 a90cf8e: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 14:50:01] cron.NOTICE 10677 cc6cbf9: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 14:55:02] cron.NOTICE 10740 cfdbcfe: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 15:00:01] cron.NOTICE 10803 768a491: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 15:05:01] cron.NOTICE 10886 e5e8a06: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 15:10:01] cron.NOTICE 10993 e3637f0: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 15:15:01] cron.NOTICE 11047 0797606: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 15:20:01] cron.NOTICE 11110 ba55ef4: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 15:25:01] cron.NOTICE 11175 6fc4130: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 15:30:02] cron.NOTICE 11733 7a041ea: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 15:35:01] cron.NOTICE 11791 c45c38f: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 15:40:01] cron.NOTICE 11890 bb83177: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 15:40:01] cron.NOTICE 11890 bb83177: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-07 15:45:01] cron.NOTICE 11937 1b9de99: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 15:50:01] cron.NOTICE 11998 9e2f976: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 15:55:01] cron.NOTICE 12057 8287f41: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 16:00:01] cron.NOTICE 12106 2817518: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 16:05:01] cron.NOTICE 12173 3b850cd: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 16:10:01] cron.NOTICE 12291 535e169: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 16:15:02] cron.NOTICE 12335 a9b589f: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 16:20:01] cron.NOTICE 12411 1cd26e0: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 16:25:01] cron.NOTICE 12461 74a4cb6: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 16:30:01] cron.NOTICE 12531 b8c5b3e: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 16:35:01] cron.NOTICE 12584 8347f5a: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 16:40:01] cron.NOTICE 12686 a3c5d86: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 16:45:01] cron.NOTICE 12733 e8d9077: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 16:45:01] cron.NOTICE 12733 e8d9077: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-07 16:50:01] cron.NOTICE 12792 96ae407: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 16:55:02] cron.NOTICE 13004 1e38b04: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 17:00:01] cron.NOTICE 13101 5412091: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 17:05:01] cron.NOTICE 13184 e5418f2: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 17:10:01] cron.NOTICE 13730 2cc5289: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 17:15:01] cron.NOTICE 13790 e062cfa: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 17:20:01] cron.NOTICE 14286 b47078f: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 17:25:01] cron.NOTICE 14588 013b709: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 17:30:02] cron.NOTICE 15676 f64b8d1: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 17:35:01] cron.NOTICE 15815 47f80ac: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 17:40:01] cron.NOTICE 16021 d36f8f6: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 17:45:01] cron.NOTICE 16093 6738b8c: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 21:20:01] cron.NOTICE 3893 c399c91: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 21:20:01] cron.NOTICE 3893 c399c91: Run cron task "Оповещение о новых заказах" {"state":"successful","return":null}
+[2018-01-07 21:20:01] cron.NOTICE 3893 c399c91: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-07 21:25:01] cron.NOTICE 4019 79a12e6: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 21:30:02] cron.NOTICE 4629 4b51a70: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 21:35:01] cron.NOTICE 4686 d4a99fc: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 21:40:01] cron.NOTICE 4803 4cb0ebc: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 21:45:01] cron.NOTICE 4863 4681744: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 21:50:01] cron.NOTICE 4924 35ee5a4: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 21:55:01] cron.NOTICE 4989 f5a11f7: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-07 22:00:01] cron.NOTICE 5038 9d7b95f: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-09 09:15:01] cron.NOTICE 2902 2e6e068: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-09 09:15:01] cron.NOTICE 2902 2e6e068: Run cron task "Удаление старого кеша данных" {"state":"successful","return":null}
+[2018-01-09 09:15:01] cron.NOTICE 2902 2e6e068: Run cron task "Оповещение о новых заказах" {"state":"successful","return":null}
+[2018-01-09 09:15:01] cron.NOTICE 2902 2e6e068: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-09 09:20:01] cron.NOTICE 3453 e594ced: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-09 09:25:01] cron.NOTICE 4206 1935f2b: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-09 09:30:01] cron.NOTICE 4342 30fb421: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-09 09:35:01] cron.NOTICE 4603 a87db49: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-09 19:45:02] cron.NOTICE 2686 ce02b9b: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-09 19:45:02] cron.NOTICE 2686 ce02b9b: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-09 19:50:01] cron.NOTICE 2788 d3f9b15: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-09 19:55:01] cron.NOTICE 3373 3f9861d: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-09 20:00:01] cron.NOTICE 3429 92a5db0: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-09 20:05:01] cron.NOTICE 3482 7eb9ac2: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-09 20:10:02] cron.NOTICE 3608 b10fb89: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-09 20:15:01] cron.NOTICE 3664 d813b37: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-09 20:20:01] cron.NOTICE 3708 a8ac074: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-09 20:25:01] cron.NOTICE 3768 a5e203b: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-09 20:30:01] cron.NOTICE 3829 36f16ba: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-09 20:35:02] cron.NOTICE 3876 3042613: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-09 20:40:01] cron.NOTICE 3973 1053ff2: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-09 20:45:01] cron.NOTICE 4028 fe6a5a0: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-09 20:50:01] cron.NOTICE 4072 9ed3330: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-09 20:50:01] cron.NOTICE 4072 9ed3330: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-09 20:55:01] cron.NOTICE 4128 11f15e0: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-09 21:00:01] cron.NOTICE 4182 d896eec: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-09 21:05:01] cron.NOTICE 4232 afb2eb3: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-09 21:10:01] cron.NOTICE 4333 ebec093: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-09 21:15:01] cron.NOTICE 4386 5bd9d6e: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-09 21:20:02] cron.NOTICE 4433 9564ffb: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-09 21:25:01] cron.NOTICE 4484 1d3b9d4: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-09 21:30:01] cron.NOTICE 4531 2f0d2b7: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-09 21:35:01] cron.NOTICE 4586 3f1cc79: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-09 21:40:02] cron.NOTICE 4707 b73a8d1: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 14:35:02] cron.NOTICE 2482 e4e2b8b: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 14:35:02] cron.NOTICE 2482 e4e2b8b: Run cron task "Удаление старого кеша данных" {"state":"successful","return":null}
+[2018-01-10 14:35:02] cron.NOTICE 2482 e4e2b8b: Run cron task "Оповещение о новых заказах" {"state":"successful","return":null}
+[2018-01-10 14:35:02] cron.NOTICE 2482 e4e2b8b: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-10 14:40:01] cron.NOTICE 4321 e322241: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 14:45:01] cron.NOTICE 4584 d968704: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 14:50:02] cron.NOTICE 4835 0e0189b: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 14:55:01] cron.NOTICE 5045 29e51e0: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 15:00:01] cron.NOTICE 5168 ed759ef: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 15:05:01] cron.NOTICE 5334 c13f447: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 15:10:01] cron.NOTICE 5508 e7558cb: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 15:15:02] cron.NOTICE 5630 f93e62b: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 15:20:01] cron.NOTICE 5759 fc4b14c: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 15:25:01] cron.NOTICE 5913 2944b2f: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 15:30:02] cron.NOTICE 6436 a669225: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 15:35:01] cron.NOTICE 6749 e158355: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 15:40:02] cron.NOTICE 7062 600b600: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 15:40:02] cron.NOTICE 7062 600b600: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-10 15:45:02] cron.NOTICE 7310 94f8308: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 15:50:01] cron.NOTICE 7435 0c9ac36: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 15:55:02] cron.NOTICE 8449 4348cb8: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 16:00:06] cron.NOTICE 8767 52907a2: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 16:05:02] cron.NOTICE 9385 56a4416: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 16:10:01] cron.NOTICE 9590 e26529f: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 16:15:02] cron.NOTICE 10069 8bffe99: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 16:20:02] cron.NOTICE 10398 66ea96f: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 16:25:02] cron.NOTICE 10500 31dd7a1: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 16:30:02] cron.NOTICE 10991 d0e5ecb: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 16:35:01] cron.NOTICE 11083 64a37a1: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 16:40:02] cron.NOTICE 11253 a026b45: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 16:45:02] cron.NOTICE 11343 6425f42: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 16:45:02] cron.NOTICE 11343 6425f42: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-10 16:50:04] cron.NOTICE 11747 1e91da0: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 16:55:01] cron.NOTICE 11921 0edc9b0: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 17:00:01] cron.NOTICE 12018 d925ba9: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 17:05:02] cron.NOTICE 12131 8e434e6: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 17:10:01] cron.NOTICE 12258 2e032e2: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 17:15:01] cron.NOTICE 12328 0c94060: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 17:20:02] cron.NOTICE 12397 69a0504: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 17:25:01] cron.NOTICE 12453 d2f46a1: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 17:30:01] cron.NOTICE 12541 6390e19: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 17:35:01] cron.NOTICE 12629 2264554: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 17:40:02] cron.NOTICE 12775 3c9d916: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 17:45:01] cron.NOTICE 12861 a60c1e8: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 17:50:01] cron.NOTICE 12980 5dd4411: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 17:50:01] cron.NOTICE 12980 5dd4411: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-10 17:55:01] cron.NOTICE 13283 b93350a: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 18:00:02] cron.NOTICE 13768 6745ac8: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 18:05:01] cron.NOTICE 13860 7014dad: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 18:10:01] cron.NOTICE 14218 37eb1d0: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 18:15:01] cron.NOTICE 14551 87290d7: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 18:20:02] cron.NOTICE 15040 9c8531b: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 18:25:01] cron.NOTICE 15198 84807ed: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 18:30:02] cron.NOTICE 15471 37bc070: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 18:35:02] cron.NOTICE 16046 9a8b3c6: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 18:40:02] cron.NOTICE 16775 b5629aa: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 18:45:02] cron.NOTICE 16876 6a8af79: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 18:50:02] cron.NOTICE 17048 cdf9b35: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-10 18:50:02] cron.NOTICE 17048 cdf9b35: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-11 13:05:01] cron.NOTICE 3170 648933d: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 13:05:01] cron.NOTICE 3170 648933d: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-11 13:10:01] cron.NOTICE 4242 43c4fe8: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 13:15:02] cron.NOTICE 5040 c353f7c: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 13:20:01] cron.NOTICE 5186 7790c6d: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 13:25:01] cron.NOTICE 5288 781e7f9: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 13:30:02] cron.NOTICE 5399 6f99206: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 13:35:01] cron.NOTICE 5473 ab8142a: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 13:40:01] cron.NOTICE 5602 ab27018: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 13:45:01] cron.NOTICE 5708 ab06a0d: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 13:50:02] cron.NOTICE 5796 9cbb394: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 13:55:01] cron.NOTICE 5994 b6aceb0: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 14:00:01] cron.NOTICE 6101 6880343: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 14:05:02] cron.NOTICE 6268 7d8e73d: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 14:05:02] cron.NOTICE 6268 7d8e73d: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-11 14:10:02] cron.NOTICE 6418 bc73ae7: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 14:15:01] cron.NOTICE 6526 9dc3ce5: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 14:20:02] cron.NOTICE 6661 1f1ec3e: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 14:25:01] cron.NOTICE 6759 da4e2d8: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 14:30:01] cron.NOTICE 6851 0ebbea4: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 14:35:02] cron.NOTICE 7025 6976a4b: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 14:40:01] cron.NOTICE 7237 300a701: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 14:40:01] cron.NOTICE 7237 300a701: Run cron task "Оповещение о новых заказах" {"state":"successful","return":null}
+[2018-01-11 14:45:02] cron.NOTICE 7337 e408643: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 14:50:02] cron.NOTICE 7730 7eb4705: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 14:55:01] cron.NOTICE 23463 b975506: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 15:00:01] cron.NOTICE 23513 021d55a: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 15:05:02] cron.NOTICE 23552 f6b1919: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 15:10:01] cron.NOTICE 23636 7f85d92: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 15:10:01] cron.NOTICE 23636 7f85d92: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-11 15:15:01] cron.NOTICE 31858 87e695f: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 15:20:02] cron.NOTICE 9819 5cbb589: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 15:25:01] cron.NOTICE 9853 747fb44: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 15:30:01] cron.NOTICE 9902 37561a8: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 19:10:02] cron.NOTICE 2753 5de6964: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 19:10:02] cron.NOTICE 2753 5de6964: Run cron task "Удаление старого кеша данных" {"state":"successful","return":null}
+[2018-01-11 19:10:02] cron.NOTICE 2753 5de6964: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-11 19:15:01] cron.NOTICE 2901 7f67d73: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 19:20:01] cron.NOTICE 3649 bd01adb: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 19:25:01] cron.NOTICE 3707 02a0e84: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 19:30:01] cron.NOTICE 3758 d50e572: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 19:35:02] cron.NOTICE 3811 279944e: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 19:40:01] cron.NOTICE 3936 8dfd95b: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 19:45:01] cron.NOTICE 3979 10a6b26: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 19:50:01] cron.NOTICE 4043 05d15ce: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 19:55:01] cron.NOTICE 4079 e85e167: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 20:00:02] cron.NOTICE 4229 53525fd: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 20:05:01] cron.NOTICE 4364 786e7c5: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 20:10:01] cron.NOTICE 4495 0999ee5: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 20:15:01] cron.NOTICE 4537 5fe9347: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 20:15:01] cron.NOTICE 4537 5fe9347: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-11 20:20:01] cron.NOTICE 4584 8b4a00d: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 20:25:02] cron.NOTICE 4630 ee17096: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 20:30:01] cron.NOTICE 4663 e6c9790: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 20:35:01] cron.NOTICE 4692 3f4d804: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 20:40:01] cron.NOTICE 4792 61863a3: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 20:45:02] cron.NOTICE 4840 6b38dea: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 20:50:01] cron.NOTICE 4869 d05e231: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 20:55:01] cron.NOTICE 4905 33efdd9: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 21:00:01] cron.NOTICE 4942 f6a29fa: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 21:05:01] cron.NOTICE 4972 5efe781: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 21:10:02] cron.NOTICE 5072 2407766: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 21:15:01] cron.NOTICE 5117 144f5af: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 21:20:01] cron.NOTICE 5668 aa6abbf: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 21:20:01] cron.NOTICE 5668 aa6abbf: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-11 21:25:01] cron.NOTICE 5712 07d60c1: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-11 21:30:01] cron.NOTICE 5747 1111f47: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 05:45:02] cron.NOTICE 3688 ebb2cbb: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 05:45:02] cron.NOTICE 3688 ebb2cbb: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-12 05:50:01] cron.NOTICE 4431 84a3787: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 05:55:01] cron.NOTICE 5067 c47fe4f: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 06:00:02] cron.NOTICE 5155 4455b78: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 06:05:01] cron.NOTICE 5286 d53733e: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 06:10:01] cron.NOTICE 5452 56e05df: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 06:15:02] cron.NOTICE 5576 12908b4: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 06:20:01] cron.NOTICE 5753 0acf897: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 06:25:01] cron.NOTICE 5847 29eb676: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 06:30:01] cron.NOTICE 6058 de5cdec: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 06:35:02] cron.NOTICE 6171 e36d782: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 06:40:01] cron.NOTICE 6443 50b5dfe: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 06:45:01] cron.NOTICE 6628 6b40480: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 06:50:01] cron.NOTICE 6803 48985a8: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 06:50:01] cron.NOTICE 6803 48985a8: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-12 06:55:02] cron.NOTICE 6876 d6860f3: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 07:00:01] cron.NOTICE 7006 d212131: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 07:05:01] cron.NOTICE 7085 9d7dfc3: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 07:10:01] cron.NOTICE 7268 d4bd5d9: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 07:15:02] cron.NOTICE 7385 ff5cc56: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 07:20:01] cron.NOTICE 8880 d63361f: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 07:25:01] cron.NOTICE 9542 abf884d: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 07:30:01] cron.NOTICE 9574 ec407a9: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 07:35:01] cron.NOTICE 10399 87f3091: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 07:40:01] cron.NOTICE 10499 2ea24a9: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 07:45:01] cron.NOTICE 10550 a50a1ec: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 07:50:01] cron.NOTICE 10602 27ccb9b: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 07:55:01] cron.NOTICE 11180 39ec131: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 07:55:01] cron.NOTICE 11180 39ec131: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-12 08:00:01] cron.NOTICE 11239 6dbf68c: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 08:05:01] cron.NOTICE 11292 ae8b749: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 08:10:01] cron.NOTICE 11376 8219727: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 08:15:01] cron.NOTICE 11437 4af3114: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 08:20:01] cron.NOTICE 11503 046fec3: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 08:25:02] cron.NOTICE 11549 ed92847: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 08:30:01] cron.NOTICE 11621 8123f18: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 08:35:02] cron.NOTICE 11663 4622d8f: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 08:40:02] cron.NOTICE 11782 c0571f5: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 08:45:01] cron.NOTICE 11852 88df025: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 08:50:02] cron.NOTICE 11895 45dcc06: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 08:55:02] cron.NOTICE 11960 0514f6e: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 08:55:02] cron.NOTICE 11960 0514f6e: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-12 09:00:02] cron.NOTICE 12019 f8c1462: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 09:05:02] cron.NOTICE 12081 fe7f9dc: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 09:10:01] cron.NOTICE 12457 12398a0: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 09:15:01] cron.NOTICE 12517 1b0d4d3: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 09:20:02] cron.NOTICE 12555 fa55385: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 09:25:01] cron.NOTICE 12590 a73c42f: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 21:30:01] cron.NOTICE 2892 8bfbaa2: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 21:30:01] cron.NOTICE 2892 8bfbaa2: Run cron task "Удаление старого кеша данных" {"state":"successful","return":null}
+[2018-01-12 21:30:01] cron.NOTICE 2892 8bfbaa2: Run cron task "Оповещение о новых заказах" {"state":"successful","return":null}
+[2018-01-12 21:30:01] cron.NOTICE 2892 8bfbaa2: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-12 21:35:02] cron.NOTICE 3122 fd861c5: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-12 21:40:01] cron.NOTICE 3873 cdd1f81: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-13 09:05:01] cron.NOTICE 2936 90a3ed4: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-13 09:05:01] cron.NOTICE 2936 90a3ed4: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-13 09:10:01] cron.NOTICE 3603 09b287b: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-13 09:15:02] cron.NOTICE 4236 44d3f57: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-13 09:20:01] cron.NOTICE 4594 13f4bc0: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-13 09:25:01] cron.NOTICE 5074 1462247: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-13 09:30:01] cron.NOTICE 5360 873867c: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-13 09:35:01] cron.NOTICE 5578 ebbd6c0: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 11:25:01] cron.NOTICE 2816 d6af958: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 11:25:01] cron.NOTICE 2816 d6af958: Run cron task "Удаление старого кеша данных" {"state":"successful","return":null}
+[2018-01-14 11:25:02] cron.NOTICE 2816 d6af958: Run cron task "Оповещение о новых заказах" {"state":"successful","return":null}
+[2018-01-14 11:25:02] cron.NOTICE 2816 d6af958: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-14 11:35:01] cron.NOTICE 3143 7338697: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 11:40:01] cron.NOTICE 3645 082870e: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 11:45:01] cron.NOTICE 4230 0889533: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 11:50:01] cron.NOTICE 4313 4867e1a: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 11:55:02] cron.NOTICE 5011 d6e306b: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 12:00:01] cron.NOTICE 5221 f93cb99: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 12:05:01] cron.NOTICE 5383 2f091e4: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 12:10:01] cron.NOTICE 5557 5939f01: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 12:15:01] cron.NOTICE 5708 add1a33: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 12:20:02] cron.NOTICE 5897 d8473d6: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 12:25:01] cron.NOTICE 5999 59b77b3: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 12:30:01] cron.NOTICE 6161 a1b2f18: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 12:30:01] cron.NOTICE 6161 a1b2f18: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-14 12:35:02] cron.NOTICE 6295 b2c7ae5: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 12:40:01] cron.NOTICE 6476 e43a479: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 12:45:01] cron.NOTICE 6593 16163c6: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 12:50:01] cron.NOTICE 6668 3f5dcc8: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 12:55:02] cron.NOTICE 6752 5a4d673: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 13:00:01] cron.NOTICE 6847 63820b8: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 13:05:01] cron.NOTICE 6972 aee91e3: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 13:10:02] cron.NOTICE 7221 736abed: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 13:15:01] cron.NOTICE 7366 debf86f: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 13:20:01] cron.NOTICE 7527 ac99244: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 13:25:01] cron.NOTICE 7782 648a78c: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 13:30:02] cron.NOTICE 7853 b97b555: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 13:30:02] cron.NOTICE 7853 b97b555: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-14 13:35:01] cron.NOTICE 7919 ce6e4b3: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 13:40:01] cron.NOTICE 8083 7488c38: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 13:45:02] cron.NOTICE 8673 a94fb68: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 13:50:01] cron.NOTICE 8745 fe1e62e: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 13:55:02] cron.NOTICE 8966 cefb760: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 14:00:01] cron.NOTICE 9076 8ae6493: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 14:05:01] cron.NOTICE 9208 791adbd: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 14:10:02] cron.NOTICE 9411 88417b1: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 14:15:01] cron.NOTICE 9532 fada8a9: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 14:20:02] cron.NOTICE 9691 2f1da56: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 14:25:02] cron.NOTICE 10134 a585b41: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 14:30:02] cron.NOTICE 10385 89b8153: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 14:35:02] cron.NOTICE 10542 85055ad: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 14:35:02] cron.NOTICE 10542 85055ad: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-14 14:40:01] cron.NOTICE 10721 7c42ef0: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 14:45:02] cron.NOTICE 10852 66bc791: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 14:50:02] cron.NOTICE 10964 7aaf526: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 14:55:02] cron.NOTICE 11123 4f3d27d: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 15:00:02] cron.NOTICE 11199 928a2b9: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 15:05:01] cron.NOTICE 11278 9dc74ac: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 15:10:01] cron.NOTICE 11394 7dc8743: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 15:15:01] cron.NOTICE 11469 d389d7e: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 15:20:02] cron.NOTICE 11543 6e9fea1: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 15:25:01] cron.NOTICE 11613 f2a4ad7: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 15:30:02] cron.NOTICE 11972 e81c0f1: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 15:35:02] cron.NOTICE 12067 f2cc6e5: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 15:40:01] cron.NOTICE 12199 a61b610: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 15:40:01] cron.NOTICE 12199 a61b610: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-14 15:45:02] cron.NOTICE 12815 fb4504b: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 15:50:02] cron.NOTICE 12923 70942d0: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 15:55:02] cron.NOTICE 13123 68e41e8: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 16:00:02] cron.NOTICE 13248 a742980: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 16:05:01] cron.NOTICE 13354 2ae79dc: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 16:10:02] cron.NOTICE 13500 9f1ced9: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 16:15:01] cron.NOTICE 13643 ac5bd8d: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 16:20:02] cron.NOTICE 13770 91ee8cb: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 16:25:02] cron.NOTICE 14098 6222fe1: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 16:30:01] cron.NOTICE 14199 25a29d3: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 16:35:01] cron.NOTICE 14358 a5215f9: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 16:40:02] cron.NOTICE 14514 51c04a2: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 16:40:02] cron.NOTICE 14514 51c04a2: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-14 16:45:01] cron.NOTICE 14588 f43f0e0: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 16:50:01] cron.NOTICE 14686 54833da: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 16:55:01] cron.NOTICE 15052 785e2ed: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 17:00:01] cron.NOTICE 15203 f56b716: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 17:05:01] cron.NOTICE 15271 bf18572: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 17:10:02] cron.NOTICE 15427 93d75ae: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 17:15:01] cron.NOTICE 15538 43b0080: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 17:20:01] cron.NOTICE 15601 ce83489: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 17:25:03] cron.NOTICE 15718 e957e11: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 17:30:02] cron.NOTICE 15806 c4249be: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 17:35:01] cron.NOTICE 15945 74c0829: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 17:40:01] cron.NOTICE 16069 60844aa: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 17:45:02] cron.NOTICE 16649 35b7289: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 17:45:02] cron.NOTICE 16649 35b7289: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-14 17:50:02] cron.NOTICE 16823 ebca3ae: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-14 17:55:02] cron.NOTICE 16977 23f8e70: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 10:40:01] cron.NOTICE 17568 f930593: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 10:40:01] cron.NOTICE 17568 f930593: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-15 10:45:01] cron.NOTICE 18071 a111433: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 10:50:01] cron.NOTICE 18149 b87c378: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 10:55:02] cron.NOTICE 18242 55ad95b: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 11:00:01] cron.NOTICE 18329 0f2270d: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 11:05:01] cron.NOTICE 18418 c5fa2a6: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 11:10:01] cron.NOTICE 18586 e7f426f: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 11:15:02] cron.NOTICE 18662 3fcdb6c: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 11:20:01] cron.NOTICE 18832 bc27407: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 11:25:02] cron.NOTICE 18910 f11c477: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 11:30:01] cron.NOTICE 19011 5e4cf15: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 11:30:01] cron.NOTICE 19011 5e4cf15: Run cron task "Оповещение о новых заказах" {"state":"successful","return":null}
+[2018-01-15 11:35:01] cron.NOTICE 19100 498580d: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 11:40:01] cron.NOTICE 19201 5af4cd4: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 11:45:02] cron.NOTICE 19270 43d833d: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 11:45:02] cron.NOTICE 19270 43d833d: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-15 11:50:01] cron.NOTICE 19343 1d47b91: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 11:55:01] cron.NOTICE 19505 fce59ce: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 12:00:01] cron.NOTICE 19569 4fd7549: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 12:05:01] cron.NOTICE 19685 85a0d24: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 12:10:01] cron.NOTICE 19839 f8c09fb: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 12:15:01] cron.NOTICE 19922 62321a0: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 12:20:02] cron.NOTICE 20036 4288095: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 12:25:01] cron.NOTICE 20607 6cf6e8e: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 12:30:01] cron.NOTICE 20748 e21181f: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 12:30:01] cron.NOTICE 20748 e21181f: Run cron task "Удаление старого кеша данных" {"state":"successful","return":null}
+[2018-01-15 12:35:01] cron.NOTICE 20833 cc7d72d: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 12:40:02] cron.NOTICE 21050 8ef6871: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 12:45:01] cron.NOTICE 21193 3f6d0cf: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 12:50:01] cron.NOTICE 21342 23156ef: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 12:50:01] cron.NOTICE 21342 23156ef: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-15 12:55:02] cron.NOTICE 21453 8193b52: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 13:00:01] cron.NOTICE 21573 ef7fa58: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 13:05:01] cron.NOTICE 21687 302f64a: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 13:10:02] cron.NOTICE 21841 5242ffd: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 13:15:01] cron.NOTICE 21950 183065b: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 13:20:01] cron.NOTICE 22059 682bfa5: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 13:25:01] cron.NOTICE 22146 74a676c: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 13:30:01] cron.NOTICE 22235 0c2cd18: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 13:35:02] cron.NOTICE 22367 87dfce5: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 16:30:02] cron.NOTICE 22820 d8d3416: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 16:30:02] cron.NOTICE 22820 d8d3416: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-15 16:35:01] cron.NOTICE 23207 5b5c004: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 16:40:01] cron.NOTICE 23371 cbc99ac: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 16:45:01] cron.NOTICE 23549 3cd4b8e: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 16:50:02] cron.NOTICE 23607 adc6005: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 16:55:01] cron.NOTICE 23779 093f70b: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 17:00:01] cron.NOTICE 23938 e2910d2: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 17:05:01] cron.NOTICE 24033 9490fd1: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 17:10:01] cron.NOTICE 24175 be4354c: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 17:15:02] cron.NOTICE 24304 9f2d068: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 17:20:01] cron.NOTICE 25053 ed26650: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 17:25:01] cron.NOTICE 25216 9a570f4: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 17:30:01] cron.NOTICE 25327 a78b468: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 17:35:02] cron.NOTICE 25433 6a4a51b: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 17:35:02] cron.NOTICE 25433 6a4a51b: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-15 17:40:01] cron.NOTICE 25637 7de0db0: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 17:45:01] cron.NOTICE 25755 f8cc461: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 17:50:02] cron.NOTICE 25904 be8432a: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 17:55:01] cron.NOTICE 26149 953c64c: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 20:35:02] cron.NOTICE 3035 dffdd6a: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 20:35:02] cron.NOTICE 3035 dffdd6a: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-15 20:40:01] cron.NOTICE 3349 bf571c4: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 20:45:01] cron.NOTICE 4080 a98f315: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 20:50:02] cron.NOTICE 4807 2d1fe67: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 20:55:01] cron.NOTICE 4948 75c968c: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 21:00:01] cron.NOTICE 4989 013054d: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 21:05:01] cron.NOTICE 5117 94c30a6: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 21:10:01] cron.NOTICE 5255 dde2c66: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 21:15:02] cron.NOTICE 5383 2ace271: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 21:20:01] cron.NOTICE 5489 f65e91e: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 21:25:01] cron.NOTICE 5648 139dc69: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 21:30:01] cron.NOTICE 5728 b8e288f: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 21:35:01] cron.NOTICE 5807 84afcc9: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 21:40:02] cron.NOTICE 5966 c47d0c7: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 21:40:02] cron.NOTICE 5966 c47d0c7: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-15 21:45:01] cron.NOTICE 6155 51b70e1: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 21:50:01] cron.NOTICE 6272 2f0bf2b: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 21:55:01] cron.NOTICE 6421 4ae5ae2: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 22:00:01] cron.NOTICE 6482 049a2ca: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 22:05:02] cron.NOTICE 6639 49abc6e: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-15 22:10:01] cron.NOTICE 6872 fdd3749: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-16 07:56:26] cron.NOTICE 3997 b86272c: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-16 07:56:26] cron.NOTICE 3997 b86272c: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-16 08:00:01] cron.NOTICE 4832 6b367d9: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-16 08:05:02] cron.NOTICE 5605 263de89: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-16 08:10:01] cron.NOTICE 5867 a05b6ed: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-16 08:15:01] cron.NOTICE 6049 2b44e8a: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-16 08:20:02] cron.NOTICE 6152 42ad259: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-16 08:25:01] cron.NOTICE 6481 43437c0: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-16 08:30:01] cron.NOTICE 6614 97da131: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-16 08:35:01] cron.NOTICE 6692 8e833d8: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-16 08:40:02] cron.NOTICE 6840 06b4360: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-16 08:45:01] cron.NOTICE 6946 80f089e: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-16 08:50:01] cron.NOTICE 7065 c020bee: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-16 08:55:01] cron.NOTICE 7197 4215a76: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-16 09:00:01] cron.NOTICE 7315 7fda577: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-16 09:00:01] cron.NOTICE 7315 7fda577: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-16 09:05:02] cron.NOTICE 7441 fefe77f: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-16 09:10:01] cron.NOTICE 7567 34f7296: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-16 09:15:01] cron.NOTICE 7675 f62733a: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-16 09:20:02] cron.NOTICE 7785 36b8a9b: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-17 08:05:01] cron.NOTICE 3496 ca370fa: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-17 08:05:01] cron.NOTICE 3496 ca370fa: Run cron task "Удаление старого кеша данных" {"state":"successful","return":null}
+[2018-01-17 08:05:02] cron.NOTICE 3496 ca370fa: Run cron task "Оповещение о новых заказах" {"state":"successful","return":null}
+[2018-01-17 08:05:02] cron.NOTICE 3496 ca370fa: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-17 08:10:01] cron.NOTICE 4358 a070e51: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-17 08:15:01] cron.NOTICE 5159 afc7050: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-17 08:20:01] cron.NOTICE 5276 86f1b07: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-17 08:25:02] cron.NOTICE 5351 1570b83: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-17 08:30:01] cron.NOTICE 5467 e0709b9: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-17 08:35:01] cron.NOTICE 5653 e2fd4b7: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-17 08:40:01] cron.NOTICE 5868 562c13f: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-17 08:45:02] cron.NOTICE 5974 a961da8: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-17 08:50:01] cron.NOTICE 6128 cdbf900: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-17 08:55:01] cron.NOTICE 6223 678a780: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-17 09:00:01] cron.NOTICE 6421 c3a37c5: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-17 09:05:01] cron.NOTICE 6579 aa6a7de: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-17 09:10:01] cron.NOTICE 7193 1e2b095: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-17 09:10:01] cron.NOTICE 7193 1e2b095: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-17 09:15:01] cron.NOTICE 7350 16130da: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-17 09:20:01] cron.NOTICE 7398 ce31368: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-17 09:25:01] cron.NOTICE 7459 15e1f9e: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 10:10:01] cron.NOTICE 3688 97021d6: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 10:10:01] cron.NOTICE 3688 97021d6: Run cron task "Удаление старого кеша данных" {"state":"successful","return":null}
+[2018-01-18 10:10:01] cron.NOTICE 3688 97021d6: Run cron task "Оповещение о новых заказах" {"state":"successful","return":null}
+[2018-01-18 10:10:01] cron.NOTICE 3688 97021d6: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-18 10:15:02] cron.NOTICE 4332 6724b12: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 10:20:01] cron.NOTICE 4957 0d02057: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 10:25:01] cron.NOTICE 5033 cf8e730: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 10:30:01] cron.NOTICE 5578 e0efd43: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 10:35:02] cron.NOTICE 5699 59834c7: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 10:40:01] cron.NOTICE 5906 d905846: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 10:45:01] cron.NOTICE 5944 7eb3d1c: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 10:50:01] cron.NOTICE 5983 a9ba23c: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 10:55:02] cron.NOTICE 6044 6a7082b: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 11:00:01] cron.NOTICE 6092 938d903: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 11:05:01] cron.NOTICE 6150 f48b56b: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 11:10:01] cron.NOTICE 6254 6d1e4a6: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 14:10:01] cron.NOTICE 7020 e717a1a: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 14:10:01] cron.NOTICE 7020 e717a1a: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-18 14:15:01] cron.NOTICE 7164 6ea7366: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 14:20:02] cron.NOTICE 7314 2cb63fe: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 14:25:01] cron.NOTICE 7444 437c8c6: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 14:30:01] cron.NOTICE 7661 20ed253: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 14:35:01] cron.NOTICE 7796 3776080: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 14:40:01] cron.NOTICE 8155 a542338: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 14:45:02] cron.NOTICE 8250 efd899d: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 14:50:01] cron.NOTICE 8343 71a47be: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 14:55:01] cron.NOTICE 8433 13ad080: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 15:00:01] cron.NOTICE 8513 2d4e84a: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 15:05:01] cron.NOTICE 8577 50f6f83: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 15:10:01] cron.NOTICE 8717 cce201e: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 15:15:01] cron.NOTICE 9279 ba75665: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 15:15:01] cron.NOTICE 9279 ba75665: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-18 15:20:01] cron.NOTICE 9316 01d43e5: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 15:25:02] cron.NOTICE 9360 bcbe0c4: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 15:30:01] cron.NOTICE 9400 d4ae8d7: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 15:35:01] cron.NOTICE 9449 c7d3c37: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 15:40:01] cron.NOTICE 9566 7f8ba2a: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 15:45:01] cron.NOTICE 9603 49c63b1: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 15:50:01] cron.NOTICE 9658 9dba775: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 15:55:02] cron.NOTICE 9696 e366780: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 16:00:01] cron.NOTICE 9741 4e18456: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 16:05:01] cron.NOTICE 9791 ea874fe: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 16:10:01] cron.NOTICE 9893 f1f9f63: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 16:15:01] cron.NOTICE 9943 f644059: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 16:20:01] cron.NOTICE 9985 1ce8df7: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 16:20:01] cron.NOTICE 9985 1ce8df7: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-18 16:25:01] cron.NOTICE 10040 8dcaeee: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 16:30:01] cron.NOTICE 10086 66ae9ed: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 16:35:01] cron.NOTICE 10151 20e9da9: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 16:40:01] cron.NOTICE 10254 e3dd8ab: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 16:45:01] cron.NOTICE 10316 f423ab6: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 16:50:01] cron.NOTICE 10364 c163f12: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 16:55:01] cron.NOTICE 10404 773ea6f: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 17:00:02] cron.NOTICE 10454 6fabde5: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 17:05:01] cron.NOTICE 10520 f33433e: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 17:10:01] cron.NOTICE 10623 5afb236: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 17:15:02] cron.NOTICE 11206 e2f7304: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 17:20:01] cron.NOTICE 11326 51c297e: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 17:25:01] cron.NOTICE 11444 af86e28: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 17:25:01] cron.NOTICE 11444 af86e28: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-18 17:30:01] cron.NOTICE 11622 a6d711c: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 17:35:02] cron.NOTICE 11932 e0c56ed: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 17:40:02] cron.NOTICE 12143 bd4f61e: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 17:45:02] cron.NOTICE 12357 f645564: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 17:50:01] cron.NOTICE 12433 f3cac4f: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 20:35:01] cron.NOTICE 12870 3f3166b: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 20:35:01] cron.NOTICE 12870 3f3166b: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-18 20:40:01] cron.NOTICE 13070 eb65d09: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 20:45:01] cron.NOTICE 13137 cb94801: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 20:50:01] cron.NOTICE 13278 5fb14c4: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 20:55:01] cron.NOTICE 13336 6594abe: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 21:00:01] cron.NOTICE 13481 ad1d55e: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 21:05:01] cron.NOTICE 13581 ec59260: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 21:10:02] cron.NOTICE 13699 d5dfd40: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 21:15:01] cron.NOTICE 13911 43814eb: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 21:20:01] cron.NOTICE 13973 69f7c05: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 21:25:02] cron.NOTICE 14034 5dcef05: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 21:30:01] cron.NOTICE 14099 4f5260e: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 21:35:01] cron.NOTICE 14152 ffbf4f5: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 21:40:01] cron.NOTICE 14281 39ac964: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 21:40:01] cron.NOTICE 14281 39ac964: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-18 21:45:01] cron.NOTICE 14337 31dfacb: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 21:50:02] cron.NOTICE 14398 a380a54: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 21:55:01] cron.NOTICE 14965 67e6ae5: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 22:00:01] cron.NOTICE 15006 a3d2eb2: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 22:05:01] cron.NOTICE 15055 686db30: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 22:10:02] cron.NOTICE 15173 96ff08a: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 22:15:01] cron.NOTICE 15245 4631700: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 22:20:01] cron.NOTICE 15287 e56891f: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-18 22:25:01] cron.NOTICE 15393 1f91e8e: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 06:40:27] cron.NOTICE 15951 6460ef5: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 06:40:27] cron.NOTICE 15951 6460ef5: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-19 06:45:01] cron.NOTICE 16597 678fdf4: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 06:50:01] cron.NOTICE 16790 ab32196: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 06:55:01] cron.NOTICE 16964 e199a76: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 07:00:01] cron.NOTICE 17053 8e0e5d0: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 07:05:01] cron.NOTICE 17794 64bf744: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 07:10:01] cron.NOTICE 18460 6ac7ba7: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 07:15:01] cron.NOTICE 18579 c57e07d: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 07:20:02] cron.NOTICE 19047 5af0660: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 07:25:01] cron.NOTICE 19366 c99fd0d: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 07:30:01] cron.NOTICE 19498 a939659: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 07:35:01] cron.NOTICE 19920 a2386c6: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 07:40:02] cron.NOTICE 20724 e706207: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 07:45:01] cron.NOTICE 21820 4cc116d: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 07:45:01] cron.NOTICE 21820 4cc116d: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-19 07:50:01] cron.NOTICE 22263 371e257: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 07:55:01] cron.NOTICE 22645 f0fa037: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 08:00:01] cron.NOTICE 22764 ce01919: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 08:05:01] cron.NOTICE 22845 cda440d: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 08:10:01] cron.NOTICE 23499 03d5392: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 08:15:02] cron.NOTICE 23682 3e839b5: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 08:20:01] cron.NOTICE 23784 0e7816f: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 08:25:01] cron.NOTICE 24161 698caf9: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 08:30:01] cron.NOTICE 24477 aa8aaef: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 08:35:02] cron.NOTICE 24926 5d9f8b1: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 08:40:01] cron.NOTICE 25035 9d024de: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 08:45:01] cron.NOTICE 25084 4509c9b: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 08:50:01] cron.NOTICE 25159 b5e04ab: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 08:50:01] cron.NOTICE 25159 b5e04ab: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-19 08:55:02] cron.NOTICE 25218 5e9fdea: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 09:00:01] cron.NOTICE 25329 8b9c63a: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 09:05:01] cron.NOTICE 25445 7e32a67: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 09:10:01] cron.NOTICE 25587 e52663b: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 11:25:31] cron.NOTICE 26090 64e58c3: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 11:25:31] cron.NOTICE 26090 64e58c3: Run cron task "Удаление старого кеша данных" {"state":"successful","return":null}
+[2018-01-19 11:25:32] cron.NOTICE 26090 64e58c3: Run cron task "Оповещение о новых заказах" {"state":"successful","return":null}
+[2018-01-19 11:25:32] cron.NOTICE 26090 64e58c3: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-19 11:30:01] cron.NOTICE 26560 4e1f63f: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 11:35:01] cron.NOTICE 26755 d716333: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 11:40:02] cron.NOTICE 26887 2260adc: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 11:45:01] cron.NOTICE 26948 c13d941: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 11:50:01] cron.NOTICE 27001 fbe2901: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 11:55:01] cron.NOTICE 27061 2ee43b7: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 12:00:01] cron.NOTICE 27121 b2afc82: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 12:05:01] cron.NOTICE 27236 e882156: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 12:10:01] cron.NOTICE 27509 72d21e5: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 12:15:01] cron.NOTICE 27561 3a50525: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 12:20:01] cron.NOTICE 27848 c784294: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 12:25:01] cron.NOTICE 28098 ee07d68: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 12:30:01] cron.NOTICE 28168 5c45797: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 12:30:01] cron.NOTICE 28168 5c45797: Run cron task "Проверять на наличие прав ydirect" {"state":"error","return":null,"message":"Undefined method module: RemoveToTimeout (code:0;line:650)"}
+[2018-01-19 12:35:02] cron.NOTICE 28229 08a4964: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 12:40:01] cron.NOTICE 28344 05c891d: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 12:45:01] cron.NOTICE 28418 392b31c: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 12:50:01] cron.NOTICE 28475 8b9ea53: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 12:55:02] cron.NOTICE 28531 11a6630: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 13:00:01] cron.NOTICE 28607 9171d1c: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 13:05:01] cron.NOTICE 28713 1494498: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-01-19 13:10:01] cron.NOTICE 28853 790d2af: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}

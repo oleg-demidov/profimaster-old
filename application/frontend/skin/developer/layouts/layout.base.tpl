@@ -121,7 +121,7 @@
                     {$layoutSidebarBlocks}
                 </aside>
             {/if}
-            <div class="ls-grid-col ls-grid-col-8 layout-content"
+            <div class="ls-grid-col {if $layoutShowSidebar}ls-grid-col-8{/if} layout-content"
                  role="main"
                  {if $sMenuItemSelect == 'profile'}itemscope itemtype="http://data-vocabulary.org/Person"{/if}>
 
