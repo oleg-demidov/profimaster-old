@@ -27,9 +27,12 @@ class PluginParser_ActionAdmin extends PluginAdmin_ActionPlugin
     {
         $this->Component_Add('ydirect:geo');
         $aData = $_REQUEST;
-        if(isset($aData['phone'])){
-            $aData['phone'] = str_replace(' ', '', $aData['phone']);
+        foreach ($aData['phones'] as &$sPhone){
+            $sPhone = str_replace(' ', '', $sPhone);
         }
+        /*if(isset($aData['phone'])){
+            $aData['phone'] = str_replace(' ', '', $aData['phone']);
+        }*/
         $this->Viewer_Assign('aUserData', $aData);
         $this->SetTemplateAction('form');
         
@@ -63,7 +66,7 @@ class PluginParser_ActionAdmin extends PluginAdmin_ActionPlugin
          */
         $oUser->setRole($aUserData['role']);
         //$oUser->setLogin($aUserData['login']);
-        $oUser->setEmailOrNumber($aUserData['phone']);
+        $oUser->setEmailOrNumber($aUserData['phones'][0]);
         $oUser->setPassword($aUserData['pass']);
         $oUser->setPasswordConfirm($aUserData['pass']);
         $oUser->setProfileAbout($aUserData['text']);
@@ -73,7 +76,7 @@ class PluginParser_ActionAdmin extends PluginAdmin_ActionPlugin
         $oUser->setIpRegister(func_getIp());
         $oUser->setActivate(1);        
         
-        
+       
         if ($oUser->_Validate()) {
             $oUser->setPassword($this->User_MakeHashPassword($oUser->getPassword()));
             
@@ -91,24 +94,29 @@ class PluginParser_ActionAdmin extends PluginAdmin_ActionPlugin
                 $oUser->setYGeo($aUserData['ygeo']);
                 $oUser->ygeo->CallbackAfterSave();
                 
-                if(isset($aUserData['imgs'][0]) and $sPathPhoto = $this->PluginSociality_Oauth_GetPhotoByUrl($aUserData['imgs'][0])){
-
-                    if($this->User_CreateProfilePhoto($sPathPhoto, $oUser)){
+                $aMedias = [];
+                foreach($aUserData['imgs'] as $key=>$sUrlImg){
+                    $sFileTmp = $this->PluginSociality_Oauth_GetPhotoByUrl($sUrlImg);
+                    
+                    $oMedia = $this->Media_UploadUrl($this->Fs_GetPathWeb($sFileTmp), 'user', $oUser->getId());
+                    
+                    if(!is_object($oMedia)){
+                        print_r( $oMedia);
+                        continue;
+                    }
+                    $aMedias[] = $oMedia;
+                }
+                
+                if($oMedia = current($aMedias)){
+                    if($this->User_CreateProfilePhoto($oMedia->getFileWebPath(), $oUser)){
 
                         $this->User_CreateProfileAvatar($oUser->getProfileFoto(), $oUser);
                     }
 
-                    $this->Fs_RemoveFileLocal($sPathPhoto);
-                    unset($aUserData['imgs'][0]);
+                    unset($aMedias[key($aMedias)]);
                 }
                 
-                foreach($aUserData['imgs'] as $key=>$sUrlImg){
-                    if($key>3){
-                        break;
-                    }
-                    if(!$oMedia = $this->Media_UploadUrl($sUrlImg, 'user', $oUser->getId())){
-                        continue;
-                    }
+                foreach($aMedias as $oMedia){
                     $oWork = Engine::GetEntity('PluginFreelancer_Portfolio_Work');
                     $oWork->setMedia([$oMedia->getId()]);
                     $oWork->setTitle($key);
@@ -128,11 +136,26 @@ class PluginParser_ActionAdmin extends PluginAdmin_ActionPlugin
                         }
                     }
                 }
-                if($oUser->getNumber()){
-                    if($iFieldId = $this->User_userFieldExistsByName('phone')){
-                        $this->User_setUserFieldsValues($oUser->getId(),array($iFieldId[0]['id'] => $oUser->getNumber()));
+                
+                $aFieldsContactType = [];
+                $aFieldsContactValue = [];
+                if($iFieldId = $this->User_userFieldExistsByName('phone')){
+                    foreach($aUserData['phones'] as $sPhone){
+                        $aFieldsContactType[] = $iFieldId[0]['id'];
+                        $aFieldsContactValue[] = $sPhone;
+                    }
+                 }
+                 
+                
+                if (is_array($aFieldsContactType)) {
+                    foreach ($aFieldsContactType as $k => $v) {
+                        $v = (string)$v;
+                        $this->User_setUserFieldsValues($oUser->getId(),
+                            array($v => $aFieldsContactValue[$k]),
+                            5);
                     }
                 }
+                
                 if($oUser->getMail()){
                     if($iFieldId = $this->User_userFieldExistsByName('mail')){
                         $this->User_setUserFieldsValues($oUser->getId(),array($iFieldId[0]['id'] => $oUser->getMail()));
