@@ -30,6 +30,8 @@ jQuery(function($) {
         },
         map:null,
         geoObjects:null,
+        circle:null,
+        point:null,
         
         _create: function () {
             this._super();
@@ -43,7 +45,9 @@ jQuery(function($) {
             
             this.map = new ymaps.Map("map", {
                 center: this.option('ymapsOptions.center'),
-                zoom: this.option('ymapsOptions.zoom')
+                zoom: this.option('ymapsOptions.zoom'),
+                controls:['zoomControl'],
+                restrictMapArea:true
             });
             
             /*if(this.option('ymapsOptions.code') !== false){
@@ -62,68 +66,130 @@ jQuery(function($) {
             this._off(this.elements.input, 'keyup');
             setTimeout(function(){
                 this._on(this.elements.input,{ keyup: 'keyup_handler' });
-            }.bind(this), 500);
+            }.bind(this), 200);
             setTimeout(function(){
                 this.change();
-            }.bind(this), 300);
+            }.bind(this), 200);
         },
         change:function(){  
-            console.log('change');
             this.geocoder(this.elements.input.val(),this.showRes.bind(this));
         },
-        clear_field:function(){
+        clearField:function(){
             if(this.option('menu')){
                 this.elements.holder.find('.ls-nav--dropdown').remove();
             } 
         },
-        clear_map:function(){
+        clearMap:function(){
             this.map.geoObjects.removeAll();
+        },
+        hideMap:function(){
             this.elements.map.css('display', 'none');
         },
-        show_map:function(){
+        showMap:function(){
             this.elements.map.css('display', 'block');
+            this.map.container.fitToViewport();
         },
         showRes:function(geoObjects){
-            this.geoObjects = geoObjects;
-            var dataForList = [];
             
-            this.clear_map();
-            this.clear_field();
-            
-            //console.log('geos',this.geoObjects.getLength())
-            geoObjects.each(function(oGeo){
-                //this.map.geoObjects.add(oGeo);
-                //console.log(oGeo)
-                dataForList.push({name:oGeo.properties.get('name'), loc:oGeo.getAdministrativeAreas()});
-            }.bind(this));
-            //console.log('data',dataForList.length)
-            if(dataForList.length){
-                this._load('geo_list',{data:encodeURIComponent(JSON.stringify(dataForList))}, this.showList.bind(this));
+            if(this.loadList(geoObjects)){
+                this.clearField();
+                //this.clearMap();
+                this.showMap();
             }
             
+        },    
+        loadList:function(geoObjects){
+            this.geoObjects = geoObjects.toArray();
+            var dataForList = [];
+            geoObjects.each(function(oGeo){
+                dataForList.push({name:oGeo.properties.get('name'), loc:oGeo.getAdministrativeAreas()});
+            }.bind(this));
+
+            if(dataForList.length){
+                this._load('geo_list',{data:encodeURIComponent(JSON.stringify(dataForList))}, this.showList.bind(this));
+                return true;
+            }
+            
+            return false;
         },
         showList:function(response){    
             var menu = $(response.sHtml);
             this.option('menu', 1);
             menu.css('display','block');
             this.elements.holder.append(menu);
-            this._on(this.element.find('li'),{click:"choose_geo"});
-            //console.log(response);
+            this._on(this.element.find('li'),{click:"chooseGeo"});
         },
-        choose_geo:function(e){
-            this.clear_map();
-            console.log(this.geoObjects.getLength())
-            console.log(oGeo);
-            var oGeo = this.geoObjects.get($(e.currentTarget).data('index'));
-            console.log(oGeo);
-            this.map.geoObjects.add(oGeo);
-            this.show_map();
+        chooseGeo:function(e){
+            var oGeo = this.geoObjects[$(e.currentTarget).data('index')];
+            
+            this.addCircle(oGeo.geometry.getCoordinates(), oGeo.properties.get('boundedBy'));
+            
+            this.map.setBounds(oGeo.properties.get('boundedBy'));
             
             return false;
         },
-        geocoder:function(sQuery, call){
-            console.log('geocoder');
-            var myGeocoder = ymaps.geocode(sQuery, this.option('ymapsOptions.geocoder'));
+        addCircle:function(aCenter, aBounds, radius){
+            this.clearMap();
+            if(radius === undefined){
+                radius = this.getRadiusByBounds(aBounds)
+                if(radius < 0){
+                    radius = this.option('ymapsOptions.circle.radius');
+                }
+            }
+
+            this.circle = new ymaps.Circle([
+                    aCenter,
+                    radius
+                ], 
+                this.option('ymapsOptions.circle.properties'), 
+                this.option('ymapsOptions.circle.options')
+            );
+            this.point = new ymaps.Placemark(
+                    aCenter, 
+                this.option('ymapsOptions.point.properties'),
+                this.option('ymapsOptions.point.options')
+            );
+            
+            this.map.geoObjects.add(this.circle).add(this.point);
+            this.map.setBounds(this.circle.geometry.getBounds());
+                        
+            this.circle.events.add('click', this.click.bind(this));
+            this.map.events.add('click', this.click.bind(this));
+        },
+        getRadiusByBounds:function(aBounds){
+            var dist = ymaps.coordSystem.geo.getDistance(aBounds[0],aBounds[1]);
+            var radius = Math.ceil(dist/3);
+            if(this.option('ymapsOptions.circle.minRadius') > radius){
+                radius = this.option('ymapsOptions.circle.minRadius');
+            }
+            return radius;
+        },
+        click:function(event){
+            var aCoord = event.get('coords');
+            if(this.circle === null){
+                this.addCircle(aCoord, this.map.getBounds());
+            }else{
+                this.circle.geometry.setCoordinates(aCoord);
+                this.point.geometry.setCoordinates(aCoord);
+            }
+            
+            var mapBounds = this.map.getBounds();
+            this.circle.geometry.setRadius(this.getRadiusByBounds(mapBounds));
+            
+            this.map.setBounds(this.circle.geometry.getBounds());
+            
+            this.geocoder(aCoord, this.showClickResults.bind(this));            
+        },
+        showClickResults:function(geoObjects){
+            if(this.loadList(geoObjects)){
+                this.clearField();
+            }
+        },
+        geocoder:function(mQuery, call){
+            console.log('geocoder')
+            var options = this.option('ymapsOptions.geocoder');
+            
+            var myGeocoder = ymaps.geocode(mQuery, options);
             myGeocoder.then(
                 function (res) {
                     var geoObjects = this.filterRes(res);
