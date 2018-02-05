@@ -223,4 +223,5 @@
     {component 'toolbar' classes='js-toolbar-default' items={show_blocks group='toolbar'}}
 
     {hook run='layout_body_end'}
+    
 {/block}

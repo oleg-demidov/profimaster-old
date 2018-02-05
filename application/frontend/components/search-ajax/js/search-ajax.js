@@ -184,7 +184,7 @@
          */
         setParam: function( name, value ) {
             this.option( 'params.' + name, value );
-            // this.updateUrl();
+            //this.updateUrl();
         },
 
         /**

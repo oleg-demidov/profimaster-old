@@ -45,7 +45,11 @@ class PluginParser_ActionAdmin extends PluginAdmin_ActionPlugin
             
             $aData['role'] = 'master';
             $aData['pass'] = rand(1000, 9999);
-            $this->AddUser($aData);
+            if($oUser = $this->AddUser($aData)){
+                $this->Message_AddNotice('Пользователь добавлен',null,true);
+                Router::Location($oUser->getUserWebPath());
+            }
+            
         }
     }
     

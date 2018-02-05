@@ -21,7 +21,7 @@ textarea,
 select,
 input[type="password"],
 input[type="text"] {
-    font-size: 18px;
+    font-size: 16px;
     padding: 4px 10px 5px 10px;
     border: 1px solid #ddd;
     vertical-align: middle;
@@ -68,7 +68,7 @@ fieldset {
 }
 fieldset legend {
     color: #000;
-    font-size: 18px;
+    font-size: 16px;
     padding-right: 10px;
 }
 

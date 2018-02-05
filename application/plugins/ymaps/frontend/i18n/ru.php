@@ -1,9 +1,13 @@
 <?php
 
 return [
-    'error' => [
-        'max_per_period' => '. Максимально %%count%% раз(а) за период <b>%%period%%</b>. Осталось <b>%%rest%%</b>',
-        'max_count' => '. Максимально %%count%%',
-        'max_period' => '. Период использования разрешения истек. %%period%%'
+    'notices' => [
+        'validate_require' => 'Поле Местоположение не заполнено',
+        'validate_require_save_geo' => 'Не могу сохранить геолокацию'
+    ],
+    'map' => [
+        'you_can_choose_geo' => 'Вы можете выбрать точное местонахождение',
+        'you_destination_here'=>'Вы здесь находитесь',
+        'label' => 'Местонахождение'
     ]
 ];

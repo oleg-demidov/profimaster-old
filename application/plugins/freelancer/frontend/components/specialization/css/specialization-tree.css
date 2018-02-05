@@ -24,7 +24,7 @@
     background: none;
 }
 .fl-specialization-count{
-        padding: 3px 9px;
+    padding: 3px 25px 3px 9px;
     background: #ddd;
     margin: 4px;
     cursor: pointer;
@@ -35,7 +35,7 @@
 
 .fl-specialization-count:after{
     content: "x";
-    margin: 0 0 0 5px;
+    margin: 0 -15px 0 5px;
     float: right;
 }
 .fl-specialization-tree .ls-field,.fl-specialization-tree  .ls-field-label {

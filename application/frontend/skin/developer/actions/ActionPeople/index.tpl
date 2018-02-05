@@ -15,7 +15,8 @@
 {/block}
 
 {block 'layout_content'}
-    {component 'user' template='search-form'}
+    {component 'user' template='search-form'}   
+    
 
     {* Сортировка *}
     {component 'sort' template='ajax'

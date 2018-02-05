@@ -66,15 +66,15 @@
 
 
         {* Местоположение *}
-        {*component 'field' template='geo'
+        {component 'field' template='geo'
             classes   = 'js-field-geo-default'
             name      = 'geo'
             label     = {lang name='user.settings.profile.fields.place.label'}
             countries = $aGeoCountries
             regions   = $aGeoRegions
             cities    = $aGeoCities
-            place     = $oGeoTarget*}
-        {hook run='form_settings_profile_geo'}
+            place     = $oGeoTarget}
+        {*hook run='form_settings_profile_geo'*}
 
 
         {* О себе *}

@@ -17,7 +17,7 @@ Config::Set('module.comment.vote_target_allow', array_merge(Config::Get('module.
 
 
 
-Config::Set('block.rule_profile', []);
+//Config::Set('block.rule_profile', []);
 Config::Set('block.rule_index_blog', array(
     'action' => array(
         'community','feed','index',

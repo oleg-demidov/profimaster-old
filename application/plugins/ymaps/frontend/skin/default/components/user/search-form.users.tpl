@@ -10,3 +10,5 @@
     inputClasses    = 'js-search-text-main'
     inputName       = 'user_login'
     noSubmitButton  = true} 
+    
+{component 'ymaps:search-map.toggle'}

@@ -536,7 +536,7 @@ $config['block']['userfeedUsers'] = array(
 $config['block']['rule_users'] = array(
     'action' => array('people'),
     'blocks' => array(
-        'right' => array(
+        'left' => array(
             'component@user.block.users-statistics',
             'component@user.block.users-search',
         )

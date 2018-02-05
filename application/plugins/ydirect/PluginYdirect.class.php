@@ -33,7 +33,7 @@ class PluginYdirect extends Plugin
     protected $aInherits = array(
         'template' => array(
             //'admin:component.p-category.form' => '_components/p-category/form.tpl',
-            'component.field.geo' => '_components/field/field.geo.tpl'
+            //'component.field.geo' => '_components/field/field.geo.tpl'
         ),
         'entity' =>array(
            // 'ModuleCategory_EntityCategory' => '_ModuleCategory_EntityCategory',

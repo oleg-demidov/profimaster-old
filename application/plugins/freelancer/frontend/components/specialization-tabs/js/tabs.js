@@ -53,13 +53,14 @@
             }
         },
         changeTree: function(e){
+            this.changeInput(e);
             var target = $(e.target);
             if(target.prop("checked")){
                 target.parent().parent().addClass('checked');
-                target.closest('.select_tree').find('.select_subtree input').prop('checked', true).change();
+                target.closest('.select_tree').find('.select_subtree input').prop('checked', true);
             }else{
                 target.parent().parent().removeClass('checked');
-                target.closest('.select_tree').find('.select_subtree input').prop('checked', false).change();
+                target.closest('.select_tree').find('.select_subtree input').prop('checked', false);
             }
         }
     });

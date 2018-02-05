@@ -8,7 +8,7 @@
 	</author>
 	<homepage>https://vk.com/u_demidova</homepage>
 	<settings>{admin/plugin/ymaps}</settings>
-	<version>1.0</version>
+	<version>1.0.0</version>
 	<requires>
 		<livestreet>2.0.1</livestreet>
 		<plugins>
