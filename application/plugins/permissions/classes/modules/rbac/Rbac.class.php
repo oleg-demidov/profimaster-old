@@ -35,7 +35,7 @@ class PluginPermissions_ModuleRbac extends PluginPermissions_Inherit_ModuleRbac
         /**
          * Проверяем наличие пермишена в текущей роли
          */
-        if (isset($this->aRulePermissionCache[$oRole->getId()][$sPlugin])) {
+        if (isset($this->aRulePermissionCache[$oRole->getId()][$sPlugin])) {            
             if (in_array($sPermissionCode, array_keys( $this->aRulePermissionCache[$oRole->getId()][$sPlugin] ))) {
                 return $this->CheckPermissionByData( $this->aRulePermissionCache[$oRole->getId()][$sPlugin][$sPermissionCode] );
             }
@@ -233,6 +233,7 @@ class PluginPermissions_ModuleRbac extends PluginPermissions_Inherit_ModuleRbac
             $sPlugin = $aParamsOrPlugin;
         }
         $this->aParams = array_merge($aParams, ['user' => $oUser]);
+        
         return $this->IsAllowUserFull($oUser, $sPermissionCode, $aParams, $sPlugin);
     }
 

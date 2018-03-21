@@ -42,3 +42,6 @@
 .ls-nav--userbar .fl-market-button{
         margin: 0 10px;
 }
+.ls-nav--userbar .ls-nav--sub{
+    left: -150%;
+}

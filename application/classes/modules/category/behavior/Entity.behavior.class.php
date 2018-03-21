@@ -90,7 +90,7 @@ class ModuleCategory_BehaviorEntity extends Behavior
      */
     public function CallbackValidateAfter($aParams)
     {
-        if ($aParams['bResult'] and $this->getParam('validate_enable')) {
+        if ($aParams['bResult'] and $this->getParam('validate_enable')) { 
             $aFields = $aParams['aFields'];    
             if (is_null($aFields) or in_array($this->getParam('validate_field'), $aFields)) {
                 $oValidator = $this->Validate_CreateValidator('categories_check', $this,

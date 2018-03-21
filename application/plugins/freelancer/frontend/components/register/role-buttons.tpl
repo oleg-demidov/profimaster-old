@@ -1,18 +1,25 @@
 {$component = 'fl-register-role'}
 {component_define_params params=[ 'role']}
 
-{component 'block' classes="{$component}" title="Выберете вашу роль"
-    content={component 'button' template='group' label="Выберете вашу роль" buttons=[
-        [ 'text' => 'Мастер', 
-            'mods' => "{if $role=='master'}primary{/if} large",
-            'classes' => 'master-but',
-            'type' => 'button',
-            'value' => 'master'],
-        [ 'text' => 'Заказчик', 
-            'mods' => "{if $role=='employer'}primary{/if} large",
-            'classes' => 'employer-but',
-            'type' => 'button',
-            'value' => 'employer']
-        
-    ]}}
+{component 'block' 
+    classes="{$component}" 
+    title="Выберете вашу роль"
+    content={component 'actionbar'  items=[
+                [
+                    'buttons' => [
+                        [ 'text' => $aLang.plugin.freelancer.register.form.im_master, 
+                            'url' => {router 'fauth/register_master/step1'},
+                            'mods' => 'large success' ]
+                    ]
+                ],
+                [
+                    'buttons' => [
+                        [ 'text' => $aLang.plugin.freelancer.register.form.im_employer, 
+                            'url' => {router 'fauth/register_employer/step1'},
+                            'mods' => 'large warning' ]
+                    ]
+                ]
+            ]}
+            }
+    
 {*component 'field.hidden' name="role" value={$role|default:"master"}*}

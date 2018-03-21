@@ -3,7 +3,17 @@
 {component_define_params params=[ 'oUser']}
 
 <form method="POST">
-{hook run="freelancer_search_form" assign='contentReturn' }
+    
+{component 'ymaps:fields.ajaxgeo' 
+            classes="js-search-form-geo"
+            label={lang name='user.settings.profile.fields.place.label'} 
+            place=$oUser->getGeoTarget()
+            oLocation=$oUser->_getDataOne('_location_for_save')
+            countries = $aGeoCountries
+            regions   = $aGeoRegions
+            cities    = $aGeoCities
+            choosenGeo     = $oGeo} 
+            
 {$contentReturn}
 
 {component 'editor'

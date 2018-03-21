@@ -155,6 +155,7 @@ class ModuleRbac extends ModuleORM
      */
     protected function IsAllowUserFull($oUser, $sPermissionCode, $aParams = array(), $sPlugin = null)
     {
+        
         if (!$sPermissionCode) {
             return false;
         }

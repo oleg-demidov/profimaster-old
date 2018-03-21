@@ -41,6 +41,15 @@ class ModuleGeo_MapperGeo extends Mapper
         }
         return false;
     }
+    
+    public function UpdateGeo($oGeo)
+    {
+        $sql = "UPDATE " . Config::Get('db.table.geo_'.$oGeo->getType()) . " SET name_en=? WHERE id=?d";
+        if ($this->oDb->query($sql, $oGeo->getNameEn(), $oGeo->getId())) {
+            return true;
+        }
+        return false;
+    }
 
     /**
      * Возвращает список связей по фильтру
@@ -303,7 +312,7 @@ class ModuleGeo_MapperGeo extends Mapper
 				ORDER by {$sOrder}
 				LIMIT ?d, ?d ;
 					";
-        $aResult = array();
+        $aResult = array(); 
         if ($aRows = $this->oDb->selectPage($iCount, $sql,
             isset($aFilter['id']) ? $aFilter['id'] : DBSIMPLE_SKIP,
             isset($aFilter['name_ru']) ? $aFilter['name_ru'] : DBSIMPLE_SKIP,

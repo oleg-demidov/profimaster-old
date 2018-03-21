@@ -8,10 +8,10 @@ class PluginFreelancer_ModuleUser extends PluginFreelancer_Inherit_ModuleUser
                 'target_type'=>'specialization',
         ),
         //'property'=>'ModuleProperty_BehaviorModule',
-        'ygeo' =>array(
+        /*'ygeo' =>array(
             'class'=>'PluginYdirect_ModuleGeo_BehaviorModule',
             'target_type'=>'user'
-        )/*,
+        ),
         
         'favourites' => 'PluginFreelancer_ModuleFavourites_BehaviorModule'*/
     );
@@ -42,13 +42,12 @@ class PluginFreelancer_ModuleUser extends PluginFreelancer_Inherit_ModuleUser
     
     public function GetUsersByFilter($aFilter, $aOrder, $iCurrPage, $iPerPage, $aAllowData = null)
     {
-       
         $sKey = "user_filter_" . serialize($aFilter) . serialize($aOrder) . "_{$iCurrPage}_{$iPerPage}";
         if (false === ($data = $this->Cache_Get($sKey))) {
             
             $this->RunBehaviorHook('module_orm_GetItemsByFilter_before',
                 array('aFilter' => &$aFilter, 'sEntityFull' => 'User_User'), true);
-            
+
             $iCount = 0;
             $data = array(
                 'collection' => $this->oMapper->GetUsersByFilter($aFilter, $aOrder, $iCount, $iCurrPage, $iPerPage),
@@ -60,7 +59,197 @@ class PluginFreelancer_ModuleUser extends PluginFreelancer_Inherit_ModuleUser
             $iTimeCache = isset($aFilter['date_last_more']) ? 60 * 10 : 60 * 60 * 24 * 2;
             $this->Cache_Set($data, $sKey, array("user_update", "user_new"), $iTimeCache);
         }
-        $data['collection'] = $this->GetUsersAdditionalData($data['collection'], $aAllowData);
+        if(isset($aFilter['#select']) and count($aFilter['#select'])){
+            $data['collection'] = $this->GetUsersAdditionalData($data['collection'], $aAllowData, ['#select' => $aFilter['#select']] );
+        }else{
+            $data['collection'] = $this->GetUsersAdditionalData($data['collection'], $aAllowData);
+        }
+        return $data;
+    }
+    
+    /**
+     * Получает дополнительные данные(объекты) для юзеров по их ID
+     *
+     * @param array $aUserId Список ID пользователей
+     * @param array|null $aAllowData Список типод дополнительных данных для подгрузки у пользователей
+     * @return array
+     */
+    public function GetUsersAdditionalData($aUserId, $aAllowData = null, $aFilter = null)
+    {
+        if (is_null($aAllowData)) {
+            $aAllowData = array('vote', 'session', 'friend', 'geo_target', 'note');
+        }
+        func_array_simpleflip($aAllowData);
+        if (!is_array($aUserId)) {
+            $aUserId = array($aUserId);
+        }
+        /**
+         * Получаем юзеров
+         */
+        $aUsers = $this->GetUsersByArrayId($aUserId, $aFilter);
+        /**
+         * Получаем дополнительные данные
+         */
+        $aSessions = array();
+        $aFriends = array();
+        $aVote = array();
+        $aGeoTargets = array();
+        $aNotes = array();
+        if (isset($aAllowData['session'])) {
+            $aSessions = $this->GetSessionsByArrayId($aUserId);
+        }
+        if (isset($aAllowData['friend']) and $this->oUserCurrent) {
+            $aFriends = $this->GetFriendsByArray($aUserId, $this->oUserCurrent->getId());
+        }
+
+        if (isset($aAllowData['vote']) and $this->oUserCurrent) {
+            $aVote = $this->Vote_GetVoteByArray($aUserId, 'user', $this->oUserCurrent->getId());
+        }
+        if (isset($aAllowData['geo_target'])) {
+            $aGeoTargets = $this->Geo_GetTargetsByTargetArray('user', $aUserId);
+        }
+        if (isset($aAllowData['note']) and $this->oUserCurrent) {
+            $aNotes = $this->GetUserNotesByArray($aUserId, $this->oUserCurrent->getId());
+        }
+        /**
+         * Добавляем данные к результату
+         */
+        foreach ($aUsers as $oUser) {
+            if (isset($aSessions[$oUser->getId()])) {
+                $oUser->setSession($aSessions[$oUser->getId()]);
+            } else {
+                $oUser->setSession(null); // или $oUser->setSession(new ModuleUser_EntitySession());
+            }
+            if ($aFriends && isset($aFriends[$oUser->getId()])) {
+                $oUser->setUserFriend($aFriends[$oUser->getId()]);
+            } else {
+                $oUser->setUserFriend(null);
+            }
+
+            if (isset($aVote[$oUser->getId()])) {
+                $oUser->setVote($aVote[$oUser->getId()]);
+            } else {
+                $oUser->setVote(null);
+            }
+            if (isset($aGeoTargets[$oUser->getId()])) {
+                $aTargets = $aGeoTargets[$oUser->getId()];
+                $oUser->setGeoTarget(isset($aTargets[0]) ? $aTargets[0] : null);
+            } else {
+                $oUser->setGeoTarget(null);
+            }
+            if (isset($aAllowData['note'])) {
+                if (isset($aNotes[$oUser->getId()])) {
+                    $oUser->setUserNote($aNotes[$oUser->getId()]);
+                } else {
+                    $oUser->setUserNote(false);
+                }
+            }
+        }
+
+        return $aUsers;
+    }
+
+    /**
+     * Список юзеров по ID
+     *
+     * @param array $aUserId Список ID пользователей
+     * @return array
+     */
+    public function GetUsersByArrayId($aUserId, $aFilter = null)
+    {
+        if (!$aUserId) {
+            return array();
+        }
+        if (Config::Get('sys.cache.solid')) {
+            return $this->GetUsersByArrayIdSolid($aUserId, $aFilter);
+        }
+        if (!is_array($aUserId)) {
+            $aUserId = array($aUserId);
+        }
+        $aUserId = array_unique($aUserId);
+        $aUsers = array();
+        $aUserIdNotNeedQuery = array();
+        
+        if($aFilter === null){
+            $aKeyPrefix = 'user_';
+        }else{
+            $aKeyPrefix = 'user_'. serialize($aFilter);
+        }
+        /**
+         * Делаем мульти-запрос к кешу
+         */
+        $aCacheKeys = func_build_cache_keys($aUserId, $aKeyPrefix);
+        if (false !== ($data = $this->Cache_Get($aCacheKeys))) {
+            /**
+             * проверяем что досталось из кеша
+             */
+            foreach ($aCacheKeys as $sValue => $sKey) {
+                if (array_key_exists($sKey, $data)) {
+                    if ($data[$sKey]) {
+                        $aUsers[$data[$sKey]->getId()] = $data[$sKey];
+                    } else {
+                        $aUserIdNotNeedQuery[] = $sValue;
+                    }
+                }
+            }
+        }
+        /**
+         * Смотрим каких юзеров не было в кеше и делаем запрос в БД
+         */
+        $aUserIdNeedQuery = array_diff($aUserId, array_keys($aUsers));
+        $aUserIdNeedQuery = array_diff($aUserIdNeedQuery, $aUserIdNotNeedQuery);
+        $aUserIdNeedStore = $aUserIdNeedQuery;
+        if ($data = $this->oMapper->GetUsersByArrayId($aUserIdNeedQuery, $aFilter)) {
+            foreach ($data as $oUser) {
+                /**
+                 * Добавляем к результату и сохраняем в кеш
+                 */
+                $aUsers[$oUser->getId()] = $oUser;
+                $this->Cache_Set($oUser, "{$aKeyPrefix}{$oUser->getId()}", array(), 60 * 60 * 24 * 4);
+                $aUserIdNeedStore = array_diff($aUserIdNeedStore, array($oUser->getId()));
+            }
+        }
+        /**
+         * Сохраняем в кеш запросы не вернувшие результата
+         */
+        foreach ($aUserIdNeedStore as $sId) {
+            $this->Cache_Set(null, "{$aKeyPrefix}{$sId}", array(), 60 * 60 * 24 * 4);
+        }
+        /**
+         * Сортируем результат согласно входящему массиву
+         */
+        $aUsers = func_array_sort_by_keys($aUsers, $aUserId);
+        return $aUsers;
+    }
+    
+    /**
+     * Получение пользователей по списку ID используя общий кеш
+     *
+     * @param array $aUserId Список ID пользователей
+     * @return array
+     */
+    public function GetUsersByArrayIdSolid($aUserId, $aFilter = null)
+    {
+      
+        if (!is_array($aUserId)) {
+            $aUserId = array($aUserId);
+        }
+        $aUserId = array_unique($aUserId);
+        $aUsers = array();
+        if($aFilter === null){
+            $aKeyPrefix = 'user_id_';
+        }else{
+            $aKeyPrefix = 'user_id_'. serialize($aFilter);
+        }
+        $s = join(',', $aUserId);
+        if (false === ($data = $this->Cache_Get("{$aKeyPrefix}{$s}"))) {
+            $data = $this->oMapper->GetUsersByArrayId($aUserId, $aFilter);
+            foreach ($data as $oUser) {
+                $aUsers[$oUser->getId()] = $oUser;
+            }
+            $this->Cache_Set($aUsers, "{$aKeyPrefix}{$s}", array("user_update", "user_new"), 60 * 60 * 24 * 1);
+            return $aUsers;
+        }
         return $data;
     }
     
@@ -82,87 +271,6 @@ class PluginFreelancer_ModuleUser extends PluginFreelancer_Inherit_ModuleUser
         return null;
     }
     
-    public function AddUser($sRole) {
-        $oUser = Engine::GetEntity('ModuleUser_EntityUser');
-        $oUser->_setValidateScenario('freelancer_reg');
-        /**
-         * Заполняем поля (данные)
-         */
-        $oUser->setRole($sRole);
-        $oUser->setLogin(getRequestStr('login'));
-        $oUser->setEmailOrNumber(getRequestStr('email_or_number'));
-        $oUser->setPassword(getRequestStr('pass'));
-        $oUser->setPasswordConfirm(getRequestStr('pass'));
-        $oUser->setProfileAbout($this->Session_Get('about'));
-        //$oUser->setCaptcha(getRequestStr('g-recaptcha-response'));
-        $oUser->setProfileName(getRequestStr('name'));
-        $oUser->setDateRegister(date("Y-m-d H:i:s"));
-        $oUser->setIpRegister(func_getIp());
-        
-        if (Config::Get('general.reg.activation')) {
-            $oUser->setActivate(0);
-            $oUser->setActivateKey(md5(func_generator() . time()));
-        } else {
-            $oUser->setActivate(1);
-            $oUser->setActivateKey(null);
-        }
-        if ($oUser->_Validate()) {
-            $oUser->setPassword($this->User_MakeHashPassword($oUser->getPassword()));
-            
-            if ($this->User_Add($oUser)) {
-                $oRole = $this->Rbac_GetRoleByCode($sRole);
-                $this->Rbac_AddRoleToUser($oRole, $oUser);
-                $this->User_Update($oUser);
-                
-                $this->SetDefaultSettings($oUser);
-                
-                if ($sCode = $this->Session_Get('invite_code')) {
-                    $this->Session_Drop('invite_code');
-                    $this->Invite_UseCode($sCode, $oUser);
-                }
-                
-                $this->Stream_switchUserEventDefaultTypes($oUser->getId());
-                
-                $oUser->setYGeo($this->Session_Get('ygeo'));
-                $oUser->ygeo->CallbackAfterSave();
-                
-                if($oUser->getStrRole() == 'master'){
-                    
-                    $oUser->setSpecialization($this->Session_Get('specialization'));
-                    $oUser->_setValidateScenario('specialization');
-                    if($oUser->_Validate()){
-                        $this->Category_SaveCategories($oUser, 'specialization');
-                    } else {
-                        foreach($oUser->_getValidateErrors() as $sError){
-                            $this->Message_AddError($sError[0]);
-                        }
-                    }
-                }
-                if($oUser->getNumber()){
-                    if($iFieldId = $this->User_userFieldExistsByName('phone')){
-                        $this->User_setUserFieldsValues($oUser->getId(),array($iFieldId[0]['id'] => $oUser->getNumber()));
-                    }
-                }
-                if($oUser->getMail()){
-                    if($iFieldId = $this->User_userFieldExistsByName('mail')){
-                        $this->User_setUserFieldsValues($oUser->getId(),array($iFieldId[0]['id'] => $oUser->getMail()));
-                    }
-                }
-                
-                
-                return $oUser;
-            }
-        }else {
-            /**
-             * Получаем ошибки
-             */
-            foreach($oUser->_getValidateErrors() as $sError){
-                $this->Message_AddError($sError[0]);
-            }
-            return false;
-        }
-        
-    }
     
     public function AddSocial($oUser) {
         if(!$oDataUser = $this->Session_Get('dataUser')){

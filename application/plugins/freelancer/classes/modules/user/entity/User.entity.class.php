@@ -14,7 +14,7 @@ class PluginFreelancer_ModuleUser_EntityUser extends PluginFreelancer_Inherit_Mo
             'target_type'=>'specialization',
             'form_field'=>'specialization',
             'multiple'=>true,
-            'validate_require'=>false,
+            'validate_enable'=>false,
             'validate_min'=>1,
             'validate_max'=>500,
             'validate_only_without_children'=>false,
@@ -22,9 +22,14 @@ class PluginFreelancer_ModuleUser_EntityUser extends PluginFreelancer_Inherit_Mo
             'object_type' => 'user',
             'classes' => 'specialization'
         ),
-        'ygeo' => [
+        /*'ygeo' => [
             'class' => 'PluginYdirect_ModuleGeo_BehaviorEntity',
             'target_type' => 'user'
+        ],*/
+        'ymaps' => [
+            'class'=>'PluginYmaps_ModuleGeo_BehaviorEntity',
+            'target_type'=>'user',
+            'validate_guest' => true
         ],
         'favourites' => 'PluginFreelancer_ModuleFavourites_BehaviorEntity'
     );
@@ -43,17 +48,22 @@ class PluginFreelancer_ModuleUser_EntityUser extends PluginFreelancer_Inherit_Mo
     }
     
     protected $aValidateRules = array(
-        array('login', 'login', 'on' => array('registration', 'freelancer_reg','login', '')), // '' - означает дефолтный сценарий
-        array('login', 'login_exists', 'on' => array('registration', 'freelancer_reg','login','login_exist')),
-        array('email_or_number', 'email_or_number', 'allowEmpty' => false, 'on' => array( 'freelancer_reg','email_or_number')),
-        array('role', 'role', 'on' => array( 'freelancer_reg')),
+        array('login', 'login', 'on' => array('registration', 'register_master_step3', 'register_employer_step1', 'login', '')), // '' - означает дефолтный сценарий
+        array('login', 'login_exists', 'on' => array('registration', 'register_master_step3', 'register_employer_step1','login','login_exist')),
+        array('email_or_number', 'email_or_number', 'allowEmpty' => false, 'on' => array( 'register_master_step3', 'register_employer_step1', 'email_or_number')),
+        array('role', 'role', 'on' => array( 'register_master_step3', 'register_employer_step1', 'register_master_step2')),
         array('mail', 'email', 'allowEmpty' => false, 'on' => array('registration','')),
         array('mail', 'mail_exists', 'on' => array('registration')),
-        array('specialization', 'specialization', 'on' => array('specialization', 'freelancer_reg')),
-        array('profile_about', 'profile_about', 'on' => array('profile_about', 'profile')),
+        array('specialization', 'specialization', 'on' => array('specialization', 'register_master_step2', 'register_master_step3')),
         array('profile_sex', 'profile_sex', 'on' => array('profile_sex', 'profile')),
         array('profile_birthday', 'profile_birthday', 'on' => array('profile_birthday', 'profile')),
-        array('profile_foto', 'profile_foto', 'on' => array('profile_foto', 'profile')),
+        array('profile_foto', 'profile_foto', 'on' => array('profile_foto', 'profile')),        
+        array('profile_about', 'profile_about', 'on' => array('register_master_step2', 'profile')),
+        array('geo', 'geo', 'on' => array('register_master_step2', 'profile')),        
+        array('profile_name', 'string', 'min' => 2, 'max'=>100 ,'allowEmpty' => false, 'on' => array( 'register_employer_step1', 'register_master_step3')),
+        array('password', 'string', 'allowEmpty' => false, 'min' => 5, 'max'=>100 ,'on' => array( 'register_employer_step1', 'register_master_step3')),
+        array('captcha', 'captcha_recaptcha', 'allowEmpty' => false, 'on' => array( 'register_employer_step1', 'register_master_step3'))
+        
     );
     
     public function ValidateProfileFoto($sValue, $aParams) {
@@ -118,17 +128,19 @@ class PluginFreelancer_ModuleUser_EntityUser extends PluginFreelancer_Inherit_Mo
         return true;
     }
     
-    public function ValidateProfileAbout($sValue, $aParams) {
+    public function ValidateProfileAbout($sValue, $aParams) { 
         $sOrigProfileAbout = '';
-        if($this->getId()){
-            $oUser = $this->User_GetUserById($this->getId());
+        
+        if($oUser = $this->User_GetUserById($this->getId())){
             $sOrigProfileAbout = $oUser->getProfileAbout();
         }
+        
         $iRatingOffset = $this->getRatingOffsetByAbout($sOrigProfileAbout, $sValue );
         $this->_setData(['rating_offset' => $iRatingOffset]); 
         $this->setRating($this->_getDataOne('user_rating') + $iRatingOffset);
         
-        if(!$this->Validate_Validate('string',$sValue, ['min'=>0, "max" => 5000])){
+        if(!$this->Validate_Validate('string',$sValue, 
+                ['allowEmpty' => false, 'min'=>Config::Get('plugin.freelancer.user.validate.min_profile_about'), "max" => 5000])){
             return $this->Validate_GetErrors()[0];            
         }
         return true;
@@ -153,7 +165,7 @@ class PluginFreelancer_ModuleUser_EntityUser extends PluginFreelancer_Inherit_Mo
     public function ValidateSpecialization($sValue, $aParams)
     {
         if(!is_array($sValue)){
-            return true;
+            return $this->Lang_Get('plugin.freelancer.register.validation.no_specialization');
         }
         if(!$this->Rbac_IsAllowUser($this,'specialization', 'freelancer', ['count' => sizeof($sValue)])){
             return $this->Rbac_GetMsgLast();
@@ -179,6 +191,30 @@ class PluginFreelancer_ModuleUser_EntityUser extends PluginFreelancer_Inherit_Mo
         }
         return true;
     }
+    
+    public function ValidateGeo($sValue, $aParams)
+    {
+        $oGeo=null; 
+        if(isset($sValue['city']) ){
+            $oGeo = $this->Geo_GetGeoObject('city', $sValue['city']);
+        }elseif(isset($sValue['region']) ){
+            $oGeo = $this->Geo_GetGeoObject('region', $sValue['region']);
+        }elseif(isset($sValue['country'])){
+            $oGeo = $this->Geo_GetGeoObject('country', $sValue['country']);
+        }
+        
+        if($oGeo){
+            $oGeoTarget = Engine::GetEntity('Geo_Target', $oGeo->_getData(['city_id', 'country_id', 'region_id']));
+            $oGeoTarget->_setData([$oGeo->getType().'_id' => $oGeo->getId()]);
+            $oGeoTarget->setTargetType('user');   
+            $oGeoTarget->setGeoType($oGeo->getType());
+            
+            $this->setGeoTarget($oGeoTarget);
+        }else{
+            return $this->Lang_Get('plugin.freelancer.user.validators.no_geo');
+        }
+        return true;
+    }    
     
     public function ValidateRole($sValue, $aParams)
     {

@@ -1,11 +1,16 @@
 {
     "templates": {
-        "count":"field.count.tpl"
+        "count":"field.count.tpl",
+        "category-tree":"category-tree.tpl",
+        "query":"field.query.tpl"
     },
     "scripts": {
-        "count":"js/count.js"
+        "count":"js/count.js",
+        "category-tree":"js/category-tree.js"
     },
     "styles": {
+        "query":"css/query.css",
+        "category-tree":"css/category-tree.css",
     	"count":"css/count.css"
     }
 }

@@ -1,86 +1,95 @@
 <?php
-/**
- * LiveStreet CMS
- * Copyright © 2013 OOO "ЛС-СОФТ"
- *
- * ------------------------------------------------------
- *
- * Official site: www.livestreetcms.com
- * Contact e-mail: office@livestreetcms.com
- *
- * GNU General Public License, version 2:
- * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
- *
- * ------------------------------------------------------
- *
- * @link http://www.livestreetcms.com
- * @copyright 2013 OOO "ЛС-СОФТ"
- * @author Maxim Mzhelskiy <rus.engine@gmail.com>
- *
- */
+
 
 /**
- * Часть экшена админки по управлению ajax запросами
+ * Description of EventTopic
+ *
+ * @author oleg
  */
-class PluginFreelancer_ActionFauth_EventRegister extends Event
-{
 
-    public function Init()
-    {
-        /**
-         * Устанавливаем формат ответа
-         */
-        //$this->Viewer_SetResponseAjax('json');
-    }
+class PluginFreelancer_ActionFauth_EventRegister extends Event {
 
-    /**
-     * Обработка добавления страницы
-     */
-    public function EventRegister()
-    {
-        $this->Component_Add('freelancer:auth');
-        if(!$sRole = $this->GetParam(0)){
-            $sRole = 'master';
-        }
-        $this->Session_Set('register_role', $sRole);
-                
-        if(isPost()){
-            $sName = getRequest('name');
-            $sPass = getRequest('password');
-            $sEmailOrNumber = getRequest('email_or_number');
-            
-            $oUser = Engine::GetEntity('ModuleUser_EntityUser');
-            $oUser->_setValidateScenario('freelancer_reg');
-            
-            /**
-             * Заполняем поля (данные)
-             */
-            $oUser->setEmailOrNumber($sEmailOrNumber);
-            $oUser->setLogin($sName);
-            $oUser->setRole($this->Session_Get('register_role'));
-            $oUser->setPassword($sPass);
-            $oUser->setPasswordConfirm($sPass);
+    public function EventRegister() 
+    { 
+        $aRegisterParams = $this->Session_Get('aRegisterParams');
+        $aRegisterParams = array_merge([
+            'validate_scenario' => 'freelancer_reg',
+            'ymaps_validate_enable' => true,
+            'category_validate_enable' => true,
+            'ymaps_save_enable' => true,
+            'category_save_enable' => true,
+            'register_template' => 'register_master/step3',
+            'activation_template' => 'register_master/step4'
+        ],$aRegisterParams);
+        
+        $this->Component_Add('freelancer:register');
+        
+        $this->SetTemplateAction($aRegisterParams['register_template']);
+        
+        if(isPost()){  
+            $oUser= Engine::GetEntity('User_User',$this->Session_Get('userData'));
+
+            $oUser->setCaptcha(getRequest('g-recaptcha-response'));
+            $oUser->setProfileName(getRequestStr('name'));
+            $oUser->setLogin(getRequestStr('login'));
+            $oUser->setEmailOrNumber(getRequestStr('email_or_number'));
+            $oUser->setPassword(getRequestStr('pass'));
+            $oUser->setId(ModuleRbac::ROLE_CODE_GUEST);
             $oUser->setDateRegister(date("Y-m-d H:i:s"));
-            $oUser->setCaptcha(getRequestStr('captcha'));
             $oUser->setIpRegister(func_getIp());
-            /**
-             * Если используется активация, то генерим код активации
-             */
-            $oUser->setActivate(1);
+            $oUser->setProfileSex('other');
+            
+            if (Config::Get('general.reg.activation') ) {
+                $oUser->setActivate(0);
+                $oUser->setActivateKey(md5(func_generator() . time()));
+            } else {
+                $oUser->setActivate(1);
+                $oUser->setActivateKey(null);
+            }
             
             $this->Hook_Run('registration_validate_before', array('oUser' => $oUser));
             
-            /**
-             * Запускаем валидацию
-             */
-            if ($oUser->_Validate()) {
-                print_r($oUser->_getData());
+            $oUser->_setValidateScenario($aRegisterParams['validate_scenario']);
+            
+            $oUser->ymaps->setParam('validate_enable', $aRegisterParams['ymaps_validate_enable']);
+            $oUser->category->setParam('validate_enable', $aRegisterParams['category_validate_enable']);
+            
+            if(!$oUser->_Validate()){
                 $this->Hook_Run('registration_validate_after', array('oUser' => $oUser));
+                foreach($oUser->_getValidateErrors() as $sError){
+                    $this->Message_AddError(current($sError));
+                }                
+            }else{            
                 $oUser->setPassword($this->User_MakeHashPassword($oUser->getPassword()));
-                if (/*$this->User_Add($oUser)*/0) {
+                if ($this->User_Add($oUser)) {
+                    $this->Hook_Run('registration_after', array('oUser' => $oUser));
                     
-                    if ($sCode = $this->GetInviteRegister()) {
+                    $oRole = $this->Rbac_GetRoleByCode($oUser->getRole());
+                    $this->Rbac_AddRoleToUser($oRole, $oUser);
+                    
+                    $this->User_Update($oUser);
+                    
+                    $this->User_SetDefaultSettings($oUser);
+                    
+                    if ($sCode = $this->Session_Get('invite_code')) {
+                        $this->Session_Drop('invite_code');
                         $this->Invite_UseCode($sCode, $oUser);
+                    }
+                    
+                    $this->Stream_switchUserEventDefaultTypes($oUser->getId());
+                    
+                    if($aRegisterParams['ymaps_save_enable']){
+                        $oUser->ymaps->CallbackAfterSave();
+                    }
+                    if($aRegisterParams['category_save_enable']){
+                        
+                        $oUser->category->CallbackAfterSave();
+                    }
+                    
+                    if( $oGeoTarget = $oUser->getGeoTarget() ){
+                        $oGeoTarget->setTargetId($oUser->getId());
+                        $oGeoTarget->setTargetType('user');
+                        $this->Geo_AddTarget($oGeoTarget);
                     }
                     
                     if($oUser->getNumber()){
@@ -88,42 +97,53 @@ class PluginFreelancer_ActionFauth_EventRegister extends Event
                             $this->User_setUserFieldsValues($oUser->getId(),array($iFieldId[0]['id'] => $oUser->getNumber()));
                         }
                     }
-                    $this->Hook_Run('registration_after', array('oUser' => $oUser));
-                    /**
-                     * Убиваем каптчу
-                     */
-                    $this->Session_Drop('captcha_keystring_user_signup');
-                    /**
-                     * Подписываем пользователя на дефолтные события в ленте активности
-                     */
-                    $this->Stream_switchUserEventDefaultTypes($oUser->getId());
-                    $oUser = $this->User_GetUserById($oUser->getId());
-                    /**
-                     * Сразу авторизуем
-                     */
-                    $this->User_Authorization($oUser, false);
-                    $this->DropInviteRegister();
-                    /**
-                     * Определяем URL для редиректа после авторизации
-                     */
-                    $sUrl = Config::Get('module.user.redirect_after_registration');
+                    if($oUser->getMail()){
+                        if($iFieldId = $this->User_userFieldExistsByName('mail')){
+                            $this->User_setUserFieldsValues($oUser->getId(),array($iFieldId[0]['id'] => $oUser->getMail()));
+                        }
+                    }                    
                     
-                } else {
-                    $this->Message_AddErrorSingle($this->Lang_Get('common.error.system.base'));
-                    //return;
                 }
-            } else {
-                $aErrors = $oUser->_getValidateErrors();
-                foreach($aErrors as $sError){
-                    $this->Message_AddError($sError[0]);
-                }
+                $this->Session_Drop('userData');              //  print_r($oUser->_getData());
+                Router::LocationAction('fauth/activation?user_id='.$oUser->getId());
             }
             
-            $this->Viewer_Assign('sName', $sName);
-            $this->Viewer_Assign('sPass', $sPass);
-            $this->Viewer_Assign('sEmailOrNumber', $sEmailOrNumber);
         }
+       
         
-        $this->Viewer_Assign('sRole', $sRole);
+        /*if($aUserData = $this->Session_Get('dataUser')){
+            $aUserData->displayName = $this->PluginFreelancer_Freelancer_Rus2Translit($aUserData->displayName);
+            $this->Viewer_Assign('aUserData',$aUserData );
+        }*/
+        //$this->Viewer_Assign('sUrlResetData', Router::GetPathWebCurrent().'?reset_data=1' );
+        
+        
+    }
+    
+    public function EventActivation()             
+    {
+        $aRegisterParams = $this->Session_Get('aRegisterParams');
+        
+        $this->Hook_Run('registration_activate_before');
+        
+        $this->Session_Drop('aRegisterParams');
+        
+        if( !$oUser = $this->User_GetUserById(getRequest('user_id')) ){
+            return Router::ActionError('',$this->Lang_Get('plugin.freelancer.register.validation.undefined_user'));
+        }
+        if(!$oUser->getActivate()){
+            if(!$oUser->getActivate()){
+                $this->PluginFreelancer_Notify_Send($oUser,'registration_activate', $oUser);   
+            }
+        }else{
+            $this->User_Authorization($oUser);
+            $this->Session_Drop('userId');
+            Router::Location($oUser->getUserWebPath());
+        }
+        $this->Viewer_Assign('sEmail', $oUser->getMail());
+        $this->Viewer_Assign('sNumber', $oUser->getNumber());
+        $this->Component_Add('freelancer:register');
+        
+        $this->SetTemplateAction($aRegisterParams['activation_template']);
     }
 }

@@ -135,7 +135,7 @@
             switch ( filter.type ) {
                 // Текстовое поле
                 case 'text':
-                    element.each(function () {
+                    element.each(function () { 
                         _this.setParam( filter.name, $(this).val() );
                         _this.setParam( 'isPrefix', 0 );
                     });

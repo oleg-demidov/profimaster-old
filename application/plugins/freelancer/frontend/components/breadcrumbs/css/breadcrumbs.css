@@ -1,5 +1,5 @@
 .fl-breadcrumbs {
-        background-color: #3993a3;
+        background-color: #2f8bbc;
     color: #FFF;
     display: flex;
     font-size: 17px;
@@ -45,7 +45,7 @@
     left: 18px;
     border-top: 1px solid #1f535d;
     border-left: 1px solid #1f535d;
-    background-color: #3993a3;
+    background-color: #2f8bbc;
 }
 
 .breadcrumb-item.current,

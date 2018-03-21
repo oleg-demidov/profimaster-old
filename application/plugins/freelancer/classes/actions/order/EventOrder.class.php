@@ -51,6 +51,7 @@ class PluginFreelancer_ActionOrder_EventOrder extends Event {
         $this->Component_Add('freelancer:order');
         $this->Component_Add('freelancer:bid');
         $this->Component_Add('freelancer:user');
+         
         
     		
         $iIdOrder = (int)$this->sCurrentEvent;
@@ -109,6 +110,7 @@ class PluginFreelancer_ActionOrder_EventOrder extends Event {
         $this->Component_Add('freelancer:specialization-tabs');
         $this->Component_Add('freelancer:user');
         $this->Component_Add('freelancer:specialization');
+        $this->Component_Add('ymaps:geo-init');
         
         //$this->Viewer_AppendScript(Plugin::GetTemplateWebPath('freelancer').'assets/js/init.js');
         if(!$this->oUserCurrent){
@@ -125,6 +127,7 @@ class PluginFreelancer_ActionOrder_EventOrder extends Event {
             if($oOrder->getUserId() != $this->oUserCurrent->getId()){
                 return Router::ActionError($this->Rbac_GetMsgLast());
             } 
+            $oGeoObject = $this->Geo_GetGeoObjectByTarget('order', $oOrder->getId());
         }
         
         $this->AddMetaTags($oOrder);
@@ -148,8 +151,22 @@ class PluginFreelancer_ActionOrder_EventOrder extends Event {
             
             $oOrder->setGeoTarget($oGeoTarget);
         }
+        
+        
    
         if(isPost()){
+            
+            $aGeo = getRequest('geo');
+
+            if (isset($aGeo['city']) && $aGeo['city']) {
+                $oGeoObject = $this->Geo_GetGeoObject('city', (int)$aGeo['city']);
+            } elseif (isset($aGeo['region']) && $aGeo['region']) {
+                $oGeoObject = $this->Geo_GetGeoObject('region', (int)$aGeo['region']);
+            } elseif (isset($aGeo['country']) && $aGeo['country']) {
+                $oGeoObject = $this->Geo_GetGeoObject('country', (int)$aGeo['country']);
+            } else {
+                $oGeoObject = null;
+            }
             
             $oOrder->setMedia(getRequest('media',[]));
             
@@ -167,6 +184,9 @@ class PluginFreelancer_ActionOrder_EventOrder extends Event {
             
             if($oOrder->_Validate()){ 
                 if($oOrder->Save()){ 
+                    if ($oGeoObject) {
+                        $this->Geo_CreateTarget($oGeoObject, 'order', $oOrder->getId());
+                    }
                     if($oOrder->_isNew()){                        
                         $this->oUserCurrent->isCreateOrder(['stat' => true]);
                         $this->oUserCurrent->setRating($this->oUserCurrent->_getDataOne('user_rating')
@@ -193,7 +213,8 @@ class PluginFreelancer_ActionOrder_EventOrder extends Event {
         
         $this->Viewer_Assign('oOrder', $oOrder);
         
-        $this->Viewer_Assign('oUser', $this->oUserCurrent);
+        $this->Viewer_Assign('oUser', $this->oUserCurrent); 
+        $this->Viewer_Assign('oGeoObject', $oGeoObject);
         
         $this->SetTemplateAction('add');
         

@@ -5,13 +5,19 @@
  * @date  : 02.07.13
  */
 
-class PluginFreelancer_BlockDefaultGeo extends Block
+class PluginFreelancer_BlockPoisk extends Block
 {
-    private $plugin;
-
     public function Exec()
     {
-        print_r(11112);
-        return true;
+        $this->Lang_AddLangJs([
+            'plugin.ymaps.field.defaultText'
+        ]);
+        
+        $aSpecializations = $this->Category_GetCategoriesTreeByTargetType('specialization');
+        
+        $this->Viewer_Assign('aSpecializations', $aSpecializations, true); 
+        $this->Viewer_Assign('geoLabel', 'Местоположение', true);
+        
+        $this->SetTemplate('component@freelancer:search-form');
     }
 }

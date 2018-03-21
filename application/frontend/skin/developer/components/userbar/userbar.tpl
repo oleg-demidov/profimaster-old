@@ -21,7 +21,8 @@
     {/if}
     {$aMenuItems = array_merge($aMenuItems, [
         [ 'icon'=>'envelope-o', 'name' => 'talk',       'text' => {lang name='user.profile.nav.messages'},     'url' => "{router page='talk'}", 'count' => $iUserCurrentCountTalkNew ],
-        [ 'icon'=>'cogs', 'name' => 'settings',   'text' => {lang name='user.profile.nav.settings'},     'url' => "{router page='settings'}" ]
+        [ 'icon'=>'cogs', 'name' => 'settings',   'text' => {lang name='user.profile.nav.settings'},     'url' => "{router page='settings'}" ],
+        [ 'icon'=>'money', 'name' => 'manager',   'text' => "Моя партнерка",    'url' => "{router page='manager'}{$oUserCurrent->getLogin()}" ]
     ])}
     {if $oUserCurrent->isEmployer()}
         {if $oUserCurrent->isCreateOrder()}
@@ -39,7 +40,7 @@
     ])}
     {$aItems=[
         [ 'name' => 'userbar', 'url' => "{$oUserCurrent->getUserWebPath()}", 'count'=>"{$oUserCurrent->getPro()}",
-        'text' => "<img src=\"{$oUserCurrent->getProfileAvatarPath(30)}\" alt=\"{$oUserCurrent->getDisplayName()}\" class=\"{$component}-avatar\" /> {$smarty.capture.pro}", 
+        'text' => "<img src=\"{$oUserCurrent->getProfileAvatarPath(24)}\" alt=\"{$oUserCurrent->getDisplayName()}\" class=\"{$component}-avatar\" /> {$smarty.capture.pro}", 
         'menu' => [
             'items' => $aMenuItems
         ]]

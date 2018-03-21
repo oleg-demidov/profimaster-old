@@ -114,12 +114,7 @@ jQuery(document).ready(function($){
     /**
      * Fields
      */
-    $('.js-field-geo-default').lsFieldGeo({
-        urls: {
-            regions: aRouter.ajax + 'geo/get/regions/',
-            cities: aRouter.ajax + 'geo/get/cities/'
-        }
-    });
+    
 
     $('.js-field-date-default').livequery(function () {
         $(this).lsDate({
@@ -637,8 +632,52 @@ jQuery(document).ready(function($){
             load_comments: aRouter.ajax + 'wall/load-comments/'
         }
     });
+    
+    /*
+     * ymaps геолокация
+     */ 
+    var elAjaxGeo = $('.ymaps-ajax-geo');
+    if(elAjaxGeo.length){
+        elAjaxGeo.lsFieldAjaxGeo({
+            urls: {
+                geo: aRouter.ymaps + 'ajax-geo',
+                countries: aRouter.ymaps + 'ajax-countries',
+                regions: aRouter.ymaps + 'ajax-regions',
+                cities: aRouter.ymaps + 'ajax-cities'
+            },
+            selectors:{
+                form:'form'
+            }
+        });
+    }
+    
+    var elFieldLocation = $('.js-ymaps-field-location');
+    if(elFieldLocation.length){
+        elFieldLocation.ymapsFieldLocation( ls.registry.get('ymaps_options') );
+        
+        if(elAjaxGeo.length){
+            elAjaxGeo.lsFieldAjaxGeo('option', 'afterchange', function(e,data){
+                elFieldLocation.ymapsFieldLocation( 'geocoderToMap', data.context.elements.input.val() )
+            });
 
-
+            elAjaxGeo.lsFieldAjaxGeo('option', 'afterclear', function(e,data){ 
+                elFieldLocation.ymapsFieldLocation( 'clearForm' );
+            })
+        }
+    }
+    
+    
+    /*
+     * category-tabs
+     */
+    
+    var flCategoryTabs = $('.fl-category-tabs');
+    if(flCategoryTabs.length){
+        flCategoryTabs.flCategoryTabs({
+            height:800
+        });
+    }
+    
     /**
      * Лайтбокс
      */

@@ -1,0 +1,7 @@
+.fl-breadcrumb {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+.fl-breadcrumb li{
+    display: inline-block;
+}

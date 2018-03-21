@@ -1,0 +1,23 @@
+{
+    "name": "search-form",
+    "version": "1.0.0",
+    "dependencies": {
+        "ymaps:fields":"*",
+        "ymaps:ymaps":"*",
+        "freelancer:field":"*",
+        "freelancer:breadcrumb":"*",
+        "search-ajax":"*",
+        "freelancer:modal-map":"*"
+    },
+    "templates": {
+        "search-form":"search-form.tpl",
+        "breadcrumbs":"breadcrumbs.tpl"
+    },
+    "scripts": {
+        "search-form":"js/search-form-init.js",
+        "search-form-ajax":"js/search-form-ajax.js"
+    },
+    "styles": {
+    	"search-form":"css/search-form.css"
+    }
+}

@@ -12,6 +12,8 @@ Config::Set('router.page.user', 'PluginFreelancer_ActionUser');
 Config::Set('router.page.manager', 'PluginFreelancer_ActionManager');
 Config::Set('router.page.portfolio', 'PluginFreelancer_ActionPortfolio');
 Config::Set('router.page.pay', 'PluginFreelancer_ActionPay');
+Config::Set('router.page.masters', 'PluginFreelancer_ActionMasters');
+
 Config::Set('module.comment.vote_target_allow', array_merge(Config::Get('module.comment.vote_target_allow'),['order']));
 
 
@@ -150,11 +152,12 @@ $config['rating'] = [
 
 $config['poisk'] = [
     'per_page' => 10,
-    'count_page_line' => 2,
+    'count_page_line' => 10,
     'geo' => [
         'countries' => ['KZ']
         ],
-    'item_desc_words' => 20
+    'item_desc_words' => 20,
+    'country_code' => 'kz'
     ];
     
 $config['menu'] = [
@@ -188,6 +191,12 @@ $config['market'] = [
 ];
 $config['manager'] = [
     'precent' => 20
+];
+
+$config['user'] = [
+    'validate' => [
+        'min_profile_about' => 100
+    ]
 ];
 
 return $config;

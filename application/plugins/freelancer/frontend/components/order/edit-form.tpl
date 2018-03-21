@@ -22,7 +22,7 @@
         {component 'freelancer:market' text="Добавить еще специализации" sTargetType="role" iTargetId="employer_specialization_order"}
     {/if}
     {* Местоположение *}
-    {hook run="freelancer_order_form" assign='contentReturn' target = $oOrder}
+    {*hook run="freelancer_order_form" assign='contentReturn' target = $oOrder}
     {if $contentReturn}
         {$contentReturn}
     {else}
@@ -31,7 +31,11 @@
                 'plugin'=>'freelancer',
                 'geo_target'=>$oGeoTarget 
             ]} 
-    {/if}
+    {/if*}
+    {component 'ymaps:fields.ajaxgeo' 
+            classes="js-order-form-geo"
+            label=$aLang.plugin.ymaps.field.label
+            choosenGeo     = $oGeoObject}
             
     {component 'field.text' value={$oOrder->getTitle()} name='title' label={$aLang.plugin.freelancer.text.form.order.title}}
     {component 'field.textarea' name='text_about' value={$oOrder->getTextAbout()} label={$aLang.plugin.freelancer.text.about_order}}

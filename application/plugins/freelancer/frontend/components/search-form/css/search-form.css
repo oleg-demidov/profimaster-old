@@ -1,0 +1,12 @@
+
+.fl-search-form{
+    overflow: visible;
+}
+.fl-search-form .search-results-count{
+    float: right;
+    margin-top: 5px;
+    font-size: 16px;
+}
+#map{
+    height:600px;
+}

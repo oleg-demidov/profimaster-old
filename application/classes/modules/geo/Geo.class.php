@@ -173,7 +173,7 @@ class ModuleGeo extends Module
     {
         /**
          * Проверяем объект на валидность
-         */
+         */ 
         if (!$this->CheckTarget($sTargetType, $iTargetId)) {
             return false;
         }
@@ -518,5 +518,10 @@ class ModuleGeo extends Module
             return true;
         }
         return false;
+    }
+    
+    public function UpdateGeo($oGeo) {
+        return $this->oMapper->UpdateGeo($oGeo, $aNeedCollums);
+        
     }
 }

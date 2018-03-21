@@ -14,19 +14,23 @@
                 name: '[name="name"]',
                 login: '[name="login"]',
                 pass: '[type="password"]',
-                label: ".pass_field .ls-field-holder"
+                label: ".pass_field .ls-field-holder",
+                polz:".fl-register-master-form-polz"
             },
             // Локализация
             i18n: {
                 title: null
             },
-
+            parsley:null,
 
             // Парметры передаваемый при аякс запросе
             params : {}
         },
         _create: function () {
             this._super();
+            
+            this.elements.polz.change(function(){this.parsley.validate();}.bind(this))
+            this.parsley = this.element.parsley();
             this.elements.name.on('focusout', this.focusout.bind(this));            
             this.elements.label.append('<div class="eye" title="Показать/Скрыть пароль"><i class="fa fa-eye-slash  "></i></div>');
             var eye = this.elements.label.find('.eye i');
@@ -35,6 +39,10 @@
         },
         focusout: function(event){
             //this.lock();
+            
+            if(this.elements.login.val()){
+                return false;
+            }
             this._load( 'login',{name: this.elements.name.val()}, this.loadSuccess );
         },
         showHidePass: function(event){
@@ -52,6 +60,7 @@
         },
         loadSuccess:function(r){
             this.elements.login.val(r.login);
+            this.parsley.validate();
         } 
     });
 })( jQuery );

@@ -17,10 +17,11 @@
     <div class="{$component}-block">
         <a class="{$component}-name" href="{$oMaster->getUserWebPath()}">
             {if $oMaster->getProfileName()}{$oMaster->getProfileName()}{else}{$oMaster->getLogin()}{/if}</a>
-        {component 'badge' value=$oMaster->getPro() }
+        {component 'badge' value=$oMaster->getPro() mods="warning"}
         {$aWorks = $oMaster->getWorks(3)}
         {if $aWorks}
-            {component 'freelancer:portfolio.work.small.list' aWorks=$aWorks}
+            {component 'freelancer:portfolio.work.small.list' aWorks=$aWorks 
+                attributes=['data-group' => "group{$oMaster->getId()}"]}
         {/if}
     </div>
     <div class="{$component}-block-right">
@@ -51,14 +52,13 @@
             list = [['label' => 'Специализация:', 'icon' => 'address-card-o', 'content' =>  $smarty.capture.specializations]]}
         </div>
         <div class="ls-grid-col ls-grid-col-6">
-        {$oGeo = $oMaster->ygeo->getGeo()}    
-        {component 'info-list'
-            classes="{$component}-geo"
-            list = [[
-            'label' => 'Местоположение:', 
-            'icon' => 'map-marker', 
-            'content' =>  "{if $oGeo}{$oGeo->getGeoRegionName()}{else}Не выбрано{/if}"
-        ]]}
+        {$oGeo = $oMaster->ygeo->getGeo()} 
+        {if $oGeo}
+            {$sGeo = $oGeo->getGeoRegionName()}
+        {else}
+            {$sGeo = "Не выбрано"}
+        {/if}
+        {component 'freelancer:modal-map' text=$sGeo oGeo=$oMaster->ymaps->getGeo()}
         </div>
     </div>
         

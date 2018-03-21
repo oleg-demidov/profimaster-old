@@ -4,8 +4,13 @@
     "dependencies": {
         "freelancer:breadcrumbs":"*",
         "freelancer:masonry": "*",
-        "freelancer:specialization-tabs":"*",
-        "ydirect:geo":"*"
+        "freelancer:category-tabs":"*",
+        "ymaps:ymaps":"*",
+        "ymaps:fields":"*",
+        "ymaps:geo-init":"*",
+        "ymaps:location-init":"*",
+        "ymaps:geo-location-init":"*",        
+        "ymaps:settings-map":"*"
     },
     "templates": {
         "master.step1":"master/master-step1.tpl",

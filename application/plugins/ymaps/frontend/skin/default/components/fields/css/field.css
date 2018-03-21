@@ -1,0 +1,29 @@
+.ls-field--geo .input-close-but{
+    position: absolute;
+    right: 0;
+    margin: 5px 9px;
+    cursor: pointer;
+    color: #e95e5e;
+    font-weight: bolder;
+    display: none;
+}
+.ls-field--geo .ls-field-input{
+    padding: 4px 25px;
+    text-overflow:  ellipsis;
+}
+.ls-field--geo .ls-field-icon{
+    position: absolute;
+    left: 0;
+    margin: 4px 5px;
+    cursor: pointer;
+    font-weight: bolder;
+}
+.ls-field--geo .default-text{
+    color: #93a1a1;
+}
+.ls-field--geo .ls-field-holder{
+    position: relative;
+}
+div.ls-block.ls-block--users-search{
+    overflow: visible;
+}

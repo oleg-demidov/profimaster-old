@@ -28,6 +28,10 @@ class PluginFreelancer_ActionUser extends ActionPlugin{
         $this->RegisterEventExternal('Search','PluginFreelancer_ActionUser_EventSearch');
         $this->AddEventPreg('/^search$/i','/^(page([0-9]+))?/i','Search::EventSearch'); 
         
+        $this->RegisterEventExternal('Register','PluginFreelancer_ActionUser_EventRegister');
+        $this->AddEventPreg('/^register/i','/^reg/i','Register::EventReg');
+        $this->AddEventPreg('/^activation/i','/^activation/i','Register::EventActivation');
+        
         $this->RegisterEventExternal('RegisterMaster','PluginFreelancer_ActionUser_EventRegisterMaster');
         $this->AddEventPreg('/^register_master/i','/^step1/i','RegisterMaster::EventStep1');
         $this->AddEventPreg('/^register_master/i','/^step2/i','RegisterMaster::EventStep2');

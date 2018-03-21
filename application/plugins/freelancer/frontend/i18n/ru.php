@@ -1,6 +1,7 @@
 <?php
 
 return [
+    
     'errors' => [
         'is_master' =>'Не доступно заказчику',
         'is_employer' => 'Не доступно мастеру',
@@ -159,6 +160,31 @@ return [
             'response' => 'Новый отзыв',
             'specialization_leave1' => 'Дополнительные специализации истекли'
             ]
+        ],
+    'field_category' => [
+        'placeholder' => 'Выберите специализацию'
+    ],
+    'search_form' => [
+        'breadcrubs_first' => 'Все специальности',
+        'count' => 'Найдено'
+    ],
+    'user' => [
+        'validators' =>[
+            'no_geo' => 'Не заполнено поле "Местоположение"',
+            'no_location' => 'Не заполнено поле "Локация"'
         ]
+    ],
+    'register' => [
+        'validation' => [
+            'no_specialization' => 'Выберете хотябы одну специализацию',
+            'no_captcha' => 'Вы робот?',
+            'undefined_user' => 'Неизвестный пользователь'
+        ],
+        'form' => [
+            'im_master' => 'Я мастер',
+            'im_employer' => 'Я заказчик'
+         
+        ]
+    ]
     
 ];

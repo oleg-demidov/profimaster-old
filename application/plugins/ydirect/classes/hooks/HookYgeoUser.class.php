@@ -30,7 +30,7 @@ class PluginYdirect_HookYgeoUser extends Hook
     public function RegisterHook()
     {
         $this->AddHook('settings_profile_save_before', 'SaveGeoUserBefore');
-        $this->AddHook('action_shutdown_settings', 'ComponentYgeoAdd');
+        //$this->AddHook('action_shutdown_settings', 'ComponentYgeoAdd');
         
         $this->AddHook('freelancer_user_init', 'AttachGeo');
         
@@ -44,7 +44,7 @@ class PluginYdirect_HookYgeoUser extends Hook
     
     public function ComponentAddSearchFl($aParams) {
         if($aParams['event'] == 'search'){
-            $this->Component_Add('ydirect:geo');
+            //$this->Component_Add('ydirect:geo');
         }
     }
     

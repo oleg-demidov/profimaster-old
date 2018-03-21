@@ -11,13 +11,27 @@ class PluginFreelancer_ActionFauth extends ActionPlugin{
     protected $oUserCurrent;
     
     protected function RegisterEvent() {
-        /*$this->RegisterEventExternal('Register','PluginFreelancer_ActionFauth_EventRegister');        
-        $this->AddEventPreg('/^register$/i','/^(employer|master)?$/i','Register::EventRegister');
         
-        $this->RegisterEventExternal('Login','PluginFreelancer_ActionFauth_EventLogin');
-        $this->AddEventPreg('/^login/i','/^(employer|master)?$/i','Login::EventLogin');*/
         $this->AddEvent('ajax-login', 'EventAjaxLogin');
         $this->AddEvent('role-login-choose', 'EventRoleLoginChoose');
+        
+        $this->RegisterEventExternal('Register','PluginFreelancer_ActionFauth_EventRegister');
+        $this->AddEventPreg('/^register$/i', 'Register::EventRegister');
+        $this->AddEventPreg('/^activation$/i', 'Register::EventActivation');
+        
+        $this->RegisterEventExternal('RegisterMaster','PluginFreelancer_ActionFauth_EventRegisterMaster');
+        $this->AddEventPreg('/^register_master$/i','/^step1$/i','RegisterMaster::EventStep1');
+        $this->AddEventPreg('/^register_master$/i','/^step2$/i','RegisterMaster::EventStep2');
+        $this->AddEventPreg('/^register_master$/i','/^step3/i','RegisterMaster::EventStep3');
+        
+        $this->RegisterEventExternal('RegisterManager','PluginFreelancer_ActionFauth_EventRegisterManager');
+        $this->AddEventPreg('/^register_manager$/i','/^reg/i','RegisterManager::EventReg');
+        $this->AddEventPreg('/^register_manager$/i','/^activation/i','RegisterManager::EventActivation');
+        
+        $this->RegisterEventExternal('RegisterEmployer','PluginFreelancer_ActionFauth_EventRegisterEmployer');
+        $this->AddEventPreg('/^register_employer$/i','/^step1$/i','RegisterEmployer::EventStep1');
+        
+        //$this->AddEventPreg('/^register_role$/i','EventRegisterRole');
     }
 
     public function Init() {

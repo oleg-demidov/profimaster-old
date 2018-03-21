@@ -9,14 +9,18 @@
 ]*}
 {$aItems = []}
 {if $oUserCurrent}
+    {$aItems[] = [
+        'buttons' => [
+            [ 
+                'icon' => 'envelope-o', 
+                'text' => 'Написать',
+                'url' => "{router page='talk/add'}?talk_recepient_id={$oMaster->getId()}"
+            ]
+        ]
+    ]}
     {if $oUserCurrent->isEmployer()}
         {$aItems[] = [
             'buttons' => [
-                [ 
-                    'icon' => 'envelope-o', 
-                    'text' => 'Написать',
-                    'url' => "{router page='talk/add'}?talk_recepient_id={$oMaster->getId()}"
-                ],
                 [ 
                     'icon' => 'file-text', 
                     'mods' => 'success',

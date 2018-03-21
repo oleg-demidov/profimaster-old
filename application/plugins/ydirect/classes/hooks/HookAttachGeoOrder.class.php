@@ -30,11 +30,11 @@ class PluginYdirect_HookAttachGeoOrder extends Hook
     public function RegisterHook()
     {
         $this->AddHook('template_freelancer_order_form', 'FormGeo');
-        $this->AddHook('freelancer_order_edit', 'AttachGeoOrder');
+        //$this->AddHook('freelancer_order_edit', 'AttachGeoOrder');
         $this->AddHook('freelancer_init_order_module', 'AttachGeoOrderModule');
         
         $this->AddHook('template_freelancer_search_form', 'FormGeo');
-        $this->AddHook('freelancer_event_search_order', 'AttachFilterSearch');
+        //$this->AddHook('freelancer_event_search_order', 'AttachFilterSearch');
     }
 
     public function FormGeo($aParams)

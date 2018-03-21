@@ -19,8 +19,14 @@ class PluginFreelancer_ActionFreelancer_EventAjaxAuth extends Event {
         $oUser = Engine::GetEntity('ModuleUser_EntityUser');
         $oUser->_setValidateScenario('email_or_number');
         $oUser->setEmailOrNumber(getRequest('email_or_number'));
+        
+        $aBehaviors = $oUser->GetBehaviors();
+        foreach(array_keys($aBehaviors) as $aBehaviorKey){
+            $oUser->DetachBehavior($aBehaviorKey);
+        }
+        
         $oUser->_Validate();
-        if ($oUser->_hasValidateErrors()) {
+        if ($oUser->_hasValidateErrors()) { 
             /**
              * Получаем ошибки
              */

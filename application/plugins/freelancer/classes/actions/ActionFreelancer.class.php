@@ -40,7 +40,7 @@ class PluginFreelancer_ActionFreelancer extends ActionPlugin{
         $this->AddEventPreg('/^index?/i','EventIndex');
                 
         //$this->AddEventPreg('/^email?/i','EventEmail');
-        //$this->AddEventPreg('/^test?/i','EventTest');
+        //$this->AddEventPreg('/^test/i','EventTest');
     }
 
     public function Init() {
@@ -51,9 +51,17 @@ class PluginFreelancer_ActionFreelancer extends ActionPlugin{
     public function EventIndex(){
         $this->Component_Add('freelancer:banner');
         $this->Component_Add('freelancer:specialization-tabs');
+        $this->Component_Add('freelancer:category-tabs');
         $this->Component_Add('freelancer:user');
         $this->Component_Add('freelancer:portfolio');
         $this->Component_Add('freelancer:master');
+        
+        $oBehavior = Engine::GetEntity('User_User')->GetBehavior('category');  
+        if ($oType = $this->Category_GetTypeByTargetType($oBehavior->getCategoryTargetType())) {
+            $aCategories = $this->Category_LoadTreeOfCategory(array('type_id' => $oType->getId()));
+        }
+        $this->Viewer_Assign('aCategories', $aCategories);
+        
         $this->Viewer_Assign('action', Router::GetPath('order/search'));
         
         $this->Viewer_SetHtmlDescription( 'Лучшие мастера Казахстана ждут ваших заказов' );
@@ -64,7 +72,13 @@ class PluginFreelancer_ActionFreelancer extends ActionPlugin{
     }
     
     public function EventTest(){
-        $iCount = 0;echo 22;
+    
+        /*$oGeos = $this->Geo_GetCities(['name_en' => '', 'country_id' => 80], [], 1, 500);
+        foreach($oGeos['collection'] as &$oGeo){
+            $oGeo->setNameEn($this->Text_Transliteration($oGeo->getNameRu(), false));
+            $this->Geo_UpdateGeo($oGeo);
+        }*/
+        /*$iCount = 0;
         $aSpecTargets = $this->Category_GetTargetItemsByFilter([
             'target_id' => $this->oUserCurrent->getId(),
             'object_type' => 'user',
@@ -75,6 +89,23 @@ class PluginFreelancer_ActionFreelancer extends ActionPlugin{
         print_r($aSpecTargets);
         foreach ($aSpecTargets as $oSpecTarget) {
             $oSpecTarget->Delete();
+        }*/
+        
+        $aTargets = $this->PluginYdirect_Geo_GetTargetItemsByFilter([
+            'target_type' => 'user',
+            '#select' => ['t.target_type','t.target_id', 'g.geo_region_type', 'g.geo_old'],
+            '#join' => ['join pm_ydirect_geo as g on g.id = t.geo_id']
+        ]); 
+        $aTransType = [
+            'City' => 'city',
+            'Country' => 'country',
+            'Administrative area' => 'region'
+        ];
+        foreach($aTargets as $oTarget){
+            $oTarget->_setData(['type' => $aTransType[$oTarget->getGeoRegionType()]]);
+            $oGeoObject = $this->Geo_GetGeoObject($oTarget->getType(), $oTarget->getGeoOld());
+            $this->Geo_CreateTarget($oGeoObject, $oTarget->getTargetType(), $oTarget->getTargetId());
+            print_r($oTarget->_getData());echo '<br>';
         }
     }
     

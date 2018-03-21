@@ -178,7 +178,7 @@
 }
 .ls-nav:not(.ls-nav--sub) > .ls-nav-item > .ls-nav--sub {
     top: 100%;
-    left: -10px;
+    /*left: -10px;*/
 }
 .ls-nav .ls-nav-item:hover > .ls-nav--sub {
     display: block;

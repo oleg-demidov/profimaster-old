@@ -1,30 +1,5 @@
 <?php
-/*
- * LiveStreet CMS
- * Copyright © 2013 OOO "ЛС-СОФТ"
- *
- * ------------------------------------------------------
- *
- * Official site: www.livestreetcms.com
- * Contact e-mail: office@livestreetcms.com
- *
- * GNU General Public License, version 2:
- * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
- *
- * ------------------------------------------------------
- *
- * @link http://www.livestreetcms.com
- * @copyright 2013 OOO "ЛС-СОФТ"
- * @author Maxim Mzhelskiy <rus.engine@gmail.com>
- *
- */
 
-/**
- * Маппер для работы с БД
- *
- * @package application.modules.user
- * @since 1.0
- */
 class PluginFreelancer_ModuleUser_MapperUser extends PluginFreelancer_Inherit_ModuleUser_MapperUser
 {
        
@@ -53,12 +28,12 @@ class PluginFreelancer_ModuleUser_MapperUser extends PluginFreelancer_Inherit_Mo
         if ($sOrder == '') {
             $sOrder = ' t.user_id desc ';
         }
-        
+                
         list($sJoinTables, $aFilterFields ) = $this->getJoins($aFilter);
         if(!$sJoinTables) $sJoinTables = '';
-        
+
         $sql = "SELECT
-					DISTINCT t.user_id
+					DISTINCT t.user_id 
 				FROM
 					" . Config::Get('db.table.user') . " as t 
                                             ".$sJoinTables."
@@ -80,7 +55,7 @@ class PluginFreelancer_ModuleUser_MapperUser extends PluginFreelancer_Inherit_Mo
 					{ AND t.user_profile_sex = ? }
 					{ AND t.user_login LIKE ? }
 					{ AND t.user_profile_name LIKE ? }
-					{ AND ( t.user_profile_name LIKE ? OR t.user_login LIKE ? ) }
+					{ AND ( t.user_profile_name LIKE ? OR t.user_login LIKE ? OR t.user_profile_about LIKE ? ) }
 				ORDER by {$sOrder}
 				LIMIT ?d, ?d ;
 					";
@@ -110,6 +85,7 @@ class PluginFreelancer_ModuleUser_MapperUser extends PluginFreelancer_Inherit_Mo
             isset($aFilter['profile_name']) ? $aFilter['profile_name'] : DBSIMPLE_SKIP,
             isset($aFilter['name']) ? $aFilter['name'] : DBSIMPLE_SKIP,
             isset($aFilter['name']) ? $aFilter['name'] : DBSIMPLE_SKIP,
+            isset($aFilter['name']) ? $aFilter['name'] : DBSIMPLE_SKIP,
             ($iCurrPage - 1) * $iPerPage, $iPerPage
         ]); 
         
@@ -123,6 +99,39 @@ class PluginFreelancer_ModuleUser_MapperUser extends PluginFreelancer_Inherit_Mo
         return $aResult;
     }
     
+    
+    public function GetUsersByArrayId($aArrayId, $aFilter = null)
+    {
+        if (!is_array($aArrayId) or count($aArrayId) == 0) {
+            return array();
+        }
+
+        $sSelect = 'u.*';
+        if (isset($aFilter['#select'])) {
+            foreach($aFilter['#select'] as &$val){
+                $val = 'u.'.$val;
+            }
+            if (!is_array($aFilter['#select'])) {
+                $aFilter['#select'] = array($aFilter['#select']);
+            }
+            $sSelect = join(', ', $aFilter['#select']);
+        }
+
+        $sql = "SELECT
+					{$sSelect}
+				FROM
+					" . Config::Get('db.table.user') . " as u
+				WHERE
+					u.user_id IN(?a)
+				ORDER BY FIELD(u.user_id,?a) ";
+        $aUsers = array(); 
+        if ($aRows = $this->oDb->select($sql, $aArrayId, $aArrayId)) {
+            foreach ($aRows as $aUser) {
+                $aUsers[] = Engine::GetEntity('User', $aUser);
+            }
+        }
+        return $aUsers;
+    }
     
     public function getJoins($aFilter) {
         $sJoinTables = '';

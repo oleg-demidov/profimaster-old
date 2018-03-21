@@ -23,7 +23,7 @@ class PluginSmsc_ActionSend extends PluginAdmin_ActionPlugin
      */
     protected function EventIndex()
     {
-        echo 'send';
+        //echo 'send';
         
         $oSms = Engine::GetEntity('PluginSmsc_Sms_Sms');
         $oSms->setNumber('87054503719');

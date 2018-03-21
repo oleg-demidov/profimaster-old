@@ -9,5 +9,6 @@
 {/block}
 
 {block 'layout_content' append}
-    {insert name="block" block="searchIndex" params=['plugin'=>'freelancer']}
+    {*{insert name="block" block="searchIndex" params=['plugin'=>'freelancer']}*}
+    {component 'freelancer:category-tabs.links'  categories=$aCategories }
 {/block}

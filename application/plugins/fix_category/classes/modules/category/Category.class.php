@@ -14,12 +14,11 @@ class PluginFixCategory_ModuleCategory extends PluginFixCategory_Inherit_ModuleC
     
     public function SaveCategories($oTarget, $sTargetType, $mCallbackCountTarget = null)
     {   
-        
         $aCategoriesId = $oTarget->_getDataOne('_categories_for_save');
         if (!is_array($aCategoriesId)) {
             return;
         }       
-        
+                
         
         $aSpecTargets = $this->Category_GetTargetItemsByFilter([
             'target_id' => $oTarget->_getPrimaryKeyValue(),
@@ -52,11 +51,20 @@ class PluginFixCategory_ModuleCategory extends PluginFixCategory_Inherit_ModuleC
         /**
          * Подсчитываем количество новое элементов для каждой категории
          */
-        $this->UpdateCountTarget($aCategoriesId, $sTargetType, $mCallbackCountTarget);
+        $this->UpdateCountTarget($aCategoriesId, $sTargetType, $mCallbackCountTarget, $oTarget->category->getParam('object_type'));
 
         $oTarget->_setData(array('_categories_for_save' => null));
     }
 	
+    public function RemoveCategories($oTarget, $sTargetType, $mCallbackCountTarget = null)
+    {
+        $aCategoryIdChanged = $this->RemoveRelation($oTarget->_getPrimaryKeyValue(), $sTargetType);
+        /**
+         * Подсчитываем количество новое элементов для каждой категории
+         */
+        $this->UpdateCountTarget($aCategoryIdChanged, $sTargetType, $mCallbackCountTarget,  $oTarget->category->getParam('object_type'));
+    }
+    
     public function CreateRelation($aCategoryId, $iTargetId, $iType, $sObjectType=null)
     {
         
@@ -127,12 +135,12 @@ class PluginFixCategory_ModuleCategory extends PluginFixCategory_Inherit_ModuleC
                     and category.category_id IN ( ?a ) ";
                     //echo $sJoin;
                 $aFilter['#join'][$sJoin] = array($aCategoryId);
-                if (count($aFilter['#select'])) {
+                /*if (count($aFilter['#select'])) {
                     $aFilter['#select'][] = "distinct t.`{$oEntitySample->_getPrimaryKey()}`";
                 } else {
                     $aFilter['#select'][] = "distinct t.`{$oEntitySample->_getPrimaryKey()}`";
                     $aFilter['#select'][] = 't.*';
-                }
+                }*/
             }
         }
         return $aFilter;
@@ -219,6 +227,16 @@ class PluginFixCategory_ModuleCategory extends PluginFixCategory_Inherit_ModuleC
         return $aItems;
     }
     
+    public function getCategoryParents($oCategory, $aParents = []){
+        $aParents[] = $oCategory;
+        
+        if(!$oParent = $oCategory->getParent()){
+            return $aParents;
+        }
+        $this->getCategoryParents($oParent, $aParents);
+        
+    }
+    
     public function getChildItems($oSpecialization, $aParentKeys = [], $aSpecSelected = []){
         
         $aSpecChilds = $oSpecialization->getChildren();
@@ -252,6 +270,33 @@ class PluginFixCategory_ModuleCategory extends PluginFixCategory_Inherit_ModuleC
         $oViewer->Assign('classes' , 'fl-specialization-tree-checkbox', true);
         $oViewer->Assign('attributes' , ['data-val' => $sSpec,'data-parent-ids' => implode(',', $aParentKeys)], true);
         return $oViewer->Fetch('component@field.checkbox');
+    }
+    
+    protected function UpdateCountTarget($aCategoryId, $sTargetType, $mCallback = null , $sObjectType = 'user')
+    {
+        if (!is_array($aCategoryId)) {
+            $aCategoryId = array($aCategoryId);
+        }
+        if (!count($aCategoryId)) {
+            return;
+        }
+        $aCategories = $this->GetCategoryItemsByArrayId($aCategoryId);
+        foreach ($aCategories as $oCategory) {
+            if ($mCallback) {
+                if (is_string($mCallback)) {
+                    $mCallback = array($this, $mCallback);
+                }
+                $iCount = call_user_func_array($mCallback, array($oCategory, $sTargetType));
+            } else {
+                $iCount = $this->GetCountItemsByFilter(array(
+                        'target_type' => $sTargetType, 
+                        'category_id' => $oCategory->getId(), 
+                        'object_type' => $sObjectType),
+                    'ModuleCategory_EntityTarget');
+            }
+            $oCategory->setCountTarget($iCount);
+            $oCategory->Update();
+        }
     }
     
 }

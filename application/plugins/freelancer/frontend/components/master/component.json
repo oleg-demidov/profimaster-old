@@ -2,9 +2,13 @@
     "name": "master",
     "version": "1.0.0",
     "dependencies": {
+        "freelancer:portfolio":"*",
+        "ymaps:ymaps":"*",
+        "ymaps:modal-map":"*"
     },
     "templates": {
         "list":"master-list.tpl",
+        "page":"master-page.tpl",
         "item":"master-item.tpl",
         "actionbar" : "master-actionbar.tpl"
     },

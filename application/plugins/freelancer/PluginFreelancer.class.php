@@ -27,6 +27,11 @@ class PluginFreelancer extends Plugin {
         )
     );
     
+    private $aDependencePlugins = [
+        'fix_category'
+    ];
+
+
     protected $aInherits = array(
         'template' => array(
             'admin:component.p-user.list' => '_components/admin/list.tpl',
@@ -43,6 +48,7 @@ class PluginFreelancer extends Plugin {
             'ActionIndex' => '_ActionIndex'],
         'module' => [
             'ModuleMedia' => '_ModuleMedia',
+            'ModuleGeo' => '_ModuleGeo',
             'ModuleTalk' => '_ModuleTalk',
             'ModuleUser' => '_ModuleUser',
             'PluginPayment_ModulePayment' => '_ModulePayment',
@@ -69,8 +75,8 @@ class PluginFreelancer extends Plugin {
     
     public function Activate() {
         
-        if(!in_array('fix_category', $this->PluginManager_GetPluginsActive())){
-            $this->Message_AddError('Необходимо установить зависиимость: Плагин "fix_category"','Ошибка установки',true);
+        if(($sError = $this->GetDependenceSatisfied()) !== true){
+            $this->Message_AddError($sError,'Ошибка активации',true);
             return false;
         }
         
@@ -98,6 +104,16 @@ class PluginFreelancer extends Plugin {
         }
         $this->Cron_CreateTask('Оповещение о новых заказах','PluginFreelancer_Notify_SendOrders',60*24,$this);
         $this->Cron_CreateTask('Удаление истекших ролей','PluginFreelancer_Freelancer_UpdateRoles',30,$this);
+        return true;
+    }
+    
+    public function GetDependenceSatisfied() {
+        $aActivePlugins = $this->PluginManager_GetPluginsActive();
+        foreach($this->aDependencePlugins as $sNeedPlugin){
+            if(!in_array($sNeedPlugin, $aActivePlugins)){
+                return 'Необходимо установить зависиимость: Плагин "'.$sNeedPlugin.'"';                
+            }
+        }
         return true;
     }
 

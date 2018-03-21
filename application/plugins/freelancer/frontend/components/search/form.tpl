@@ -3,6 +3,7 @@
 
 {capture name="search_form" }
     <form  method="GET" class="{$component}" action="{$action}" > 
+       
         <div class='ls-grid-row'>
             <div class='ls-grid-col ls-grid-col-4'>
                 {component 'freelancer:specialization.tree' 

@@ -18,8 +18,20 @@ class PluginFreelancer_ActionSettings_EventSpecialization extends Event {
             }
             $this->oUserCurrent->setSpecialization(getRequest('specialization'));
             $this->oUserCurrent->_setValidateScenario('specialization');
-            if ($this->oUserCurrent->_Validate()) {
-                $this->Category_SaveCategories($this->oUserCurrent, 'specialization');
+            
+             $this->oUserCurrent->category->setParam('validate_enable', true);
+            
+            if ($this->oUserCurrent->_Validate()) {                print_r(getRequest('specialization'));
+                
+                $this->oUserCurrent->category->CallbackAfterSave();
+            
+                /*$this->Category_SaveCategories($this->oUserCurrent, 'specialization', function($oCategory, $sTargetType){ 
+                            return $this->GetCountItemsByFilter(array(
+                                    'target_type' => $sTargetType,
+                                    'category_id' => $oCategory->getId(), 
+                                    'object_type' => 'user'),
+                                'ModuleCategory_EntityTarget');
+                        });*/
                 $this->Hook_Run('freelancer_user_aftersave_specialization', ['oUser' => $this->oUserCurrent]);
                 $this->Message_AddNoticeSingle($this->Lang_Get('common.success.save'));
             } else {

@@ -44,4 +44,14 @@ if (Config::Get('view.theme')) {
 $config['view']['seo']['topic_heading'] = 'h1';
 $config['view']['seo']['topic_heading_list'] = 'h2';
 
+$config['block']['search'] = array(
+    'action' => array('masters'),
+    'blocks' => array(
+        'left' => array(
+            'poisk' => array('priority' => 50, 'params' => array('plugin' => 'freelancer'))
+        )
+    ),
+    'clear'  => true
+);
+
 return $config;

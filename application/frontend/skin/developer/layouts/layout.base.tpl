@@ -84,7 +84,7 @@
                     'url' => {router page='order/search'},  'name' => 'order_search' ],
                     
                 [ 'text' => $aLang.plugin.freelancer.menu.masters, 'classes' => "fl-nav-item",
-                    'url' => {router page='user/search'},  'name' => 'master_search' ],
+                    'url' => {router page='masters'},  'name' => 'master_search' ],
                     
                 [ 'text' => "Информация", 'classes' => "fl-nav-item",  
                     'url' => {router page='info'},  'name' => 'info' ],

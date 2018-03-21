@@ -10,5 +10,5 @@ jQuery(function($) {
           });
     }
     $('.js-fl-portfolio-work-item-slider').lsSlider();
-    $('.js-fl-portfolio-work-small-item-lightbox').lsLightbox();
+    $('.fl-portfolio-work-small-list').lsLightbox();
 });

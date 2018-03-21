@@ -1,0 +1,9 @@
+{
+    "name": "lightbox",
+    "version": "1.0.0",    
+    "scripts": {
+        "lightbox": "js/lightbox.js"
+    },
+    "styles": {
+    }
+}

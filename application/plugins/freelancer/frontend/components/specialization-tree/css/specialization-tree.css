@@ -1,0 +1,43 @@
+.fl-specialization-tree .ls-field--checkbox:hover{
+    background: #eaeaea;
+}
+
+.fl-specialization-tree .ls-field--checkbox .ls-field-label {
+    padding: 4px 3px 4px 26px;
+}
+.fl-specialization-tree .ls-field--checkbox:last-child .ls-field-label {
+    margin-bottom: 0;
+}
+.fl-specialization-tree .ls-field--checkbox .ls-field-holder {
+    top: 5px;
+    left: 9px;
+}
+.fl-st-item-selected{
+    background: #fbc9007a;
+}
+
+.fl-specialization-tree .ls-field--checkbox.fl-st-item-selected:hover, 
+.fl-specialization-tree .ls-nav .ls-nav-item.fl-st-item-selected:hover{
+    background: #fbc90099;
+}
+.fl-specialization-tree .ls-nav .ls-nav-item.fl-st-item-selected a:hover{
+    background: none;
+}
+.fl-specialization-count{
+    padding: 3px 25px 3px 9px;
+    background: #ddd;
+    margin: 4px;
+    cursor: pointer;
+}
+.fl-specialization-count:hover{
+    background: #d88;
+}
+
+.fl-specialization-count:after{
+    content: "x";
+    margin: 0 -15px 0 5px;
+    float: right;
+}
+.fl-specialization-tree .ls-field,.fl-specialization-tree  .ls-field-label {
+    margin-bottom: 0;
+}

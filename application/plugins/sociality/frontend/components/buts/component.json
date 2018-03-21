@@ -4,12 +4,10 @@
     "dependencies": {
     },
     "templates": {
-        "buts": "buts.tpl",
-        "profile": "profile.tpl"
+        "buts": "buts.tpl"
     },
     "scripts": {
     },
     "styles": {
-        "style":"css/style.css"
     }
 }
