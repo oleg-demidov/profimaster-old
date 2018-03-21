@@ -6636,3 +6636,4 @@
 [2018-03-21 13:35:01] cron.NOTICE 5398 ad71c02: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
 [2018-03-21 13:40:02] cron.NOTICE 5619 fd5044f: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
 [2018-03-21 13:45:01] cron.NOTICE 5791 aa31562: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
+[2018-03-21 13:50:01] cron.NOTICE 6011 e65b823: Run cron task "Отложенная отправка емайлов" {"state":"successful","return":"empty"}
