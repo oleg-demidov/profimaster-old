@@ -29,7 +29,7 @@ class PluginFreelancer_ModuleUser_EntityUser extends PluginFreelancer_Inherit_Mo
         'ymaps' => [
             'class'=>'PluginYmaps_ModuleGeo_BehaviorEntity',
             'target_type'=>'user',
-            'validate_guest' => true
+            'validate_guest' => false
         ],
         'favourites' => 'PluginFreelancer_ModuleFavourites_BehaviorEntity'
     );
