@@ -1,4 +1,8 @@
 application/plugins/ymaps/*
+application/plugins/tmp/*
+application/plugins/logs/*
+application/config/config.bd.php
 uploads/*
 nbproject
 application/plugins/sociality/*
+framework/*

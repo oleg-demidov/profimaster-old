@@ -8,14 +8,15 @@
 /**
  * Настройка базы данных
  */
-$config['db']['params']['host'] = 'localhost';
-$config['db']['params']['port'] = '3306';
-$config['db']['params']['user'] = 'root';
-$config['db']['params']['pass'] = '23197';
-$config['db']['params']['type']   = 'mysqli';
-$config['db']['params']['dbname'] = 'profimaster';
-$config['db']['table']['prefix'] = 'pm_';
+//$config['db']['params']['host'] = 'localhost';
+//$config['db']['params']['port'] = '3306';
+//$config['db']['params']['user'] = 'root';
+//$config['db']['params']['pass'] = '23197';
+//$config['db']['params']['type']   = 'mysqli';
+//$config['db']['params']['dbname'] = 'profimaster';
+//$config['db']['table']['prefix'] = 'pm_';
 
+include 'config.bd.php';
 /**
  * Настройки кеширования
  */

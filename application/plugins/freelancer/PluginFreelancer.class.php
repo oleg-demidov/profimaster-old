@@ -91,11 +91,10 @@ class PluginFreelancer extends Plugin {
         
         $oCategory = Engine::GetEntity('Category_Category');
         $oCategory->setTypeId($oType->getId());
-        $oCategory->setTitle('Строймастер');
-        $oCategory->setDescription('Строительство и ремонт');
-        $oCategory->setUrl('stroymaster');
+        $oCategory->setTitle('Фрилансер');
+        $oCategory->setUrl('freelancer');
         $oCategory->setDateCreate(date("Y-m-d H:i:s"));
-        $oCategory->setUrlFull('stroymaster');
+        $oCategory->setUrlFull('freelancer');
         $oCategory->setOrder(1);
         $oCategory->setData([]);
         if (!$oCategory->Save()){
