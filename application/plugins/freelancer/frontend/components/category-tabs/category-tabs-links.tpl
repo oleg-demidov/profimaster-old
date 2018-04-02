@@ -12,8 +12,8 @@
     
     {foreach $categories as $categoryLevel0}
         
-        {$aData = $categoryLevel0->getData()}        
-        {$tab.text =  "{component 'icon' mods='large' icon={$aData['icon']}} {$categoryLevel0->getTitle()}" }
+        {*$aData = $categoryLevel0->getData()}        
+        {$tab.text =  "{component 'icon' mods='large' icon={$aData['icon']}} {$categoryLevel0->getTitle()}" *}
         
         {$categoriesLevel1 = $categoryLevel0->getChildren()}
         
