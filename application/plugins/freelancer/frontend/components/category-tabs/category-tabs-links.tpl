@@ -14,6 +14,7 @@
         
         {*$aData = $categoryLevel0->getData()}        
         {$tab.text =  "{component 'icon' mods='large' icon={$aData['icon']}} {$categoryLevel0->getTitle()}" *}
+        {$tab.text =  " {$categoryLevel0->getTitle()}" }
         
         {$categoriesLevel1 = $categoryLevel0->getChildren()}
         
